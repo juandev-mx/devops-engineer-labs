@@ -1,0 +1,46 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>#!/bin/bash
+
+# Fetch advice from the API
+curl -s https://api.adviceslip.com/advice &gt; advice.json
+
+# Extract advice text
+cat advice.json | jq -r .slip.advice &gt; advice.message
+
+# Test to make sure the advice message has more than 5 words
+word_count=$(wc -w &lt; advice.message)
+
+if [ $word_count -gt 5 ]; then
+  echo &quot;Advice has more than 5 words&quot;
+else
+  echo &quot;Advice $(cat advice.message) has 5 words or less&quot;
+fi
+
+# Deploy cowsay
+sudo apt-get install cowsay -y
+
+# Ensure path is correct
+echo $PATH
+export PATH=&quot;$PATH:/usr/games:/usr/local/games&quot;
+
+# Display advice with cowsay
+cat advice.message | cowsay -f $(ls /usr/share/cowsay/cows | shuf -n 1)</command>
+      <configuredLocalRules/>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

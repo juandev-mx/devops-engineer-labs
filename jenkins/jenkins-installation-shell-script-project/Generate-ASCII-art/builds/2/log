@@ -1,0 +1,54 @@
+Started by user [8mha:////4LvGhveHHXnFRAjKo659DSumxLMI6lPX2l/SEOUPDXENAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/Generate-ASCII-art
+[Generate-ASCII-art] $ /bin/bash /tmp/jenkins14437113352917277999.sh
+Advice has more than 5 words
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libtext-charwidth-perl
+Suggested packages:
+  filters cowsay-off
+The following NEW packages will be installed:
+  cowsay libtext-charwidth-perl
+0 upgraded, 2 newly installed, 0 to remove and 118 not upgraded.
+Need to get 28.7 kB of archives.
+After this operation, 139 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libtext-charwidth-perl amd64 0.04-10build3 [10.2 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/universe amd64 cowsay all 3.03+dfsg2-8 [18.6 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 28.7 kB in 0s (150 kB/s)
+Selecting previously unselected package libtext-charwidth-perl.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 37816 files and directories currently installed.)
+Preparing to unpack .../libtext-charwidth-perl_0.04-10build3_amd64.deb ...
+Unpacking libtext-charwidth-perl (0.04-10build3) ...
+Selecting previously unselected package cowsay.
+Preparing to unpack .../cowsay_3.03+dfsg2-8_all.deb ...
+Unpacking cowsay (3.03+dfsg2-8) ...
+Setting up libtext-charwidth-perl (0.04-10build3) ...
+Setting up cowsay (3.03+dfsg2-8) ...
+Processing triggers for man-db (2.10.2-1) ...
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ ________________________________________
+/ Sometimes, you just need to say sorry. \
+\ Even if it's not your fault.           /
+ ----------------------------------------
+   \
+    \
+    ____  
+   /# /_\_
+  |  |/o\o\
+  |  \\_/_/
+ / |_   |  
+|  ||\_ ~| 
+|  ||| \/  
+|  |||_    
+ \//  |    
+  ||  |    
+  ||_  \   
+  \_|  o|  
+  /\___/   
+ /  ||||__ 
+    (___)_)
+Finished: SUCCESS
