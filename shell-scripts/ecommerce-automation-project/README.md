@@ -1,179 +1,275 @@
-# Introduction
+# 🛒 E-Commerce Automation Project - Shell Scripting
 
-This is a sample e-commerce application built for learning purposes.
+Automation project developed during the **KodeKloud - Shell Scripts for Beginners** course.
 
-Here's how to deploy it on CentOS systems:
+This project focuses on automating the deployment and management of a sample e-commerce application using **Bash scripting** in Linux environments.  
+The lab simulates real-world DevOps and system administration tasks including web server configuration, database provisioning, environment variable management, service administration, and automation workflows.
 
-## Deploy Pre-Requisites
+---
 
-1. Install FirewallD
+# 🚀 Project Objectives
 
-```
-sudo yum install -y firewalld
-sudo systemctl start firewalld
-sudo systemctl enable firewalld
-sudo systemctl status firewalld
-```
+The primary objective of this project is to automate common operational tasks required during the deployment of a Linux-based e-commerce application.
 
-## Deploy and Configure Database
+The project includes:
 
-1. Install MariaDB
+- Automated package installation
+- Firewall configuration
+- Database deployment and configuration
+- Apache web server setup
+- Environment variable management
+- Linux service administration
+- Application deployment automation
+- Basic infrastructure provisioning
+- Troubleshooting and validation tasks
 
-```
-sudo yum install -y mariadb-server
-sudo vi /etc/my.cnf
-sudo systemctl start mariadb
-sudo systemctl enable mariadb
-```
+---
 
-2. Configure firewall for Database
-
-```
-sudo firewall-cmd --permanent --zone=public --add-port=3306/tcp
-sudo firewall-cmd --reload
-```
-
-3. Configure Database
-
-```
-$ mysql
-MariaDB > CREATE DATABASE ecomdb;
-MariaDB > CREATE USER 'ecomuser'@'localhost' IDENTIFIED BY 'ecompassword';
-MariaDB > GRANT ALL PRIVILEGES ON *.* TO 'ecomuser'@'localhost';
-MariaDB > FLUSH PRIVILEGES;
-```
-
-> ON a multi-node setup remember to provide the IP address of the web server here: `'ecomuser'@'web-server-ip'`
-
-4. Load Product Inventory Information to database
-
-Create the db-load-script.sql
-
-```
-cat > db-load-script.sql <<-EOF
-USE ecomdb;
-CREATE TABLE products (id mediumint(8) unsigned NOT NULL auto_increment,Name varchar(255) default NULL,Price varchar(255) default NULL, ImageUrl varchar(255) default NULL,PRIMARY KEY (id)) AUTO_INCREMENT=1;
-
-INSERT INTO products (Name,Price,ImageUrl) VALUES ("Laptop","100","c-1.png"),("Drone","200","c-2.png"),("VR","300","c-3.png"),("Tablet","50","c-5.png"),("Watch","90","c-6.png"),("Phone Covers","20","c-7.png"),("Phone","80","c-8.png"),("Laptop","150","c-4.png");
-
-EOF
-```
-
-Run sql script
-
-```
-
-sudo mysql < db-load-script.sql
-```
+# 🛠️ Technologies Used
 
 
-## Deploy and Configure Web
+| Area | Technology |
+|------|-------------|
+| Operating System | Linux (CentOS) |
+| Scripting | Bash |
+| Web Server | Apache HTTP Server |
+| Database | MariaDB |
+| Backend | PHP |
+| Firewall Management | Firewalld |
+| Automation | Shell Scripts |
+| Version Control | Git & GitHub |
 
-1. Install required packages
+---
 
-```
-sudo yum install -y httpd php php-mysqlnd
+# ⚙️ Deployment Workflow
+
+## 🔥 Firewall Configuration
+
+The project configures the Linux firewall using Firewalld to allow HTTP and database communication.
+
+### Tasks Performed
+- Install Firewalld
+- Start and enable firewall service
+- Open HTTP port (80)
+- Open MariaDB port (3306)
+- Reload firewall rules
+
+**Example:**
+```bash
 sudo firewall-cmd --permanent --zone=public --add-port=80/tcp
 sudo firewall-cmd --reload
 ```
 
-2. Configure httpd
+## 🗄️ Database Deployment and Configuration
 
-Change `DirectoryIndex index.html` to `DirectoryIndex index.php` to make the php page the default page
+MariaDB is used as the backend database for storing product inventory information.
 
+### Tasks Performed
+- Install MariaDB server
+- Create application database
+- Create database user
+- Grant privileges
+- Load inventory data automatically
+
+### Database Schema
+```sql
+CREATE TABLE products (
+    id mediumint(8) unsigned NOT NULL auto_increment,
+    Name varchar(255) default NULL,
+    Price varchar(255) default NULL,
+    ImageUrl varchar(255) default NULL,
+    PRIMARY KEY (id)
+) AUTO_INCREMENT=1;
 ```
+
+### Sample Data
+```sql
+INSERT INTO products (Name,Price,ImageUrl)
+VALUES
+("Laptop","100","c-1.png"),
+("Drone","200","c-2.png"),
+("VR","300","c-3.png");
+```
+
+## 🌐 Web Server Configuration
+
+The application uses Apache HTTP Server with PHP support.
+
+### Tasks Performed
+- Install Apache and PHP dependencies
+- Configure Apache startup services
+- Configure PHP as default entry point
+- Clone application source code
+- Configure environment variables
+
+### Installed Packages
+```bash
+sudo yum install -y httpd php php-mysqlnd
+```
+
+### Apache Configuration
+```bash
 sudo sed -i 's/index.html/index.php/g' /etc/httpd/conf/httpd.conf
 ```
 
-3. Start httpd
+## 🔐 Environment Variable Management
 
-```
-sudo systemctl start httpd
-sudo systemctl enable httpd
+Sensitive database credentials are managed through a `.env` file.
+
+**Example:**
+```env
+DB_HOST=localhost
+DB_USER=ecomuser
+DB_PASSWORD=ecompassword
+DB_NAME=ecomdb
 ```
 
-4. Download code
+The PHP application dynamically loads environment variables during runtime.
 
-```
-sudo yum install -y git
+## 🚀 Application Deployment
+
+The project automates the deployment of a sample e-commerce application hosted on GitHub.
+
+### Repository Deployment
+```bash
 sudo git clone https://github.com/kodekloudhub/learning-app-ecommerce.git /var/www/html/
 ```
 
-<!-- 5. Update index.php
+### Deployment Includes
+- Web application setup
+- Database connectivity
+- Service initialization
+- Application validation
 
-Update [index.php](https://github.com/kodekloudhub/learning-app-ecommerce/blob/13b6e9ddc867eff30368c7e4f013164a85e2dccb/index.php#L107) file to connect to the right database server. In this case `localhost` since the database is on the same server.
+---
 
-```
-sudo sed -i 's/172.20.1.101/localhost/g' /var/www/html/index.php
+# 📊 Features Implemented
 
-              <?php
-                        $link = mysqli_connect('172.20.1.101', 'ecomuser', 'ecompassword', 'ecomdb');
-                        if ($link) {
-                        $res = mysqli_query($link, "select * from products;");
-                        while ($row = mysqli_fetch_assoc($res)) { ?>
-```
+### ⚙️ Infrastructure Automation
+- Automated package installation
+- Service initialization
+- Firewall configuration
 
-> ON a multi-node setup remember to provide the IP address of the database server here.
-```
-sudo sed -i 's/172.20.1.101/localhost/g' /var/www/html/index.php
-```
--->
+### 🗄️ Database Automation
+- Automated database creation
+- User provisioning
+- SQL script execution
 
-5. Create and Configure the `.env` File
+### 🌐 Web Deployment
+- Apache server setup
+- PHP configuration
+- Application cloning
 
-   Create an `.env` file in the root of your project folder.
+### 🔒 Environment Configuration
+- Secure credential management
+- Dynamic environment loading
 
-   ```sh
-   cat > /var/www/html/.env <<-EOF
-   DB_HOST=localhost
-   DB_USER=ecomuser
-   DB_PASSWORD=ecompassword
-   DB_NAME=ecomdb
-   EOF
+### 🧪 Validation and Testing
+- HTTP endpoint testing
+- Service verification
+- Deployment troubleshooting
 
-6. Update `index.php`
-
-   Update the `index.php` file to load the environment variables from the `.env` file and use them to connect to the database.
-
-   ```php
-   <?php
-   // Function to load environment variables from a .env file
-   function loadEnv($path)
-   {
-       if (!file_exists($path)) {
-           return false;
-       }
-
-       $lines = file($path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-       foreach ($lines as $line) {
-           if (strpos(trim($line), '#') === 0) {
-               continue;
-           }
-
-           list($name, $value) = explode('=', $line, 2);
-           $name = trim($name);
-           $value = trim($value);
-           putenv(sprintf('%s=%s', $name, $value));
-       }
-       return true;
-   }
-
-   // Load environment variables from .env file
-   loadEnv(__DIR__ . '/.env');
-
-   // Retrieve the database connection details from environment variables
-   $dbHost = getenv('DB_HOST');
-   $dbUser = getenv('DB_USER');
-   $dbPassword = getenv('DB_PASSWORD');
-   $dbName = getenv('DB_NAME');
-
-   ?>
-
-   ON a multi-node setup, remember to provide the IP address of the database server in the .env file.
-
-
-7. Test
-
-```
+**Example validation command:**
+```bash
 curl http://localhost
+```
+
+---
+
+# 🧠 Skills Demonstrated
+
+This project demonstrates practical skills in:
+
+- Linux system administration
+- Bash scripting
+- Apache web server configuration
+- MariaDB administration
+- Firewall configuration
+- Environment variable management
+- Shell automation
+- DevOps fundamentals
+- Infrastructure provisioning
+- Deployment troubleshooting
+- Service management with `systemctl`
+- Git and GitHub workflows
+
+---
+
+# ⚠️ Troubleshooting Challenges
+
+During the lab several operational issues were resolved, including:
+
+- Linux file permission issues
+- `.env` file write permissions
+- Service startup validation
+- Firewall communication problems
+- Git synchronization conflicts
+- Database connection troubleshooting
+
+**Example issue resolved:**
+```text
+-bash: /var/www/html/.env: Permission denied
+```
+
+**Solution:**
+```bash
+sudo tee /var/www/html/.env <<EOF
+```
+
+---
+
+# ▶️ Running the Project
+
+### 1️⃣ Install Dependencies
+```bash
+sudo yum install -y firewalld mariadb-server httpd php php-mysqlnd git
+```
+
+### 2️⃣ Start Services
+```bash
+sudo systemctl start firewalld
+sudo systemctl start mariadb
+sudo systemctl start httpd
+```
+
+### 3️⃣ Configure Database
+```bash
+sudo mysql < db-load-script.sql
+```
+
+### 4️⃣ Deploy Application
+```bash
+sudo git clone https://github.com/kodekloudhub/learning-app-ecommerce.git /var/www/html/
+```
+
+### 5️⃣ Test Application
+```bash
+curl http://localhost
+```
+
+---
+
+# 📈 Learning Outcome
+
+This project provided hands-on experience with real-world Linux administration and DevOps automation workflows.
+
+The lab reinforced concepts such as:
+
+- Infrastructure setup
+- Linux troubleshooting
+- Service orchestration
+- Deployment automation
+- Bash scripting practices
+- Environment configuration
+- Backend service integration
+
+The project also improved practical understanding of how web applications are deployed and managed in Linux server environments.
+
+---
+
+# 📚 Course Information
+
+- **Platform:** KodeKloud
+- **Course:** Shell Scripts for Beginners
+- **Learning Path:** DevOps Engineer Learning Path
 ```
