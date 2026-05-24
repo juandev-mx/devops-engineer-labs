@@ -1,0 +1,59 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <org.jenkinsci.plugins.gogs.GogsProjectProperty plugin="gogs-webhook@1.0.15">
+      <gogsSecret>{AQAAABAAAAAQORcGCFbqrb2h+ZYGtFIIRd9CPQpQvjGXn4kVt9XTkQs=}</gogsSecret>
+      <gogsUsePayload>false</gogsUsePayload>
+      <gogsBranchFilter></gogsBranchFilter>
+    </org.jenkinsci.plugins.gogs.GogsProjectProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>#!/bin/bash
+
+# Ruta al archivo en el otro proyecto (Jenkins guarda todo en /var/lib/jenkins/workspace/)
+ORIGEN=&quot;../ascii-build-job/advice.json&quot;
+
+if [ -f &quot;$ORIGEN&quot; ]; then
+    cp &quot;$ORIGEN&quot; .
+    echo &quot;Archivo copiado manualmente con éxito&quot;
+else
+    echo &quot;Error: No se encontró el archivo en $ORIGEN. ¿Corriste el primer job?&quot;
+    exit 1
+fi
+
+# Procesar el archivo
+cat advice.json | jq -r .slip.advice &gt; advice.message
+word_count=$(wc -w &lt; advice.message)
+
+if [ $word_count -gt 5 ]; then
+  echo &quot;Advice has more than 5 words&quot;
+else
+  echo &quot;Advice $(cat advice.message) has 5 words or less&quot;
+fi
+</command>
+      <configuredLocalRules/>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>ascii-build-job</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+  </publishers>
+  <buildWrappers/>
+</project>
