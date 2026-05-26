@@ -140,6 +140,7 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 jenkins-installation-shell-script-project/
 ├── Generate-ASCII-art/
 │   ├── config.xml
+│   ├── nextBuildNumber
 │   └── builds/
 └── README.md
 ```
@@ -234,7 +235,6 @@ git clone https://github.com/juandev-mx/devops-engineer-labs.git
 - **Course:** Jenkins for Beginners
 
 
-<img width="229" height="119" alt="Details_Create_User" src="https://github.com/user-attachments/assets/8596fb84-a5b7-45f1-a46e-f1ef18049453" />
 
 <img width="499" height="43" alt="Password_Unlock" src="https://github.com/user-attachments/assets/c95a88cc-f16d-448d-a664-cfed24ec489f" />
 
