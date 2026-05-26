@@ -1,0 +1,41 @@
+pipeline {
+    agent any
+    environment {
+        REPO_URL = "http://git-server:3000/max/python-app.git"
+        REPO_DIR = "${WORKSPACE}/python-app"
+        BRANCH_NAME = "main"
+        RUN_TESTS = "true"
+        PYTHON_VERSION = "python3"
+    }
+    stages {
+        stage('Checkout Code') {
+            steps {
+                script {
+                    sh "git clone --branch ${BRANCH_NAME} ${REPO_URL} ${REPO_DIR} || (cd ${REPO_DIR} && git pull origin ${BRANCH_NAME})"
+                }
+            }
+        }
+        stage('Install Dependencies') {
+            steps {
+                dir("${REPO_DIR}") {
+                    sh "${PYTHON_VERSION} -m venv venv && . venv/bin/activate && pip install -r requirements.txt"
+                }
+            }
+        }
+        stage('Run Tests') {
+            when { expression { return env.RUN_TESTS == "true" } }
+            steps {
+                dir("${REPO_DIR}") {
+                    sh ". venv/bin/activate && pytest"
+                }
+            }
+        }
+        stage('Run Application') {
+            steps {
+                dir("${REPO_DIR}") {
+                    sh "timeout 60s . venv/bin/activate && python app.py || echo 'App stopped'"
+                }
+            }
+        }
+    }
+}
