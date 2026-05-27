@@ -1,0 +1,10 @@
+commit cc681b7e7511a1d23f3fc52b0aca24615f8cf6a3
+tree b473eeac9cac7d79ea6d4fcdaed1b3af3da794d1
+parent 032d2366d94ededcf7e648d740b315ed4ec61f49
+author gitea-admin <admin@example.com> 2026-05-26 23:27:43 -0400
+committer gitea-admin <admin@example.com> 2026-05-26 23:27:43 -0400
+
+    Fix pipeline syntax and background deployment process
+
+
+:100644 100644 3c767726b6d217feaff938a5f991f43af7736418 66843fca9fc9e20f08dddc4eb1afedc54dc4ab59 M	Jenkinsfile
