@@ -115,6 +115,15 @@ Successfully configured Docker containers using environment variables and verifi
 
 ---
 
+# 📚 Course
+
+KodeKloud - Docker for Absolute Beginners
+
+Lab:
+- Docker Environment Variables
+
+---
+
 # 👨‍💻 Author
 
 Juan Carlos Reynoso Zuñiga
