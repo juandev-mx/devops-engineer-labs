@@ -158,6 +158,15 @@ This lab strengthened practical DevOps and containerization skills commonly used
 
 ---
 
+# 📚 Course
+
+KodeKloud - Docker for Absolute Beginners
+
+Lab:
+- Docker Images
+
+---
+
 ## 👨‍💻 Author
 
 **Juan Carlos Reynoso Zuñiga**
