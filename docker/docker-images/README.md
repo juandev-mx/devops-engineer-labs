@@ -165,6 +165,3 @@ This lab strengthened practical DevOps and containerization skills commonly used
 * Backend Developer
 * DevOps Enthusiast
 * Computer Systems Engineer
-
-[GitHub Profile](https://github.com/juandev-mx)
-
