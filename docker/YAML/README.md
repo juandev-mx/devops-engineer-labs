@@ -29,12 +29,6 @@ YAML is widely used in technologies such as:
 
 ---
 
-## 🛠️ Technologies Used
-
-![YAML](https://img.shields.io/badge/YAML-000000?style=for-the-badge\&logo=yaml\&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge\&logo=docker\&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge\&logo=linux\&logoColor=black)
----
 
 ## 📂 Project Structure
 
