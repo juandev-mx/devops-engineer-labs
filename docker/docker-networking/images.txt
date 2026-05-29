@@ -1,0 +1,11 @@
+REPOSITORY                      TAG       IMAGE ID       CREATED        SIZE
+mysql                           latest    f6b0ca07d79d   7 months ago   934MB
+postgres                        latest    a38f9f77ff88   7 months ago   456MB
+alpine                          latest    706db57fb206   7 months ago   8.32MB
+nginx                           alpine    5e7abcdd2021   7 months ago   52.7MB
+nginx                           latest    657fdcd1c365   7 months ago   152MB
+redis                           latest    466e5b1da2ef   7 months ago   137MB
+ubuntu                          latest    97bed23a3497   7 months ago   78.1MB
+mysql                           5.7       5107333e08a8   2 years ago    501MB
+kodekloud/simple-webapp-mysql   latest    129dd9f67367   7 years ago    96.6MB
+kodekloud/simple-webapp         latest    c6e3cd9aae36   7 years ago    84.8MB

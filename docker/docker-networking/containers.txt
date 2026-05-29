@@ -1,0 +1,5 @@
+CONTAINER ID   IMAGE                           COMMAND                  CREATED          STATUS                      PORTS                                         NAMES
+c007d9b90121   kodekloud/simple-webapp-mysql   "/bin/sh -c 'python …"   15 minutes ago   Up 15 minutes               0.0.0.0:38080->8080/tcp, :::38080->8080/tcp   webapp
+32090b026d31   mysql:5.7                       "docker-entrypoint.s…"   16 minutes ago   Up 16 minutes               3306/tcp, 33060/tcp                           mysql-db
+995d69d1895c   alpine                          "/bin/sh"                21 minutes ago   Exited (0) 21 minutes ago                                                 alpine-2
+6f518f804528   alpine                          "sleep 1000"             27 minutes ago   Exited (0) 10 minutes ago                                                 alpine-1

@@ -1,0 +1,45 @@
+[
+    {
+        "Name": "wp-mysql-network",
+        "Id": "67381143f40b31015aa719928ae203a7d12cd25ca691f7d36175d8c3dabab969",
+        "Created": "2026-05-29T03:46:14.065059624Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+                {
+                    "Subnet": "182.18.0.0/24",
+                    "Gateway": "182.18.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "32090b026d311ab45d817f864a053c98487b65399868737c14cb366b4fbda87a": {
+                "Name": "mysql-db",
+                "EndpointID": "db5e2a18f4fe6c19e4857fa3fd44f85f3460057bcfb4a0b408435f76a074228b",
+                "MacAddress": "02:42:b6:12:00:02",
+                "IPv4Address": "182.18.0.2/24",
+                "IPv6Address": ""
+            },
+            "c007d9b901212763bbee7422ffb98ef98a9604163e7c025403868b20ebdd5f32": {
+                "Name": "webapp",
+                "EndpointID": "2b8a5430ab8f42cafe9927dc6b53110285e683244d8064e09c76cca9b05a8100",
+                "MacAddress": "02:42:b6:12:00:03",
+                "IPv4Address": "182.18.0.3/24",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {}
+    }
+]

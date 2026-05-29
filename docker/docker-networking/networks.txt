@@ -1,0 +1,5 @@
+NETWORK ID     NAME               DRIVER    SCOPE
+d87865b13e74   bridge             bridge    local
+c9ae16eb7e15   host               host      local
+b90d714f40ac   none               null      local
+67381143f40b   wp-mysql-network   bridge    local
