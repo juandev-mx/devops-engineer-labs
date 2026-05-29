@@ -48,8 +48,8 @@ Example:
 
 ```bash id="t43q9p"
 REPOSITORY             TAG       IMAGE ID       CREATED       SIZE
-localhost:5000/nginx   latest    7aaca76c508f   6 days ago    192MB
-nginx                  latest    657fdcd1c365   7 months ago  152MB
+localhost:5000/nginx   latest    7aaca76c508f   6 days ago    161MB
+registry               2         26b2eb03618e   2 years ago   25.4MB
 ```
 
 ---
