@@ -1,4 +1,4 @@
-# Docker Command & Entrypoint Lab
+# 🐳 Docker Command & Entrypoint Lab
 
 ## 📌 Overview
 
