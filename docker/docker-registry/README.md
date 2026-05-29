@@ -1,4 +1,4 @@
-# 📦 Docker Registry
+# 🐳 Docker Registry
 
 This lab demonstrates the fundamentals of Docker Registry usage, image tagging, pushing images to a registry, and working with local/private Docker registries.
 
