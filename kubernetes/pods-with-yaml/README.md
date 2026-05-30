@@ -1,4 +1,4 @@
-# 🚀 Kubernetes Lab: Pods with YAML
+<img width="813" height="374" alt="image" src="https://github.com/user-attachments/assets/e41382bc-c424-482a-a9bd-40260c86b38c" /># 🚀 Kubernetes Lab: Pods with YAML
 
 ## 📖 Overview
 
@@ -18,8 +18,12 @@ This lab focuses on creating and managing Kubernetes Pods using YAML definition 
 
 ```text
 pods-with-yaml/
+├── screenshot/
 ├── README.md
+└── pod-status.yaml
+└── pods.yaml
 └── redis-definition.yaml
+
 ```
 
 ---
