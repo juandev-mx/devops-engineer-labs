@@ -1,0 +1,199 @@
+apiVersion: v1
+items:
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2026-05-30T23:29:44Z"
+    generation: 1
+    name: deployment-1
+    namespace: default
+    resourceVersion: "2615"
+    uid: 7fdd771a-f64e-492a-a512-770c1133c91c
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 2
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        name: busybox-pod
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        labels:
+          name: busybox-pod
+      spec:
+        containers:
+        - command:
+          - sh
+          - -c
+          - echo Hello Kubernetes! && sleep 3600
+          image: busybox
+          imagePullPolicy: Always
+          name: busybox-container
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 2
+    conditions:
+    - lastTransitionTime: "2026-05-30T23:29:46Z"
+      lastUpdateTime: "2026-05-30T23:29:46Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    - lastTransitionTime: "2026-05-30T23:29:44Z"
+      lastUpdateTime: "2026-05-30T23:29:46Z"
+      message: ReplicaSet "deployment-1-c4ffd6669" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    observedGeneration: 1
+    readyReplicas: 2
+    replicas: 2
+    terminatingReplicas: 0
+    updatedReplicas: 2
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"name":"frontend-deployment","namespace":"default"},"spec":{"replicas":4,"selector":{"matchLabels":{"name":"busybox-pod"}},"template":{"metadata":{"labels":{"name":"busybox-pod"}},"spec":{"containers":[{"command":["sh","-c","echo Hello Kubernetes! \u0026\u0026 sleep 3600"],"image":"busybox888","name":"busybox-container"}]}}}}
+    creationTimestamp: "2026-05-30T23:17:55Z"
+    generation: 1
+    name: frontend-deployment
+    namespace: default
+    resourceVersion: "2533"
+    uid: 18643ced-65d2-402e-a3f8-7d7ec56465ec
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 4
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        name: busybox-pod
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        labels:
+          name: busybox-pod
+      spec:
+        containers:
+        - command:
+          - sh
+          - -c
+          - echo Hello Kubernetes! && sleep 3600
+          image: busybox888
+          imagePullPolicy: Always
+          name: busybox-container
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    conditions:
+    - lastTransitionTime: "2026-05-30T23:17:55Z"
+      lastUpdateTime: "2026-05-30T23:17:55Z"
+      message: Deployment does not have minimum availability.
+      reason: MinimumReplicasUnavailable
+      status: "False"
+      type: Available
+    - lastTransitionTime: "2026-05-30T23:27:56Z"
+      lastUpdateTime: "2026-05-30T23:27:56Z"
+      message: ReplicaSet "frontend-deployment-685654657c" has timed out progressing.
+      reason: ProgressDeadlineExceeded
+      status: "False"
+      type: Progressing
+    observedGeneration: 1
+    replicas: 4
+    terminatingReplicas: 0
+    unavailableReplicas: 4
+    updatedReplicas: 4
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2026-05-30T23:37:17Z"
+    generation: 1
+    labels:
+      type: frontend
+    name: httpd-frontend
+    namespace: default
+    resourceVersion: "2873"
+    uid: 79188734-2aab-4751-a16b-1e154c777164
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 3
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        name: httpd-frontend
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        labels:
+          name: httpd-frontend
+      spec:
+        containers:
+        - image: httpd:2.4-alpine
+          imagePullPolicy: IfNotPresent
+          name: httpd-container
+          ports:
+          - containerPort: 80
+            protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 3
+    conditions:
+    - lastTransitionTime: "2026-05-30T23:37:19Z"
+      lastUpdateTime: "2026-05-30T23:37:19Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    - lastTransitionTime: "2026-05-30T23:37:17Z"
+      lastUpdateTime: "2026-05-30T23:37:19Z"
+      message: ReplicaSet "httpd-frontend-76769fc787" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    observedGeneration: 1
+    readyReplicas: 3
+    replicas: 3
+    terminatingReplicas: 0
+    updatedReplicas: 3
+kind: List
+metadata:
+  resourceVersion: ""
