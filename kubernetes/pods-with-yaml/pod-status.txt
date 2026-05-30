@@ -1,0 +1,6 @@
+NAME            READY   STATUS    RESTARTS        AGE   IP           NODE           NOMINATED NODE   READINESS GATES
+newpods-5zhst   1/1     Running   2 (3m43s ago)   37m   10.22.0.11   controlplane   <none>           <none>
+newpods-gstj4   1/1     Running   2 (3m43s ago)   37m   10.22.0.9    controlplane   <none>           <none>
+newpods-rwxrk   1/1     Running   2 (3m43s ago)   37m   10.22.0.10   controlplane   <none>           <none>
+nginx           1/1     Running   0               36m   10.22.0.12   controlplane   <none>           <none>
+redis           1/1     Running   3 (9m25s ago)   15m   10.22.0.14   controlplane   <none>           <none>
