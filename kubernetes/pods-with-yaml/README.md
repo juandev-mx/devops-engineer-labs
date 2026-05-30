@@ -1,4 +1,4 @@
-<img width="813" height="374" alt="image" src="https://github.com/user-attachments/assets/e41382bc-c424-482a-a9bd-40260c86b38c" /># 🚀 Kubernetes Lab: Pods with YAML
+# 🚀 Kubernetes Lab: Pods with YAML
 
 ## 📖 Overview
 
