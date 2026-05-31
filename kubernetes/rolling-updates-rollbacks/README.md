@@ -1,4 +1,4 @@
-# Kubernetes Rolling Updates and Rollbacks
+# 🚀 Kubernetes Rolling Updates and Rollbacks
 
 This lab demonstrates how Kubernetes Deployments handle application updates, version management, and rollback operations. The exercise focuses on performing rolling updates, monitoring rollout status, reviewing deployment revisions, and restoring previous versions when necessary.
 
