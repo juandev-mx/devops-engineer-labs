@@ -1,0 +1,64 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2026-05-31T01:32:19Z"
+    labels:
+      component: apiserver
+      provider: kubernetes
+    name: kubernetes
+    namespace: default
+    resourceVersion: "200"
+    uid: ef8e600b-29e3-4c5e-a383-1fd89004cf97
+  spec:
+    clusterIP: 10.43.0.1
+    clusterIPs:
+    - 10.43.0.1
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https
+      port: 443
+      protocol: TCP
+      targetPort: 6443
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"webapp-service","namespace":"default"},"spec":{"ports":[{"nodePort":30080,"port":8080,"targetPort":8080}],"selector":{"name":"simple-webapp"},"type":"NodePort"}}
+    creationTimestamp: "2026-05-31T02:50:49Z"
+    name: webapp-service
+    namespace: default
+    resourceVersion: "2289"
+    uid: c932c5ed-430c-4daf-a72e-f5621951ef7c
+  spec:
+    clusterIP: 10.43.98.217
+    clusterIPs:
+    - 10.43.98.217
+    externalTrafficPolicy: Cluster
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - nodePort: 30080
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+    selector:
+      name: simple-webapp
+    sessionAffinity: None
+    type: NodePort
+  status:
+    loadBalancer: {}
+kind: List
+metadata:
+  resourceVersion: ""
