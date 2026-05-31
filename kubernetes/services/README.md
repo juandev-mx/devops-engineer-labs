@@ -1,4 +1,4 @@
-# Kubernetes Services
+# 🚀 Kubernetes Services
 
 This lab demonstrates how Kubernetes Services provide network access to applications running inside a cluster. The exercise focuses on creating a NodePort Service, exposing application Pods, and verifying connectivity between Kubernetes resources.
 
