@@ -1,0 +1,2 @@
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS      IMAGES                      SELECTOR
+frontend   4/4     4            4           57m   simple-webapp   kodekloud/webapp-color:v3   name=webapp
