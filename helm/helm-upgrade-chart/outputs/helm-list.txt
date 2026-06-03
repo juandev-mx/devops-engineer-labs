@@ -1,0 +1,2 @@
+NAME            NAMESPACE   REVISION    STATUS      CHART         APP VERSION
+dazzling-web    default     5           deployed    nginx-12.0.4  1.22.0
