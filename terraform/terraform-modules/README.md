@@ -12,7 +12,7 @@ Terraform project demonstrating the use of the official AWS IAM module to create
 ## Project Structure
 
 ```text
-.
+├── screenshot/
 ├── provider.tf
 ├── variables.tf
 ├── main.tf
@@ -24,8 +24,24 @@ Terraform project demonstrating the use of the official AWS IAM module to create
 ### Provider
 
 ```hcl
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "5.11.0"
+    }
+  }
+}
+
 provider "aws" {
-  region = var.region
+  region                      = var.region
+  skip_credentials_validation = true
+  skip_requesting_account_id  = true
+  endpoints {
+    iam = "http://aws:4566"
+    ec2 = "http://aws:4566"
+    s3 = "http://aws:4566"
+  }
 }
 ```
 
@@ -36,7 +52,9 @@ module "iam_iam-user" {
   source  = "terraform-aws-modules/iam/aws//modules/iam-user"
   version = "5.28.0"
 
-  name = "max"
+  name                          = "max"
+  create_iam_user_login_profile = false
+  create_iam_access_key         = false
 }
 ```
 
