@@ -74,6 +74,10 @@ terraform apply
 - Terraform providers and variables
 - LocalStack integration
 
-## Author
 
-Juan Carlos Reynoso Zuñiga
+
+# Course Information
+
+Course: Terraform for Beginners
+
+Lab: Terraform Modules – AWS IAM User Module
