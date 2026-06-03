@@ -1,13 +1,5 @@
 # Terraform Workspaces
 
-## Course Information
-
-**Learning Path:** KodeKloud DevOps Engineer Program
-
-**Course:** Terraform for Beginners
-
-**Lab:** Terraform Workspaces
-
 ## Overview
 
 This lab demonstrates how Terraform Workspaces can be used to manage multiple environments from a single Terraform configuration.
