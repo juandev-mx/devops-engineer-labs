@@ -100,4 +100,4 @@ module "payroll_app" {
 
 Course: Terraform for Beginners
 
-Lab: Terraform Modules – AWS IAM User Module
+Lab: terraform Workspaces
