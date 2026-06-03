@@ -1,0 +1,9 @@
+NAME: dazzling-web
+
+STATUS: deployed
+
+REVISION: 5
+
+CHART VERSION: nginx-12.0.4
+
+APP VERSION: 1.22.0
