@@ -10,31 +10,27 @@
 
 ## Overview
 
-This lab demonstrates how Terraform Workspaces can be used to manage multiple environments using a single Terraform configuration.
+This lab demonstrates how Terraform Workspaces can be used to manage multiple environments from a single Terraform configuration.
 
-Different workspaces represent separate payroll environments:
-
-* us-payroll
-* uk-payroll
-* india-payroll
-
-Each workspace uses its own region and AMI values through Terraform maps and the `terraform.workspace` built-in variable.
+Different environments are configured through workspace-specific values using the `terraform.workspace` expression and Terraform maps.
 
 ## Technologies Used
 
-* Terraform
-* AWS Provider
-* LocalStack
-* Terraform Workspaces
-* Infrastructure as Code (IaC)
+- Terraform
+- AWS Provider
+- LocalStack
+- AWS EC2
+- AWS S3
+- AWS DynamoDB
 
 ## Project Structure
 
 ```text
 .
-├── main.tf
+├── screenshot/
 ├── provider.tf
 ├── variables.tf
+├── main.tf
 └── README.md
 ```
 
@@ -43,31 +39,13 @@ Each workspace uses its own region and AMI values through Terraform maps and the
 ### Available Workspaces
 
 ```bash
-terraform workspace list
-```
-
-Output:
-
-```text
 default
-india-payroll
-uk-payroll
 us-payroll
+uk-payroll
+india-payroll
 ```
 
-### Switch Workspace
-
-```bash
-terraform workspace select us-payroll
-```
-
-### Create Workspace
-
-```bash
-terraform workspace new payroll-environment
-```
-
-## Main Configuration
+### Main Configuration
 
 ```hcl
 module "payroll_app" {
@@ -78,23 +56,81 @@ module "payroll_app" {
 }
 ```
 
+## Variables
+
+The project uses maps to define environment-specific values.
+
+### Regions
+
+| Workspace | Region |
+|------------|----------|
+| us-payroll | us-east-1 |
+| uk-payroll | eu-west-2 |
+| india-payroll | ap-south-1 |
+
+## Managed Resources
+
+Terraform provisions the following resources through the module:
+
+- EC2 Instance
+- DynamoDB Table
+- S3 Bucket
+
+## Commands
+
+### Initialize Terraform
+
+```bash
+terraform init
+```
+
+### List Workspaces
+
+```bash
+terraform workspace list
+```
+
+### Create Workspace
+
+```bash
+terraform workspace new us-payroll
+```
+
+### Switch Workspace
+
+```bash
+terraform workspace select india-payroll
+```
+
+### Generate Execution Plan
+
+```bash
+terraform plan
+```
+
+### Apply Changes
+
+```bash
+terraform apply
+```
+
 ## Learning Objectives
 
-* Understand Terraform Workspaces
-* Manage multiple environments with a single configuration
-* Use workspace-specific variables
-* Deploy infrastructure based on active workspace
-* Organize Infrastructure as Code efficiently
+- Understand Terraform Workspaces
+- Manage multiple environments
+- Use terraform.workspace
+- Configure workspace-specific variables
+- Reuse Terraform modules
+- Apply Infrastructure as Code principles
 
 ## Skills Demonstrated
 
-* Terraform
-* Terraform Workspaces
-* AWS Infrastructure
-* Variable Maps
-* Environment Isolation
-* Infrastructure as Code (IaC)
-
+- Terraform
+- Terraform Workspaces
+- AWS Infrastructure
+- Infrastructure as Code (IaC)
+- Modular Terraform Design
+- Environment Isolation
 
 # Course Information
 
