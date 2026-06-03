@@ -26,7 +26,6 @@ Different environments are configured through workspace-specific values using th
 ## Project Structure
 
 ```text
-.
 ├── screenshot/
 ├── provider.tf
 ├── variables.tf
