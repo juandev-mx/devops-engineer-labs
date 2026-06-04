@@ -16,6 +16,16 @@ The lab uses a custom chart named **webapp-color** that deploys a web applicatio
 
 ---
 
+## Course Information
+
+**Course:** Helm for Beginners  
+**Platform:** KodeKloud
+
+**Lab:** Conditionals, With Blocks and Ranges
+
+---
+
+
 ## Technologies Used
 
 * Helm
