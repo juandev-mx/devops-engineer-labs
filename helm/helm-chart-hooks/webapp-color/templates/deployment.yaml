@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+  {{- include "labels" . | indent 2 }}
+    app: webapp-color
+  name: {{ .Values.name }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+    {{- include "labels" . | indent 4 }}
+      app: webapp-color
+  template:
+    metadata:
+      labels:
+      {{- include "labels" . | indent 6 }}
+        app: webapp-color
+    spec:
+      containers:
+      - image: kodekloud/webapp-color
+        name: webapp-color
+        envFrom:
+         - configMapRef:
+                name: {{ .Values.configMap.name }}
