@@ -15,6 +15,16 @@ These Jobs execute automatically when a Helm release is installed or upgraded.
 
 ---
 
+## Course Information
+
+**Course:** Helm for Beginners  
+**Platform:** KodeKloud
+
+**Lab:** Chart Hooks
+
+---
+
+
 ## Technologies Used
 
 * Helm
