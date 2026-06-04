@@ -1,7 +1,0 @@
-Started by upstream project "[8mha:////4PxSm54WDKK1hL17Rgm4cwayhi8JRzK/qVxCv1Zg0A/BAAAAnh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYR/az8JP3E4uTMTN2S1OISXRAXAO+nPKXJAAAA[0mascii-test-job" build number [8mha:////4P2ZCGF7YUAhcguvPMZZMjmvEIeLCzNGi+ok4LbpQeGPAAAAnh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBlH9rPwk/cTi5MxM3ZLU4hJdENcQACYnv0bKAAAA[0m1
-originally caused by:
- Started by user [8mha:////4KK9zo3BcSwfqgpVZ2nPquM3YVILgSua6u2WsyAxGWAQAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
-Running as SYSTEM
-Building in workspace /var/lib/jenkins/workspace/ascii-build-job
-[ascii-build-job] $ /bin/bash /tmp/jenkins11485575030372097352.sh
-{"slip": { "id": 176, "advice": "Good things come to those who wait."}}Finished: SUCCESS
