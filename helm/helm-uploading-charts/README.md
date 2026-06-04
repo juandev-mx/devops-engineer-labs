@@ -10,6 +10,17 @@ During this lab, the `webapp-color` chart was packaged successfully, generating 
 
 ---
 
+---
+
+## Course Information
+
+**Course:** Helm for Beginners  
+**Platform:** KodeKloud
+
+**Lab:** Uploading Charts
+
+---
+
 ## Technologies Used
 
 * Helm
