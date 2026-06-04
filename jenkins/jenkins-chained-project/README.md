@@ -1,4 +1,4 @@
-# 🔗 Jenkins Chained Project - CI/CD Automation Lab
+#  Jenkins Chained Project - CI/CD Automation Lab
 
 CI/CD automation laboratory developed during the **KodeKloud - Jenkins for Beginners** course.
 
@@ -6,7 +6,7 @@ This project demonstrates how to create and configure **chained Jenkins jobs** t
 
 ---
 
-# 📚 Course Information
+#  Course Information
 
 
 
@@ -21,7 +21,7 @@ This project demonstrates how to create and configure **chained Jenkins jobs** t
 
 ---
 
-# 🧠 Project Overview
+#  Project Overview
 
 The purpose of this laboratory was to understand how Jenkins jobs can trigger other jobs automatically as part of a CI/CD workflow.
 
@@ -33,7 +33,7 @@ This workflow represents the foundational concepts behind real-world Continuous 
 
 ---
 
-# 🚀 Objectives
+#  Objectives
 
 The main objectives of this lab were:
 - Install and configure Jenkins jobs
@@ -46,7 +46,7 @@ The main objectives of this lab were:
 
 ---
 
-# 🛠️ Technologies Used
+# ️ Technologies Used
 
 
 
@@ -62,7 +62,7 @@ The main objectives of this lab were:
 
 ---
 
-# 📂 Project Structure
+#  Project Structure
 
 ```text
 jenkins-chained-project/
@@ -81,9 +81,9 @@ jenkins-chained-project/
 
 ---
 
-# ⚙️ Jenkins Chained Workflow
+# ️ Jenkins Chained Workflow
 
-## 🏗️ Build Job — `ascii-build-job`
+## ️ Build Job — `ascii-build-job`
 
 The first Jenkins job is responsible for:
 - Executing shell commands
@@ -102,7 +102,7 @@ echo "================================="
 echo "Build completed successfully!"
 ```
 
-## 🧪 Test Job — `ascii-test-job`
+##  Test Job — `ascii-test-job`
 
 The second Jenkins job runs automatically after the build job succeeds.
 
@@ -124,7 +124,7 @@ echo "All tests passed successfully!"
 
 ---
 
-# 🔄 Jenkins Job Chaining
+#  Jenkins Job Chaining
 
 The project uses Jenkins Freestyle Project configuration to create a chained execution flow.
 
@@ -145,7 +145,7 @@ This demonstrates:
 
 ---
 
-# 🚀 Running the Jobs
+#  Running the Jobs
 
 ### 1️⃣ Start Jenkins
 ```bash
@@ -163,7 +163,7 @@ From the Jenkins dashboard:
 
 ---
 
-# 📊 Skills Demonstrated
+#  Skills Demonstrated
 
 This project demonstrates practical experience with:
 - Jenkins Administration
@@ -178,7 +178,7 @@ This project demonstrates practical experience with:
 
 ---
 
-# 🧪 Testing and Validation
+#  Testing and Validation
 
 The workflow was validated by:
 - Running chained Jenkins jobs
@@ -194,7 +194,7 @@ All tests passed successfully!
 
 ---
 
-# 📈 Learning Outcome
+#  Learning Outcome
 
 Through this project, I gained hands-on experience configuring Jenkins automation workflows and understanding how CI/CD systems coordinate multiple jobs in real DevOps environments.
 
@@ -207,7 +207,7 @@ This lab reinforced foundational concepts such as:
 
 ---
 
-# 🔐 Jenkins Configuration Files
+#  Jenkins Configuration Files
 
 The repository includes real Jenkins job configuration files exported directly from the Jenkins server under:
 `/var/lib/jenkins/jobs/`
@@ -216,7 +216,7 @@ This provides practical exposure to Jenkins internal job structure and configura
 
 ---
 
-# 🔗 Repository
+#  Repository
 
 ```bash
 git clone https://github.com/juandev-mx/devops-engineer-labs.git
@@ -224,14 +224,14 @@ git clone https://github.com/juandev-mx/devops-engineer-labs.git
 
 ---
 
-# 👨‍💻 Author
+# ‍ Author
 
 **Juan Carlos Reynoso Zúñiga**
 *Software Engineer | Backend & DevOps Enthusiast*
 
 ---
 
-# 📚 Course Reference
+#  Course Reference
 
 - **Platform:** KodeKloud
 - **Course:** Jenkins for Beginners

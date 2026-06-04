@@ -1,4 +1,4 @@
-# 🔐 Jenkins Pipeline and Basic Security
+#  Jenkins Pipeline and Basic Security
 
 Jenkins laboratory project completed during the KodeKloud Jenkins for Beginners course.
 
@@ -6,7 +6,7 @@ This lab focuses on building a Jenkins Pipeline integrated with a Java applicati
 
 ---
 
-# 🚀 Project Overview
+#  Project Overview
 
 The objective of this laboratory was to:
 
@@ -20,7 +20,7 @@ The objective of this laboratory was to:
 
 ---
 
-# 🛠️ Technologies Used
+# ️ Technologies Used
 
 | Area | Technology |
 |------|-------------|
@@ -35,9 +35,9 @@ The objective of this laboratory was to:
 ---
 
 
-# ⚙️ Lab Features
+# ️ Lab Features
 
-## 🔄 Jenkins Pipeline Automation
+##  Jenkins Pipeline Automation
 
 The Jenkins Pipeline automates the following tasks:
 
@@ -50,7 +50,7 @@ The Jenkins Pipeline automates the following tasks:
 
 ---
 
-## ☕ Java Application Integration
+##  Java Application Integration
 
 The project includes a Java application integrated into Jenkins for automated builds and testing.
 
@@ -63,7 +63,7 @@ Pipeline execution validates:
 
 ---
 
-## 🔐 Jenkins Security Concepts
+##  Jenkins Security Concepts
 
 This laboratory also covered basic Jenkins security configuration including:
 
@@ -75,7 +75,7 @@ This laboratory also covered basic Jenkins security configuration including:
 
 ---
 
-# 🧪 Jenkins Pipeline Workflow
+#  Jenkins Pipeline Workflow
 
 The pipeline performs multiple automated stages such as:
 
@@ -101,7 +101,7 @@ pipeline {
 
 ---
 
-# 📦 Jenkins Job Configuration
+#  Jenkins Job Configuration
 
 The Jenkins job configuration files were exported directly from the Jenkins server:
 
@@ -118,13 +118,13 @@ This includes:
 
 ---
 
-# 🖥️ Jenkins Installation Environment
+# ️ Jenkins Installation Environment
 
 The lab was executed in a Linux environment using Jenkins with Java and Maven installed.
 
 ---
 
-# ☕ Java Installation
+#  Java Installation
 
 Jenkins requires Java to run correctly.
 
@@ -151,7 +151,7 @@ OpenJDK 64-Bit Server VM
 
 ---
 
-# ⚠️ Important Jenkins Java Note
+# ️ Important Jenkins Java Note
 
 On Debian/Ubuntu systems, Java should be installed before Jenkins.
 
@@ -165,7 +165,7 @@ Installing Java beforehand ensures Jenkins initializes correctly.
 
 ---
 
-# 🚀 Jenkins LTS Installation
+#  Jenkins LTS Installation
 
 Add Jenkins repository and install Jenkins Long-Term Support version:
 
@@ -209,7 +209,7 @@ sudo systemctl status jenkins
 
 ---
 
-# 🌐 Access Jenkins
+#  Access Jenkins
 
 By default Jenkins runs on:
 
@@ -225,7 +225,7 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 ---
 
-# 🔍 Skills Demonstrated
+#  Skills Demonstrated
 
 This laboratory demonstrates practical skills in:
 
@@ -242,7 +242,7 @@ This laboratory demonstrates practical skills in:
 
 ---
 
-# 📈 Learning Outcome
+#  Learning Outcome
 
 This lab reinforced practical DevOps concepts related to:
 
@@ -255,7 +255,7 @@ This lab reinforced practical DevOps concepts related to:
 
 ---
 
-# 📚 Course
+#  Course
 
 KodeKloud - Jenkins for Beginners
 
@@ -264,7 +264,7 @@ Lab:
 
 ---
 
-# 👨‍💻 Author
+# ‍ Author
 
 Juan Carlos Reynoso Zuñiga
 

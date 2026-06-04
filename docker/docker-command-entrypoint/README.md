@@ -1,6 +1,6 @@
-# 🐳 Docker Command & Entrypoint Lab
+#  Docker Command & Entrypoint Lab
 
-## 📌 Overview
+##  Overview
 
 This laboratory focuses on understanding how Docker containers execute commands using the `CMD` and `ENTRYPOINT` instructions inside Dockerfiles.
 
@@ -13,7 +13,7 @@ The lab includes inspection of Docker images and execution behavior during conta
 
 ---
 
-# 📂 Project Structure
+#  Project Structure
 
 ```bash
 docker-command-entrypoint/
@@ -26,7 +26,7 @@ docker-command-entrypoint/
 
 ---
 
-# 🐳 Dockerfile Used
+#  Dockerfile Used
 
 ```dockerfile
 FROM python:2.6-alpine
@@ -47,7 +47,7 @@ CMD ["python", "app.py"]
 
 ---
 
-# ⚙️ Concepts Practiced
+# ️ Concepts Practiced
 
 ## CMD
 
@@ -95,7 +95,7 @@ sleep 1000
 
 ---
 
-# 🔍 Laboratory Tasks
+#  Laboratory Tasks
 
 ## Inspect Docker Images
 
@@ -121,7 +121,7 @@ docker inspect ubuntu
 
 ---
 
-# 🚀 Run Ubuntu Container with Sleep Command
+#  Run Ubuntu Container with Sleep Command
 
 Run Ubuntu container in detached mode:
 
@@ -137,7 +137,7 @@ docker ps
 
 ---
 
-# 📖 Key Learnings
+#  Key Learnings
 
 * Difference between `CMD` and `ENTRYPOINT`
 * How Docker containers execute startup commands
@@ -147,7 +147,7 @@ docker ps
 
 ---
 
-# 🛠️ Technologies Used
+# ️ Technologies Used
 
 * Docker
 * Linux
@@ -156,7 +156,7 @@ docker ps
 
 ---
 
-# 📚 Commands Used During the Lab
+#  Commands Used During the Lab
 
 ```bash
 docker images
@@ -174,13 +174,13 @@ docker run -d ubuntu sleep 1000
 
 ---
 
-# ✅ Result
+#  Result
 
 Successfully analyzed Docker image startup behavior and practiced container execution using `CMD` and `ENTRYPOINT` instructions.
 
 ---
 
-# 📚 Course
+#  Course
 
 KodeKloud - Docker for Absolute Beginners
 
@@ -189,7 +189,7 @@ Lab:
 
 ---
 
-# 👨‍💻 Author
+# ‍ Author
 
 Juan Carlos Reynoso Zuñiga
 

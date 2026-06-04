@@ -1,10 +1,10 @@
-# 🐳 Docker Networking
+#  Docker Networking
 
 This lab demonstrates the fundamentals of Docker Networking using custom bridge networks, container communication, and multi-container connectivity.
 
 ---
 
-# 📌 Lab Overview
+#  Lab Overview
 
 In this lab, Docker networking concepts were explored by creating and inspecting Docker networks, connecting containers, and verifying communication between application and database services.
 
@@ -12,7 +12,7 @@ The lab used a custom bridge network to allow communication between a MySQL data
 
 ---
 
-# 🛠 Technologies Used
+#  Technologies Used
 
 * Docker
 * Docker Networking
@@ -22,7 +22,7 @@ The lab used a custom bridge network to allow communication between a MySQL data
 
 ---
 
-# 📂 Project Structure
+#  Project Structure
 
 ```bash
 docker/docker-networking/
@@ -36,7 +36,7 @@ docker/docker-networking/
 
 ---
 
-# 🌐 Docker Networks
+#  Docker Networks
 
 The following Docker networks were available during the lab:
 
@@ -56,7 +56,7 @@ b90d714f40ac   none               null      local
 
 ---
 
-# 🐳 Containers Used
+#  Containers Used
 
 ## MySQL Database Container
 
@@ -81,7 +81,7 @@ kodekloud/simple-webapp-mysql
 
 ---
 
-# 🔍 Network Inspection
+#  Network Inspection
 
 The custom bridge network was inspected using:
 
@@ -98,7 +98,7 @@ This verified:
 
 ---
 
-# 📦 Docker Images Used
+#  Docker Images Used
 
 The following images were used during the lab:
 
@@ -108,7 +108,7 @@ The following images were used during the lab:
 
 ---
 
-# 🚀 Concepts Learned
+#  Concepts Learned
 
 * Docker default networks
 * Bridge networking
@@ -120,7 +120,7 @@ The following images were used during the lab:
 
 ---
 
-# 📁 Saved Lab Evidence
+#  Saved Lab Evidence
 
 The following files were generated as part of the lab documentation:
 
@@ -133,7 +133,7 @@ The following files were generated as part of the lab documentation:
 
 ---
 
-# 📚 Course
+#  Course
 
 KodeKloud - Docker for Absolute Beginners
 
@@ -143,7 +143,7 @@ Lab:
 
 ---
 
-# 👨‍💻 Author
+# ‍ Author
 
 Juan Carlos Reynoso Zuñiga
 

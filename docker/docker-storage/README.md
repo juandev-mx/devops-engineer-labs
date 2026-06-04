@@ -1,10 +1,10 @@
-# 🐳 Docker Storage
+#  Docker Storage
 
 This lab focuses on Docker storage concepts, including Docker Volumes, persistent storage, and data management inside containers using MySQL and Alpine containers.
 
 ---
 
-# 📌 Lab Objectives
+#  Lab Objectives
 
 * Understand Docker storage concepts
 * Create and inspect Docker volumes
@@ -14,7 +14,7 @@ This lab focuses on Docker storage concepts, including Docker Volumes, persisten
 
 ---
 
-# 📂 Project Structure
+#  Project Structure
 
 ```bash
 docker-storage/
@@ -25,7 +25,7 @@ docker-storage/
 
 ---
 
-# 🚀 Docker Volumes
+#  Docker Volumes
 
 List all Docker volumes:
 
@@ -42,7 +42,7 @@ local     beddae12bf3c85d11fd490cb8bba60317105b75e549a053c0682b6edc85285f5
 
 ---
 
-# 🐬 Run MySQL Container with Persistent Storage
+#  Run MySQL Container with Persistent Storage
 
 Run a MySQL container:
 
@@ -67,7 +67,7 @@ Explanation:
 
 ---
 
-# 📦 Verify Running Containers
+#  Verify Running Containers
 
 ```bash
 docker ps
@@ -82,7 +82,7 @@ bb006ca4a447   mysql     "docker-entrypoint.s…"   Up 9 min     mysql-db
 
 ---
 
-# 🧠 Docker Storage Concepts
+#  Docker Storage Concepts
 
 ## Container Layer
 
@@ -105,7 +105,7 @@ Benefits:
 
 ---
 
-# 🐧 Alpine Containers
+#  Alpine Containers
 
 The lab also used lightweight Alpine Linux containers.
 
@@ -130,7 +130,7 @@ CONTAINER ID   IMAGE     COMMAND      STATUS
 
 ---
 
-# 🔍 Inspect Docker Volumes
+#  Inspect Docker Volumes
 
 Inspect a volume:
 
@@ -147,7 +147,7 @@ This shows:
 
 ---
 
-# 🛠️ Useful Commands
+# ️ Useful Commands
 
 ## List Volumes
 
@@ -181,7 +181,7 @@ docker rm mysql-db
 
 ---
 
-# 📚 Concepts Learned
+#  Concepts Learned
 
 * Docker persistent storage
 * Docker volumes
@@ -192,7 +192,7 @@ docker rm mysql-db
 
 ---
 
-# 📖 Technologies Used
+#  Technologies Used
 
 * Docker
 * MySQL
@@ -200,7 +200,7 @@ docker rm mysql-db
 
 ---
 
-# 📚 Course
+#  Course
 
 KodeKloud - Docker for Absolute Beginners
 
@@ -210,7 +210,7 @@ Lab:
 
 ---
 
-# 👨‍💻 Author
+# ‍ Author
 
 Juan Carlos Reynoso Zúñiga
 

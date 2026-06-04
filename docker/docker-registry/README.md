@@ -1,10 +1,10 @@
-# 🐳 Docker Registry
+#  Docker Registry
 
 This lab demonstrates the fundamentals of Docker Registry usage, image tagging, pushing images to a registry, and working with local/private Docker registries.
 
 ---
 
-# 📌 Lab Overview
+#  Lab Overview
 
 In this lab, Docker Registry concepts were explored by working with Docker images, tagging images, and interacting with registries.
 
@@ -12,7 +12,7 @@ The lab also covered how Docker stores and retrieves container images from regis
 
 ---
 
-# 🛠 Technologies Used
+#  Technologies Used
 
 * Docker
 * Docker Registry
@@ -22,7 +22,7 @@ The lab also covered how Docker stores and retrieves container images from regis
 
 ---
 
-# 📂 Project Structure
+#  Project Structure
 
 ```bash id="hgsrm4"
 docker/docker-registry/
@@ -36,7 +36,7 @@ docker/docker-registry/
 
 ---
 
-# 🐳 Docker Images
+#  Docker Images
 
 List all Docker images:
 
@@ -54,7 +54,7 @@ registry               2         26b2eb03618e   2 years ago   25.4MB
 
 ---
 
-# 🏷 Tagging Docker Images
+#  Tagging Docker Images
 
 Tagging an image for a local registry:
 
@@ -66,7 +66,7 @@ This creates a new image reference pointing to the local Docker registry.
 
 ---
 
-# 🚀 Running a Local Docker Registry
+#  Running a Local Docker Registry
 
 Run a local registry container:
 
@@ -82,7 +82,7 @@ docker ps
 
 ---
 
-# 📤 Push Image to Local Registry
+#  Push Image to Local Registry
 
 Push the tagged image:
 
@@ -94,7 +94,7 @@ This uploads the image layers into the local Docker Registry.
 
 ---
 
-# 📥 Pull Image from Registry
+#  Pull Image from Registry
 
 Pull image from local registry:
 
@@ -104,7 +104,7 @@ docker pull localhost:5000/nginx
 
 ---
 
-# 🌐 Docker Registry Concepts Learned
+#  Docker Registry Concepts Learned
 
 * Docker Registry fundamentals
 * Docker Hub usage
@@ -116,7 +116,7 @@ docker pull localhost:5000/nginx
 
 ---
 
-# 📁 Saved Lab Evidence
+#  Saved Lab Evidence
 
 The following files were generated during the lab:
 
@@ -129,7 +129,7 @@ The following files were generated during the lab:
 
 ---
 
-# 🔍 Useful Docker Commands
+#  Useful Docker Commands
 
 ## List images
 
@@ -157,7 +157,7 @@ docker volume ls
 
 ---
 
-# 📚 Course
+#  Course
 
 KodeKloud - Docker for Absolute Beginners
 
@@ -167,7 +167,7 @@ Lab:
 
 ---
 
-# 👨‍💻 Author
+# ‍ Author
 
 Juan Carlos Reynoso Zuñiga
 

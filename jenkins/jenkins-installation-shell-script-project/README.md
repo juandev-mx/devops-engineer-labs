@@ -1,4 +1,4 @@
-# 🏗️ Jenkins Installation and Shell Script Project
+# ️ Jenkins Installation and Shell Script Project
 
 Automation and CI/CD laboratory project developed during the **KodeKloud – Jenkins for Beginners** course.
 
@@ -6,7 +6,7 @@ This project demonstrates the installation and configuration of Jenkins on Linux
 
 ---
 
-# 📚 Course Information
+#  Course Information
 
 
 
@@ -20,7 +20,7 @@ This project demonstrates the installation and configuration of Jenkins on Linux
 
 ---
 
-# 🧠 Project Overview
+#  Project Overview
 
 The objective of this lab was to:
 
@@ -35,7 +35,7 @@ This project simulates a real-world DevOps workflow where Jenkins is used to aut
 
 ---
 
-# 🛠️ Technologies Used
+# ️ Technologies Used
 
 
 
@@ -50,9 +50,9 @@ This project simulates a real-world DevOps workflow where Jenkins is used to aut
 
 ---
 
-# ⚙️ Jenkins Installation
+# ️ Jenkins Installation
 
-## ☕ Installation of Java
+##  Installation of Java
 
 Jenkins requires Java to run, yet not all Linux distributions include Java by default. Additionally, not all Java versions are compatible with Jenkins.
 
@@ -80,9 +80,9 @@ OpenJDK Runtime Environment (build 21.0.8+9-Debian-1)
 OpenJDK 64-Bit Server VM (build 21.0.8+9-Debian-1, mixed mode, sharing)
 ```
 
-> ⚠️ **Note:** On Debian/Ubuntu systems, Java should be installed before Jenkins to avoid service startup issues such as: `jenkins: failed to find a valid Java installation`. Installing Java first ensures Jenkins starts correctly.
+> ️ **Note:** On Debian/Ubuntu systems, Java should be installed before Jenkins to avoid service startup issues such as: `jenkins: failed to find a valid Java installation`. Installing Java first ensures Jenkins starts correctly.
 
-## 🔧 Jenkins LTS Installation
+##  Jenkins LTS Installation
 
 This project uses the Jenkins Long-Term Support (LTS) version.
 
@@ -122,7 +122,7 @@ sudo systemctl enable jenkins
 sudo systemctl status jenkins
 ```
 
-## 🌐 Access Jenkins
+##  Access Jenkins
 
 After installation, Jenkins becomes available on:
 [http://localhost:8080](http://localhost:8080)
@@ -134,7 +134,7 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 ---
 
-# 📂 Project Structure
+#  Project Structure
 
 ```text
 jenkins-installation-shell-script-project/
@@ -147,9 +147,9 @@ jenkins-installation-shell-script-project/
 
 ---
 
-# 🚀 Jenkins Freestyle Job
+#  Jenkins Freestyle Job
 
-## 🖥️ Generate ASCII Art Job
+## ️ Generate ASCII Art Job
 
 A Jenkins Freestyle Project was created to automate shell script execution.
 
@@ -159,7 +159,7 @@ A Jenkins Freestyle Project was created to automate shell script execution.
 - Simulates build automation workflow
 - Generates terminal-based ASCII output
 
-### 📋 Example Shell Script
+###  Example Shell Script
 ```bash
 #!/bin/bash
 
@@ -171,7 +171,7 @@ echo " Build executed successfully!"
 
 ---
 
-# 🔄 CI/CD Concepts Practiced
+#  CI/CD Concepts Practiced
 
 This lab helped reinforce:
 - Continuous Integration concepts
@@ -184,7 +184,7 @@ This lab helped reinforce:
 
 ---
 
-# 📊 Skills Demonstrated
+#  Skills Demonstrated
 
 This project demonstrates practical experience with:
 - Jenkins Installation
@@ -198,7 +198,7 @@ This project demonstrates practical experience with:
 
 ---
 
-# 🧪 Testing
+#  Testing
 
 The Jenkins service and automation job were validated using:
 ```bash
@@ -208,13 +208,13 @@ and verified through manual build execution on the Jenkins dashboard.
 
 ---
 
-# 📈 Learning Outcome
+#  Learning Outcome
 
 Through this project, I gained hands-on experience installing Jenkins, configuring Java environments, creating automation jobs, and understanding foundational CI/CD workflows used in DevOps environments.
 
 ---
 
-# 🔗 Repository
+#  Repository
 
 ```bash
 git clone https://github.com/juandev-mx/devops-engineer-labs.git
@@ -222,14 +222,14 @@ git clone https://github.com/juandev-mx/devops-engineer-labs.git
 
 ---
 
-# 👨‍💻 Author
+# ‍ Author
 
 **Juan Carlos Reynoso Zúñiga**
 *Software Engineer | Backend & DevOps Enthusiast*
 
 ---
 
-# 📚 Course Reference
+#  Course Reference
 
 - **Platform:** KodeKloud
 - **Course:** Jenkins for Beginners

@@ -1,4 +1,4 @@
-# 🛒 E-Commerce Automation Project - Shell Scripting
+#  E-Commerce Automation Project - Shell Scripting
 
 Automation project developed during the **KodeKloud - Shell Scripts for Beginners** course.
 
@@ -7,7 +7,7 @@ The lab simulates real-world DevOps and system administration tasks including we
 
 ---
 
-# 🚀 Project Objectives
+#  Project Objectives
 
 The primary objective of this project is to automate common operational tasks required during the deployment of a Linux-based e-commerce application.
 
@@ -25,7 +25,7 @@ The project includes:
 
 ---
 
-# 🛠️ Technologies Used
+# ️ Technologies Used
 
 
 | Area | Technology |
@@ -41,9 +41,9 @@ The project includes:
 
 ---
 
-# ⚙️ Deployment Workflow
+# ️ Deployment Workflow
 
-## 🔥 Firewall Configuration
+##  Firewall Configuration
 
 The project configures the Linux firewall using Firewalld to allow HTTP and database communication.
 
@@ -60,7 +60,7 @@ sudo firewall-cmd --permanent --zone=public --add-port=80/tcp
 sudo firewall-cmd --reload
 ```
 
-## 🗄️ Database Deployment and Configuration
+## ️ Database Deployment and Configuration
 
 MariaDB is used as the backend database for storing product inventory information.
 
@@ -91,7 +91,7 @@ VALUES
 ("VR","300","c-3.png");
 ```
 
-## 🌐 Web Server Configuration
+##  Web Server Configuration
 
 The application uses Apache HTTP Server with PHP support.
 
@@ -112,7 +112,7 @@ sudo yum install -y httpd php php-mysqlnd
 sudo sed -i 's/index.html/index.php/g' /etc/httpd/conf/httpd.conf
 ```
 
-## 🔐 Environment Variable Management
+##  Environment Variable Management
 
 Sensitive database credentials are managed through a `.env` file.
 
@@ -126,7 +126,7 @@ DB_NAME=ecomdb
 
 The PHP application dynamically loads environment variables during runtime.
 
-## 🚀 Application Deployment
+##  Application Deployment
 
 The project automates the deployment of a sample e-commerce application hosted on GitHub.
 
@@ -143,28 +143,28 @@ sudo git clone https://github.com/kodekloudhub/learning-app-ecommerce.git /var/w
 
 ---
 
-# 📊 Features Implemented
+#  Features Implemented
 
-### ⚙️ Infrastructure Automation
+### ️ Infrastructure Automation
 - Automated package installation
 - Service initialization
 - Firewall configuration
 
-### 🗄️ Database Automation
+### ️ Database Automation
 - Automated database creation
 - User provisioning
 - SQL script execution
 
-### 🌐 Web Deployment
+###  Web Deployment
 - Apache server setup
 - PHP configuration
 - Application cloning
 
-### 🔒 Environment Configuration
+###  Environment Configuration
 - Secure credential management
 - Dynamic environment loading
 
-### 🧪 Validation and Testing
+###  Validation and Testing
 - HTTP endpoint testing
 - Service verification
 - Deployment troubleshooting
@@ -176,7 +176,7 @@ curl http://localhost
 
 ---
 
-# 🧠 Skills Demonstrated
+#  Skills Demonstrated
 
 This project demonstrates practical skills in:
 
@@ -195,7 +195,7 @@ This project demonstrates practical skills in:
 
 ---
 
-# ⚠️ Troubleshooting Challenges
+# ️ Troubleshooting Challenges
 
 During the lab several operational issues were resolved, including:
 
@@ -249,7 +249,7 @@ curl http://localhost
 
 ---
 
-# 📈 Learning Outcome
+#  Learning Outcome
 
 This project provided hands-on experience with real-world Linux administration and DevOps automation workflows.
 
@@ -267,7 +267,7 @@ The project also improved practical understanding of how web applications are de
 
 ---
 
-# 📚 Course Information
+#  Course Information
 
 - **Platform:** KodeKloud
 - **Course:** Shell Scripts for Beginners

@@ -1,6 +1,6 @@
-# 🐳 Docker Images
+#  Docker Images
 
-## 📌 Project Overview
+##  Project Overview
 
 This laboratory focuses on creating and managing Docker images using a simple Python Flask application.
 The objective of this exercise was to understand how Docker images are built from a `Dockerfile`, how containers are created from images, and how applications can run in isolated environments.
@@ -9,7 +9,7 @@ The project was completed as part of hands-on DevOps practice using Docker funda
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```bash
 docker-images/
@@ -25,7 +25,7 @@ docker-images/
 
 ---
 
-## ⚙️ Dockerfile
+## ️ Dockerfile
 
 The following Dockerfile was used to build the application image:
 
@@ -45,7 +45,7 @@ ENTRYPOINT ["python", "app.py"]
 
 ---
 
-## 🐳 Build Docker Image
+##  Build Docker Image
 
 To build the Docker image:
 
@@ -65,7 +65,7 @@ docker run -p 8080:8080 webapp-color
 
 ---
 
-## 🌐 Access the Application
+##  Access the Application
 
 Once the container is running, open the browser and access:
 
@@ -75,7 +75,7 @@ http://localhost:8080
 
 ---
 
-## 📖 Key Concepts Learned
+##  Key Concepts Learned
 
 * Understanding Docker images
 * Writing Dockerfiles
@@ -87,7 +87,7 @@ http://localhost:8080
 
 ---
 
-## 🔍 Docker Commands Used
+##  Docker Commands Used
 
 ### List Docker Images
 
@@ -127,7 +127,7 @@ docker rmi webapp-color
 
 ---
 
-## 🧪 Laboratory Environment
+##  Laboratory Environment
 
 * **Platform:** KodeKloud
 * **OS:** Linux
@@ -136,7 +136,7 @@ docker rmi webapp-color
 
 ---
 
-## 📚 What I Practiced
+##  What I Practiced
 
 During this lab, I practiced:
 
@@ -150,7 +150,7 @@ During this lab, I practiced:
 ---
 
 
-## 🏆 Outcome
+##  Outcome
 
 Successfully created and executed a Dockerized Flask application using Docker images and containerization concepts in a Linux environment.
 
@@ -158,7 +158,7 @@ This lab strengthened practical DevOps and containerization skills commonly used
 
 ---
 
-# 📚 Course
+#  Course
 
 KodeKloud - Docker for Absolute Beginners
 
@@ -167,7 +167,7 @@ Lab:
 
 ---
 
-## 👨‍💻 Author
+## ‍ Author
 
 **Juan Carlos Reynoso Zuñiga**
 

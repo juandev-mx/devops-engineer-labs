@@ -1,4 +1,4 @@
-# 🚀 Jenkins Declarative and Scripted Pipeline
+#  Jenkins Declarative and Scripted Pipeline
 
 CI/CD automation project developed during the **KodeKloud Jenkins for Beginners** course.
 
@@ -11,7 +11,7 @@ using Jenkins Pipeline as Code practices in a Linux environment.
 
 ---
 
-# 📌 Project Overview
+#  Project Overview
 
 The objective of this lab was to understand how Jenkins Pipelines automate software delivery workflows using different pipeline syntaxes.
 
@@ -28,7 +28,7 @@ This lab reinforces real-world Jenkins automation practices commonly used in Dev
 
 ---
 
-# 🛠️ Technologies Used
+# ️ Technologies Used
 
 | Area | Technology |
 |------|-------------|
@@ -41,7 +41,7 @@ This lab reinforces real-world Jenkins automation practices commonly used in Dev
 
 ---
 
-# 📂 Project Structure
+#  Project Structure
 
 ```text
 jenkins-declarative-scripted-pipeline/
@@ -56,9 +56,9 @@ jenkins-declarative-scripted-pipeline/
 
 ---
 
-# ⚙️ Pipeline Types Implemented
+# ️ Pipeline Types Implemented
 
-## 📘 Declarative Pipeline
+##  Declarative Pipeline
 
 The Declarative Pipeline provides:
 
@@ -101,7 +101,7 @@ node {
 
 ---
 
-## 📙 Scripted Pipeline
+##  Scripted Pipeline
 
 The Scripted Pipeline offers:
 
@@ -143,7 +143,7 @@ node {
 
 ---
 
-# 🔄 CI/CD Workflow
+#  CI/CD Workflow
 
 Both pipelines automate the following workflow:
 
@@ -155,7 +155,7 @@ Both pipelines automate the following workflow:
 
 ---
 
-# 🧠 Skills Demonstrated
+#  Skills Demonstrated
 
 This project demonstrates skills in:
 
@@ -172,7 +172,7 @@ This project demonstrates skills in:
 
 ---
 
-# 🚀 Jenkins Configuration
+#  Jenkins Configuration
 
 The lab included:
 
@@ -241,7 +241,7 @@ to verify successful stage execution.
 
 ---
 
-# 📊 Pipeline Comparison
+#  Pipeline Comparison
 
 | Feature | Declarative Pipeline | Scripted Pipeline |
 |------|----------------------|------------------|
@@ -253,7 +253,7 @@ to verify successful stage execution.
 
 ---
 
-# 🔐 DevOps Concepts Practiced
+#  DevOps Concepts Practiced
 
 This lab reinforced practical concepts such as:
 
@@ -268,7 +268,7 @@ This lab reinforced practical concepts such as:
 
 ---
 
-# 📈 Learning Outcome
+#  Learning Outcome
 
 This project provided hands-on experience implementing and comparing both Jenkins Pipeline approaches used in modern DevOps environments.
 
@@ -276,7 +276,7 @@ The lab reinforced how CI/CD systems automate application workflows while improv
 
 ---
 
-# 📚 Course
+#  Course
 
 **KodeKloud — Jenkins for Beginners**
 

@@ -1,6 +1,6 @@
-# 🚀 Kubernetes Lab: Deployments
+#  Kubernetes Lab: Deployments
 
-## 📖 Overview
+##  Overview
 
 This lab focuses on creating and managing Kubernetes Deployments using YAML definition files. The objective is to understand how Deployments provide declarative updates for Pods and ReplicaSets, enabling scalable and self-healing applications in a Kubernetes cluster.
 
@@ -8,7 +8,7 @@ During the lab, Deployments were created using YAML manifests, verified using ku
 
 ---
 
-## 🎯 Objectives
+##  Objectives
 
 - Understand the structure of a Kubernetes Deployment manifest.
 - Create Deployments using YAML definition files.
@@ -20,7 +20,7 @@ During the lab, Deployments were created using YAML manifests, verified using ku
 
 ---
 
-## 🛠️ Technologies Used
+## ️ Technologies Used
 
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
 ![YAML](https://img.shields.io/badge/YAML-CB171E?style=for-the-badge&logo=yaml&logoColor=white)
@@ -29,7 +29,7 @@ During the lab, Deployments were created using YAML manifests, verified using ku
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 deployments/
@@ -42,7 +42,7 @@ deployments/
 
 ---
 
-## 📄 Deployment Definitions
+##  Deployment Definitions
 
 ### deployment-definition-1.yaml
 
@@ -100,7 +100,7 @@ spec:
 
 ---
 
-## ⚙️ Creating Deployments
+## ️ Creating Deployments
 
 Create the Deployments using the YAML manifests:
 
@@ -128,7 +128,7 @@ httpd-frontend      3/3     3            3
 
 ---
 
-## 🔍 Deployment Inspection
+##  Deployment Inspection
 
 List Deployments:
 
@@ -160,7 +160,7 @@ kubectl get deployment -o yaml > deployments-output.yaml
 
 ---
 
-## 🛠 Troubleshooting Deployment Issues
+##  Troubleshooting Deployment Issues
 
 One of the tasks in the lab involved troubleshooting a Deployment that was unable to start successfully.
 
@@ -210,7 +210,7 @@ kubectl get pods
 
 ---
 
-## 🧪 Skills Practiced
+##  Skills Practiced
 
 - Kubernetes Deployments
 - Deployment YAML manifests
@@ -223,7 +223,7 @@ kubectl get pods
 
 ---
 
-## 📚 Key Concepts Learned
+##  Key Concepts Learned
 
 ### Deployment
 
@@ -277,7 +277,7 @@ image: httpd:2.4-alpine
 
 ---
 
-## 📊 Validation Commands
+##  Validation Commands
 
 Check Deployments:
 
@@ -309,13 +309,13 @@ kubectl describe deployment httpd-frontend
 
 ---
 
-## 🎓 Learning Outcome
+##  Learning Outcome
 
 By completing this lab, I gained practical experience creating and managing Kubernetes Deployments using YAML manifests. I learned how Deployments automate the management of ReplicaSets and Pods, how to scale applications declaratively, and how to troubleshoot common deployment issues such as invalid container images. Additionally, I practiced inspecting Kubernetes resources and validating application availability within a cluster.
 
 ---
 
-## 📚 Platform Information
+##  Platform Information
 
 **Platform:** KodeKloud
 

@@ -1,6 +1,6 @@
-# 🔁 Terraform Count and for_each Lab
+#  Terraform Count and for_each Lab
 
-## 📖 Overview
+##  Overview
 
 This lab was completed as part of the **Terraform Basics Training Course** from KodeKloud.
 
@@ -10,7 +10,7 @@ This approach is commonly used in Infrastructure as Code (IaC) environments wher
 
 ---
 
-# 🎯 Learning Objectives
+#  Learning Objectives
 
 During this lab, the following Terraform concepts were practiced:
 
@@ -24,7 +24,7 @@ During this lab, the following Terraform concepts were practiced:
 
 ---
 
-# 🏗️ Project Structure
+# ️ Project Structure
 
 ```text
 terraform-count-foreach/
@@ -37,7 +37,7 @@ terraform-count-foreach/
 
 ---
 
-# 📄 Terraform Configuration
+#  Terraform Configuration
 
 ## main.tf
 
@@ -89,7 +89,7 @@ Terraform automatically removes duplicate values before resource creation.
 
 ---
 
-# 🔄 Understanding for_each
+#  Understanding for_each
 
 The `for_each` meta-argument creates one resource instance for every unique element in a collection.
 
@@ -118,7 +118,7 @@ Resulting in only three resources being created.
 
 ---
 
-# 📁 Generated Resources
+#  Generated Resources
 
 Terraform created the following files:
 
@@ -136,7 +136,7 @@ password: S3cr3tP@ssw0rd
 
 ---
 
-# 📊 Terraform State Resources
+#  Terraform State Resources
 
 After applying the configuration, Terraform registered the following resources:
 
@@ -150,7 +150,7 @@ These entries demonstrate how Terraform uniquely tracks each resource instance c
 
 ---
 
-# 🔒 Sensitive Resources
+#  Sensitive Resources
 
 This lab uses:
 
@@ -176,7 +176,7 @@ This is especially useful when handling:
 
 ---
 
-# ⚙️ Terraform Commands Used
+# ️ Terraform Commands Used
 
 Initialize Terraform:
 
@@ -210,7 +210,7 @@ terraform destroy
 
 ---
 
-# 🧠 Key Concepts Learned
+#  Key Concepts Learned
 
 ## for_each
 
@@ -256,7 +256,7 @@ Iteration 3 → /root/user12
 
 ---
 
-# 🏢 Real-World Use Cases
+#  Real-World Use Cases
 
 The same pattern is commonly used to create:
 
@@ -281,7 +281,7 @@ resource "aws_iam_user" "users" {
 
 ---
 
-# 🚀 Skills Demonstrated
+#  Skills Demonstrated
 
 * Terraform Fundamentals
 * Infrastructure as Code (IaC)
@@ -294,7 +294,7 @@ resource "aws_iam_user" "users" {
 
 ---
 
-# 📚 Course Information
+#  Course Information
 
 **Course:** Terraform Basics Training Course
 
@@ -304,7 +304,7 @@ resource "aws_iam_user" "users" {
 
 ---
 
-# ✅ Outcome
+#  Outcome
 
 This lab demonstrated how Terraform can efficiently create and manage multiple resources through iteration using `for_each`.
 

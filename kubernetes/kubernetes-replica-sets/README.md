@@ -1,6 +1,6 @@
-# 🚀 Kubernetes Lab: Replica Sets
+#  Kubernetes Lab: Replica Sets
 
-## 📖 Overview
+##  Overview
 
 This lab focuses on creating, managing, scaling, and troubleshooting Kubernetes ReplicaSets. A ReplicaSet ensures that a specified number of identical Pod replicas are always running within the cluster.
 
@@ -8,7 +8,7 @@ The lab demonstrates how ReplicaSets provide high availability and self-healing 
 
 ---
 
-## 🎯 Objectives
+##  Objectives
 
 * Understand the purpose of ReplicaSets in Kubernetes.
 * Create ReplicaSets using YAML manifests.
@@ -20,7 +20,7 @@ The lab demonstrates how ReplicaSets provide high availability and self-healing 
 
 ---
 
-## 🛠️ Technologies Used
+## ️ Technologies Used
 
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge\&logo=kubernetes\&logoColor=white)
 
@@ -32,7 +32,7 @@ The lab demonstrates how ReplicaSets provide high availability and self-healing 
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 replica-sets/
@@ -45,7 +45,7 @@ replica-sets/
 
 ---
 
-## 📄 ReplicaSet Definition 1
+##  ReplicaSet Definition 1
 
 ### replicaset-definition-1.yaml
 
@@ -71,7 +71,7 @@ spec:
 
 ---
 
-## 📄 ReplicaSet Definition 2
+##  ReplicaSet Definition 2
 
 ### replicaset-definition-2.yaml
 
@@ -97,7 +97,7 @@ spec:
 
 ---
 
-## 📄 ReplicaSet Definition 3
+##  ReplicaSet Definition 3
 
 ### new-replica-set.yaml
 
@@ -129,7 +129,7 @@ spec:
 
 ---
 
-## 🚀 Deploying ReplicaSets
+##  Deploying ReplicaSets
 
 Create the ReplicaSets:
 
@@ -156,7 +156,7 @@ new-replica-set   4         4         4
 
 ---
 
-## 🔍 Verification
+##  Verification
 
 List all Pods:
 
@@ -178,7 +178,7 @@ kubectl get rs new-replica-set -o yaml
 
 ---
 
-## ⚠️ Troubleshooting Exercise
+## ️ Troubleshooting Exercise
 
 One of the tasks in the lab involved diagnosing Pods that failed to start.
 
@@ -227,7 +227,7 @@ kubectl get pods
 
 ---
 
-## 📈 Scaling ReplicaSets
+##  Scaling ReplicaSets
 
 Increase the number of replicas:
 
@@ -250,7 +250,7 @@ new-replica-set   5         5         5
 
 ---
 
-## 🔄 Self-Healing Demonstration
+##  Self-Healing Demonstration
 
 ReplicaSets automatically maintain the desired number of Pods.
 
@@ -270,7 +270,7 @@ This demonstrates the self-healing capability provided by ReplicaSets.
 
 ---
 
-## 🧪 Skills Practiced
+##  Skills Practiced
 
 * ReplicaSet creation
 * Declarative Kubernetes resource management
@@ -283,7 +283,7 @@ This demonstrates the self-healing capability provided by ReplicaSets.
 
 ---
 
-## 📚 Key Concepts Learned
+##  Key Concepts Learned
 
 ### ReplicaSet
 
@@ -328,13 +328,13 @@ Allows increasing or decreasing the number of running Pod replicas.
 
 ---
 
-## 🎓 Learning Outcome
+##  Learning Outcome
 
 By completing this lab, I gained hands-on experience working with Kubernetes ReplicaSets and learned how they ensure workload availability through automatic Pod replication and recovery. I practiced creating ReplicaSets from YAML manifests, troubleshooting image-related deployment issues, scaling applications, and validating Kubernetes self-healing capabilities in a real cluster environment.
 
 ---
 
-## 📚 Commands Used
+##  Commands Used
 
 ```bash
 kubectl apply -f replicaset-definition-1.yaml

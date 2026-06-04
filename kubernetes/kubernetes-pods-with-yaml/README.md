@@ -1,10 +1,10 @@
-# 🚀 Kubernetes Lab: Pods with YAML
+#  Kubernetes Lab: Pods with YAML
 
-## 📖 Overview
+##  Overview
 
 This lab focuses on creating and managing Kubernetes Pods using YAML definition files. The objective is to understand the structure of a Pod manifest, define container specifications, and deploy workloads declaratively using Kubernetes.
 
-## 🎯 Objectives
+##  Objectives
 
 * Understand the basic structure of a Kubernetes Pod YAML manifest.
 * Create Pods using YAML definition files.
@@ -14,7 +14,7 @@ This lab focuses on creating and managing Kubernetes Pods using YAML definition 
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 pods-with-yaml/
@@ -28,7 +28,7 @@ pods-with-yaml/
 
 ---
 
-## 📄 Pod Definition
+##  Pod Definition
 
 ### redis-definition.yaml
 
@@ -49,7 +49,7 @@ spec:
 
 ---
 
-## 🛠️ Troubleshooting: Invalid Container Image
+## ️ Troubleshooting: Invalid Container Image
 
 During the lab, the Pod definition contained an incorrect container image:
 
@@ -76,7 +76,7 @@ kubectl describe pod redis
 
 The output indicated an image pull failure.
 
-### ✅ Solution
+###  Solution
 
 The image name was corrected to the official Redis image:
 
@@ -114,13 +114,13 @@ NAME    READY   STATUS    RESTARTS   AGE
 redis   1/1     Running   0          XXs
 ```
 
-### 🎯 Lesson Learned
+###  Lesson Learned
 
 One of the most common causes of Pod deployment failures is an invalid or unavailable container image. Using `kubectl describe pod` helps identify image pull errors and other runtime issues quickly. Correcting the image reference allowed the Pod to start successfully and reach the `Running` state.
 
 ---
 
-## ⚙️ Deploying the Pod
+## ️ Deploying the Pod
 
 Create the Pod from the YAML definition file:
 
@@ -142,7 +142,7 @@ kubectl describe pod redis
 
 ---
 
-## 🔍 Validation
+##  Validation
 
 Check the Pod details:
 
@@ -158,7 +158,7 @@ kubectl get pod redis -o yaml
 
 ---
 
-## 🧪 Skills Practiced
+##  Skills Practiced
 
 * Kubernetes Pod creation
 * YAML syntax and structure
@@ -170,7 +170,7 @@ kubectl get pod redis -o yaml
 
 ---
 
-## 📚 Key Concepts Learned
+##  Key Concepts Learned
 
 ### API Version
 
@@ -215,13 +215,13 @@ image: redis
 ```
 
 ---
-## 🎓 Learning Outcome
+##  Learning Outcome
 
 By completing this lab, I gained hands-on experience creating and managing Kubernetes Pods using YAML manifests. I learned how Kubernetes resources are defined declaratively, how to deploy them using kubectl, and how to inspect and troubleshoot Pod configurations in a Kubernetes cluster. Additionally, I practiced diagnosing and resolving container image issues, an essential skill for Kubernetes administration and DevOps workflows.
 
 ---
 
-## 📚 Commands Used
+##  Commands Used
 
 ```bash
 kubectl apply -f redis-definition.yaml

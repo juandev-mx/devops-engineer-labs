@@ -1,6 +1,6 @@
 # Bonus Lecture: Labs - YAML
 
-## 📘 Overview
+##  Overview
 
 This lab focuses on learning the fundamentals of YAML syntax and configuration files commonly used in DevOps environments.
 
@@ -18,7 +18,7 @@ YAML is widely used in technologies such as:
 
 ---
 
-## 🎯 Objectives
+##  Objectives
 
 * Understand YAML syntax
 * Learn indentation rules
@@ -30,7 +30,7 @@ YAML is widely used in technologies such as:
 ---
 
 
-## 📂 Project Structure
+##  Project Structure
 
 ```bash
 YAML/
@@ -41,7 +41,7 @@ YAML/
 
 ---
 
-## 📄 YAML Syntax Basics
+##  YAML Syntax Basics
 
 ### Key-Value Pairs
 
@@ -73,7 +73,7 @@ application:
 
 ---
 
-## 🐳 Docker Compose YAML Example
+##  Docker Compose YAML Example
 
 Example of a simple Docker Compose configuration:
 
@@ -117,7 +117,7 @@ cp /home/bob/playbooks/practice.yaml ~/devops-engineer-labs/docker/YAML/
 
 ---
 
-## 📚 Concepts Learned
+##  Concepts Learned
 
 * YAML indentation rules
 * Declarative configuration
@@ -129,7 +129,7 @@ cp /home/bob/playbooks/practice.yaml ~/devops-engineer-labs/docker/YAML/
 
 ---
 
-## 🚀 DevOps Importance
+##  DevOps Importance
 
 YAML is one of the most important configuration languages in modern DevOps practices because it enables infrastructure, pipelines, deployments, and services to be defined in a simple and readable format.
 
@@ -143,7 +143,7 @@ This knowledge is essential for working with:
 
 ---
 
-## 📌 Notes
+##  Notes
 
 This lab was completed as part of the KodeKloud Docker & DevOps learning path and documented inside the `devops-engineer-labs` repository.
 
@@ -155,7 +155,7 @@ https://github.com/juandev-mx/devops-engineer-labs
 
 ---
 
-## 👨‍💻 Author
+## ‍ Author
 
 **Juan Carlos Reynoso Zuñiga**
 

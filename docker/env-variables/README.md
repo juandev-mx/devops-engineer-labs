@@ -1,6 +1,6 @@
-# 🐳 Docker Environment Variables
+#  Docker Environment Variables
 
-## 📌 Description
+##  Description
 
 This lab demonstrates how to use environment variables in Docker containers to configure applications dynamically at runtime.
 
@@ -14,7 +14,7 @@ The exercise includes:
 
 ---
 
-# 🛠 Technologies Used
+#  Technologies Used
 
 - Docker
 - Linux
@@ -24,7 +24,7 @@ The exercise includes:
 
 ---
 
-# 📂 Project Structure
+#  Project Structure
 
 ```bash
 env-variables/
@@ -39,7 +39,7 @@ env-variables/
 
 ---
 
-# 🚀 Running the Containers
+#  Running the Containers
 
 ## Run Simple Web Application
 
@@ -73,7 +73,7 @@ mysql
 
 ---
 
-# 🔍 Inspect Environment Variables
+#  Inspect Environment Variables
 
 ```bash
 docker inspect mysql-db
@@ -83,7 +83,7 @@ This command displays container configuration details including environment vari
 
 ---
 
-# 📋 Docker Management Commands
+#  Docker Management Commands
 
 ## List Running Containers
 
@@ -99,7 +99,7 @@ docker images
 
 ---
 
-# 📚 Concepts Learned
+#  Concepts Learned
 
 - Docker environment variables
 - Container runtime configuration
@@ -109,13 +109,13 @@ docker images
 
 ---
 
-# ✅ Lab Result
+#  Lab Result
 
 Successfully configured Docker containers using environment variables and verified container settings through Docker inspection commands.
 
 ---
 
-# 📚 Course
+#  Course
 
 KodeKloud - Docker for Absolute Beginners
 
@@ -124,7 +124,7 @@ Lab:
 
 ---
 
-# 👨‍💻 Author
+# ‍ Author
 
 Juan Carlos Reynoso Zuñiga
 

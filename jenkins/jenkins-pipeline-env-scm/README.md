@@ -1,4 +1,4 @@
-# 🚀 Jenkins Pipeline with ENV using SCM
+#  Jenkins Pipeline with ENV using SCM
 
 Automation pipeline project developed during the **KodeKloud - Jenkins for Beginners** course.
 
@@ -6,7 +6,7 @@ This lab demonstrates how to integrate Jenkins Pipelines, Source Code Management
 
 ---
 
-# 📌 Project Overview
+#  Project Overview
 
 The objective of this lab was to create and execute a Jenkins Pipeline that:
 
@@ -21,7 +21,7 @@ This project simulates a real-world DevOps workflow commonly used in modern soft
 
 ---
 
-# 🛠️ Technologies Used
+# ️ Technologies Used
 
 
 
@@ -38,7 +38,7 @@ This project simulates a real-world DevOps workflow commonly used in modern soft
 
 ---
 
-# 📂 Project Structure
+#  Project Structure
 
 ```text
 jenkins-pipeline-env-scm/
@@ -53,7 +53,7 @@ jenkins-pipeline-env-scm/
 
 ---
 
-# ⚙️ Jenkins Pipeline Workflow
+# ️ Jenkins Pipeline Workflow
 
 The pipeline was configured to:
 - Connect Jenkins with a Git repository
@@ -63,7 +63,7 @@ The pipeline was configured to:
 - Validate build execution
 - Display logs and pipeline results
 
-## 🔧 Jenkinsfile Example
+##  Jenkinsfile Example
 
 ```groovy
 pipeline {
@@ -98,21 +98,21 @@ pipeline {
 
 ---
 
-# 🚀 Pipeline Features
+#  Pipeline Features
 
-### 📦 Source Code Management (SCM)
+###  Source Code Management (SCM)
 - Jenkins connected directly to Git repository
 - Automatic Jenkinsfile retrieval
 - Version-controlled pipeline configuration
 
-### 🌎 Environment Variables (ENV)
+###  Environment Variables (ENV)
 The pipeline uses environment variables for:
 - Application configuration
 - Environment selection
 - Reusable pipeline settings
 - Dynamic stage execution
 
-### 🔄 Automated Pipeline Execution
+###  Automated Pipeline Execution
 The Jenkins Pipeline automatically executes:
 - Build stage
 - Test stage
@@ -122,7 +122,7 @@ This reflects a simplified CI/CD workflow.
 
 ---
 
-# 🧠 Skills Demonstrated
+#  Skills Demonstrated
 
 This project demonstrates skills in:
 
@@ -138,7 +138,7 @@ This project demonstrates skills in:
 
 ---
 
-# 🖥️ Jenkins Configuration
+# ️ Jenkins Configuration
 
 The lab included:
 - Jenkins Pipeline Job creation
@@ -169,7 +169,7 @@ Access Jenkins from the browser:
 
 ---
 
-# 📊 Pipeline Stages Summary
+#  Pipeline Stages Summary
 
 
 
@@ -182,7 +182,7 @@ Access Jenkins from the browser:
 
 ---
 
-# 🔐 CI/CD Concepts Practiced
+#  CI/CD Concepts Practiced
 
 This lab reinforced practical concepts such as:
 - Pipeline as Code
@@ -195,7 +195,7 @@ This lab reinforced practical concepts such as:
 
 ---
 
-# 📈 Learning Outcome
+#  Learning Outcome
 
 This lab provided hands-on experience with real Jenkins Pipeline workflows used in enterprise DevOps environments. 
 
@@ -203,7 +203,7 @@ The project reinforced how modern CI/CD systems automate builds, testing, and de
 
 ---
 
-# 📚 Course Information
+#  Course Information
 
 - **Platform:** KodeKloud
 - **Course:** Jenkins for Beginners

@@ -1,4 +1,4 @@
-# 🐳 Docker Compose Lab
+#  Docker Compose Lab
 
 This laboratory demonstrates how to deploy multi-container applications using Docker Compose.
 
@@ -11,7 +11,7 @@ The environment includes:
 
 ---
 
-# 📂 Project Structure
+#  Project Structure
 
 ```bash
 docker-compose/
@@ -21,7 +21,7 @@ docker-compose/
 
 ---
 
-# ⚙️ Technologies Used
+# ️ Technologies Used
 
 - Docker
 - Docker Compose
@@ -30,7 +30,7 @@ docker-compose/
 
 ---
 
-# 📦 Docker Compose Configuration
+#  Docker Compose Configuration
 
 ```yaml
 services:
@@ -47,7 +47,7 @@ version: '3.8'
 
 ---
 
-# 🚀 Run the Application
+#  Run the Application
 
 ## Start Services
 
@@ -75,7 +75,7 @@ docker compose down
 
 ---
 
-# 🌐 Access Application
+#  Access Application
 
 Application URL:
 
@@ -85,7 +85,7 @@ http://localhost:8085
 
 ---
 
-# 📚 Concepts Practiced
+#  Concepts Practiced
 
 - Docker Compose
 - Multi-container applications
@@ -95,7 +95,7 @@ http://localhost:8085
 
 ---
 
-# 📚 Course
+#  Course
 
 KodeKloud - Docker for Absolute Beginners
 
