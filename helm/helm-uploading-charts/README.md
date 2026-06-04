@@ -10,8 +10,6 @@ During this lab, the `webapp-color` chart was packaged successfully, generating 
 
 ---
 
----
-
 ## Course Information
 
 **Course:** Helm for Beginners  
