@@ -10,6 +10,15 @@ A custom Helm Chart named **webapp** was created to deploy an Apache HTTP Server
 
 ---
 
+## Course Information
+
+**Course:** Helm for Beginners  
+**Platform:** KodeKloud
+
+**Lab:** Using Functions and Pipelines
+
+---
+
 ## Technologies Used
 
 * Helm
