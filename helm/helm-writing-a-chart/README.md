@@ -15,6 +15,15 @@ These charts package Kubernetes resources and use Helm templating to provide reu
 
 ---
 
+## Course Information
+
+**Course:** Helm for Beginners  
+**Platform:** KodeKloud
+
+**Lab:** Writing a Helm Chart
+
+---
+
 ## Technologies Used
 
 * Helm
