@@ -1,0 +1,3 @@
+GROUP  KIND        NAMESPACE  NAME           ORPHANED
+       Service     webhook    nginx-service  No
+apps   Deployment  webhook    nginx          No

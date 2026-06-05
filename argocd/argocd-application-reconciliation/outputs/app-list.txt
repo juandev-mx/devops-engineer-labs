@@ -1,0 +1,2 @@
+NAME                    CLUSTER                         NAMESPACE  PROJECT  STATUS  HEALTH   SYNCPOLICY  CONDITIONS  REPO                                                                     PATH         TARGET
+argocd/git-webhook-app  https://kubernetes.default.svc  webhook    default  Synced  Healthy  Manual      <none>      https://3000-port-47rwrons2xg3pkqq.labs.kodekloud.com/bob/gitops-argocd  ./nginx-app  HEAD

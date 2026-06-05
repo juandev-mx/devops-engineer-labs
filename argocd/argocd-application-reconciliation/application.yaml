@@ -1,0 +1,120 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  creationTimestamp: "2026-06-05T02:59:22Z"
+  generation: 27
+  name: git-webhook-app
+  namespace: argocd
+  resourceVersion: "6930"
+  uid: 6155b2d9-725e-47c5-b66b-02d678ad2be2
+spec:
+  destination:
+    namespace: webhook
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: ./nginx-app
+    repoURL: https://3000-port-47rwrons2xg3pkqq.labs.kodekloud.com/bob/gitops-argocd
+    targetRevision: HEAD
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+status:
+  controllerNamespace: argocd
+  health:
+    lastTransitionTime: "2026-06-05T03:02:46Z"
+    status: Healthy
+  history:
+  - deployStartedAt: "2026-06-05T03:00:48Z"
+    deployedAt: "2026-06-05T03:00:50Z"
+    id: 0
+    initiatedBy:
+      username: admin
+    revision: 567d80242c222dc88acb25d5eb227e917eafcb7c
+    source:
+      path: ./nginx-app
+      repoURL: https://3000-port-47rwrons2xg3pkqq.labs.kodekloud.com/bob/gitops-argocd
+      targetRevision: HEAD
+  - deployStartedAt: "2026-06-05T03:02:43Z"
+    deployedAt: "2026-06-05T03:02:43Z"
+    id: 1
+    initiatedBy:
+      username: admin
+    revision: 6c173d6196ddd096e2ba1450052ea949ee96fa1e
+    source:
+      path: ./nginx-app
+      repoURL: https://3000-port-47rwrons2xg3pkqq.labs.kodekloud.com/bob/gitops-argocd
+      targetRevision: HEAD
+  operationState:
+    finishedAt: "2026-06-05T03:02:43Z"
+    message: successfully synced (all tasks run)
+    operation:
+      initiatedBy:
+        username: admin
+      retry: {}
+      sync:
+        revision: 6c173d6196ddd096e2ba1450052ea949ee96fa1e
+        syncOptions:
+        - CreateNamespace=true
+        syncStrategy:
+          hook: {}
+    phase: Succeeded
+    startedAt: "2026-06-05T03:02:43Z"
+    syncResult:
+      resources:
+      - group: ""
+        hookPhase: Running
+        kind: Service
+        message: service/nginx-service unchanged
+        name: nginx-service
+        namespace: webhook
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apps
+        hookPhase: Running
+        kind: Deployment
+        message: deployment.apps/nginx configured
+        name: nginx
+        namespace: webhook
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      revision: 6c173d6196ddd096e2ba1450052ea949ee96fa1e
+      source:
+        path: ./nginx-app
+        repoURL: https://3000-port-47rwrons2xg3pkqq.labs.kodekloud.com/bob/gitops-argocd
+        targetRevision: HEAD
+  reconciledAt: "2026-06-05T03:06:41Z"
+  resources:
+  - health:
+      status: Healthy
+    kind: Service
+    name: nginx-service
+    namespace: webhook
+    status: Synced
+    version: v1
+  - group: apps
+    health:
+      status: Healthy
+    kind: Deployment
+    name: nginx
+    namespace: webhook
+    status: Synced
+    version: v1
+  sourceHydrator: {}
+  sourceType: Directory
+  summary:
+    images:
+    - nginx
+  sync:
+    comparedTo:
+      destination:
+        namespace: webhook
+        server: https://kubernetes.default.svc
+      source:
+        path: ./nginx-app
+        repoURL: https://3000-port-47rwrons2xg3pkqq.labs.kodekloud.com/bob/gitops-argocd
+        targetRevision: HEAD
+    revision: 6c173d6196ddd096e2ba1450052ea949ee96fa1e
+    status: Synced

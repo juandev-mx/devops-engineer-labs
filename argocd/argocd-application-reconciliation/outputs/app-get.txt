@@ -1,0 +1,17 @@
+Name:               argocd/git-webhook-app
+Project:            default
+Server:             https://kubernetes.default.svc
+Namespace:          webhook
+URL:                https://localhost:32766/applications/git-webhook-app
+Source:
+- Repo:             https://3000-port-47rwrons2xg3pkqq.labs.kodekloud.com/bob/gitops-argocd
+  Target:           HEAD
+  Path:             ./nginx-app
+SyncWindow:         Sync Allowed
+Sync Policy:        Manual
+Sync Status:        Synced to HEAD (6c173d6)
+Health Status:      Healthy
+
+GROUP  KIND        NAMESPACE  NAME           STATUS  HEALTH   HOOK  MESSAGE
+       Service     webhook    nginx-service  Synced  Healthy        service/nginx-service unchanged
+apps   Deployment  webhook    nginx          Synced  Healthy        deployment.apps/nginx configured
