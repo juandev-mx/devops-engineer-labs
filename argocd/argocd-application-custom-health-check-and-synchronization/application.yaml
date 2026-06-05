@@ -1,0 +1,153 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  creationTimestamp: "2026-06-05T03:59:50Z"
+  generation: 62
+  name: health-check-app
+  namespace: argocd
+  resourceVersion: "4936"
+  uid: a1f829d0-c56d-4e7e-8634-8f60b352cb13
+spec:
+  destination:
+    namespace: health-check
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: ./health-check
+    repoURL: https://3000-port-3eq77yqgg5uioidv.labs.kodekloud.com/bob/gitops-argocd
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
+status:
+  controllerNamespace: argocd
+  health:
+    lastTransitionTime: "2026-06-05T04:30:18Z"
+    status: Healthy
+  history:
+  - deployStartedAt: "2026-06-05T04:00:58Z"
+    deployedAt: "2026-06-05T04:01:00Z"
+    id: 0
+    initiatedBy:
+      username: admin
+    revision: 9c3e16e1193c45d5641b7ee0d9093b0b5ce87f71
+    source:
+      path: ./health-check
+      repoURL: https://3000-port-3eq77yqgg5uioidv.labs.kodekloud.com/bob/gitops-argocd
+      targetRevision: HEAD
+  - deployStartedAt: "2026-06-05T04:17:54Z"
+    deployedAt: "2026-06-05T04:17:54Z"
+    id: 1
+    initiatedBy:
+      username: admin
+    revision: 16e4e92a213977e9ad10c8ede921393738dd01f3
+    source:
+      path: ./health-check
+      repoURL: https://3000-port-3eq77yqgg5uioidv.labs.kodekloud.com/bob/gitops-argocd
+      targetRevision: HEAD
+  - deployStartedAt: "2026-06-05T04:22:51Z"
+    deployedAt: "2026-06-05T04:22:52Z"
+    id: 2
+    initiatedBy:
+      automated: true
+    revision: 2483af9158ed89891950c75308f0943f43254ce0
+    source:
+      path: ./health-check
+      repoURL: https://3000-port-3eq77yqgg5uioidv.labs.kodekloud.com/bob/gitops-argocd
+      targetRevision: HEAD
+  - deployStartedAt: "2026-06-05T04:30:17Z"
+    deployedAt: "2026-06-05T04:30:18Z"
+    id: 3
+    initiatedBy:
+      automated: true
+    revision: 05f212480a8cfa181ec2e2da6a6b771082fc08fe
+    source:
+      path: ./health-check
+      repoURL: https://3000-port-3eq77yqgg5uioidv.labs.kodekloud.com/bob/gitops-argocd
+      targetRevision: HEAD
+  operationState:
+    finishedAt: "2026-06-05T04:30:18Z"
+    message: successfully synced (all tasks run)
+    operation:
+      initiatedBy:
+        automated: true
+      retry:
+        limit: 5
+      sync:
+        autoHealAttemptsCount: 2
+        prune: true
+        revision: 05f212480a8cfa181ec2e2da6a6b771082fc08fe
+        syncOptions:
+        - CreateNamespace=true
+    phase: Succeeded
+    startedAt: "2026-06-05T04:30:17Z"
+    syncResult:
+      resources:
+      - group: ""
+        hookPhase: Succeeded
+        kind: Service
+        message: pruned
+        name: random-shapes-svc
+        namespace: health-check
+        status: Pruned
+        syncPhase: Sync
+        version: v1
+      - group: ""
+        hookPhase: Running
+        kind: ConfigMap
+        message: configmap/moving-shapes-colors unchanged
+        name: moving-shapes-colors
+        namespace: health-check
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apps
+        hookPhase: Running
+        kind: Deployment
+        message: deployment.apps/random-shapes unchanged
+        name: random-shapes
+        namespace: health-check
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      revision: 05f212480a8cfa181ec2e2da6a6b771082fc08fe
+      source:
+        path: ./health-check
+        repoURL: https://3000-port-3eq77yqgg5uioidv.labs.kodekloud.com/bob/gitops-argocd
+        targetRevision: HEAD
+  reconciledAt: "2026-06-05T04:37:53Z"
+  resources:
+  - health:
+      status: Healthy
+    kind: ConfigMap
+    name: moving-shapes-colors
+    namespace: health-check
+    status: Synced
+    version: v1
+  - group: apps
+    health:
+      status: Healthy
+    kind: Deployment
+    name: random-shapes
+    namespace: health-check
+    status: Synced
+    version: v1
+  sourceHydrator: {}
+  sourceType: Directory
+  summary:
+    images:
+    - siddharth67/php-random-shapes:v1
+  sync:
+    comparedTo:
+      destination:
+        namespace: health-check
+        server: https://kubernetes.default.svc
+      source:
+        path: ./health-check
+        repoURL: https://3000-port-3eq77yqgg5uioidv.labs.kodekloud.com/bob/gitops-argocd
+        targetRevision: HEAD
+    revision: 05f212480a8cfa181ec2e2da6a6b771082fc08fe
+    status: Synced

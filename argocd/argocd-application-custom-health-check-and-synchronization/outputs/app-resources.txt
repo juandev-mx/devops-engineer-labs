@@ -1,0 +1,3 @@
+GROUP  KIND        NAMESPACE     NAME                  ORPHANED
+       ConfigMap   health-check  moving-shapes-colors  No
+apps   Deployment  health-check  random-shapes         No

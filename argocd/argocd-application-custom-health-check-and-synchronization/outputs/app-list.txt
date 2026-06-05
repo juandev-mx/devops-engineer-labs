@@ -1,0 +1,2 @@
+NAME                     CLUSTER                         NAMESPACE     PROJECT  STATUS  HEALTH   SYNCPOLICY  CONDITIONS  REPO                                                                     PATH            TARGET
+argocd/health-check-app  https://kubernetes.default.svc  health-check  default  Synced  Healthy  Auto-Prune  <none>      https://3000-port-3eq77yqgg5uioidv.labs.kodekloud.com/bob/gitops-argocd  ./health-check  HEAD

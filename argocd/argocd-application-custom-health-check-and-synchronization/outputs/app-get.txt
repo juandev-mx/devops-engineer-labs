@@ -1,0 +1,18 @@
+Name:               argocd/health-check-app
+Project:            default
+Server:             https://kubernetes.default.svc
+Namespace:          health-check
+URL:                https://localhost:32766/applications/health-check-app
+Source:
+- Repo:             https://3000-port-3eq77yqgg5uioidv.labs.kodekloud.com/bob/gitops-argocd
+  Target:           HEAD
+  Path:             ./health-check
+SyncWindow:         Sync Allowed
+Sync Policy:        Automated (Prune)
+Sync Status:        Synced to HEAD (05f2124)
+Health Status:      Healthy
+
+GROUP  KIND        NAMESPACE     NAME                  STATUS     HEALTH   HOOK  MESSAGE
+       Service     health-check  random-shapes-svc     Succeeded  Pruned         pruned
+       ConfigMap   health-check  moving-shapes-colors  Synced     Healthy        configmap/moving-shapes-colors unchanged
+apps   Deployment  health-check  random-shapes         Synced     Healthy        deployment.apps/random-shapes unchanged
