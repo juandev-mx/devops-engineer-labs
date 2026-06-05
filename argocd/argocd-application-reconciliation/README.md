@@ -277,27 +277,6 @@ Git serves as the single source of truth for application deployments and infrast
 
 ---
 
-## Evidence
-
-Store screenshots and command outputs in:
-
-```text
-screenshots/
-```
-
-Examples:
-
-```text
-screenshots/
-├── argocd-app-list.png
-├── argocd-app-get.png
-├── argocd-app-history.png
-├── argocd-app-resources.png
-└── argocd-sync-status.png
-```
-
----
-
 ## References
 
 * ArgoCD Documentation: https://argo-cd.readthedocs.io
