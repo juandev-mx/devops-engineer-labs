@@ -1,0 +1,4 @@
+NAME                       CLUSTER                             NAMESPACE     PROJECT  STATUS   HEALTH   SYNCPOLICY  CONDITIONS       REPO                                                                         PATH                       TARGET
+argocd/app-of-apps         https://kubernetes.default.svc      argocd        default  Unknown  Healthy  Auto-Prune  ComparisonError  http://165.22.209.118:3000/siddharth/gitops-argocd.git                       ./declarative/app-of-apps  HEAD
+argocd/health-check-app    https://cluster2-controlplane:6443  health-check  default  Synced   Healthy  Manual      <none>           https://3000-port-eezopvsyada2iiyd.labs.kodekloud.com/bob/gitops-argocd.git  ./health-check             HEAD
+argocd/helm-random-shapes  https://kubernetes.default.svc      default       default  Synced   Healthy  Manual      <none>           https://3000-port-eezopvsyada2iiyd.labs.kodekloud.com/bob/gitops-argocd.git  ./helm-chart               HEAD

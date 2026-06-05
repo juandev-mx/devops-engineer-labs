@@ -1,0 +1,18 @@
+Name:               argocd/helm-random-shapes
+Project:            default
+Server:             https://kubernetes.default.svc
+Namespace:          default
+URL:                https://localhost:32766/applications/helm-random-shapes
+Source:
+- Repo:             https://3000-port-eezopvsyada2iiyd.labs.kodekloud.com/bob/gitops-argocd.git
+  Target:           HEAD
+  Path:             ./helm-chart
+SyncWindow:         Sync Allowed
+Sync Policy:        Manual
+Sync Status:        Synced to HEAD (87945a0)
+Health Status:      Healthy
+
+GROUP  KIND        NAMESPACE  NAME                          STATUS  HEALTH   HOOK  MESSAGE
+       ConfigMap   default    helm-random-shapes-configmap  Synced                 configmap/helm-random-shapes-configmap created
+       Service     default    helm-random-shapes-service    Synced  Healthy        service/helm-random-shapes-service created
+apps   Deployment  default    helm-random-shapes-deploy     Synced  Healthy        deployment.apps/helm-random-shapes-deploy created

@@ -1,0 +1,17 @@
+Name:               argocd/app-of-apps
+Project:            default
+Server:             https://kubernetes.default.svc
+Namespace:          argocd
+URL:                https://localhost:32766/applications/app-of-apps
+Source:
+- Repo:             http://165.22.209.118:3000/siddharth/gitops-argocd.git
+  Target:           HEAD
+  Path:             ./declarative/app-of-apps
+SyncWindow:         Sync Allowed
+Sync Policy:        Automated (Prune)
+Sync Status:        Unknown
+Health Status:      Healthy
+
+CONDITION        MESSAGE                                                                                                                                                                                                                                                                                                       LAST TRANSITION
+ComparisonError  Failed to load target state: failed to generate manifest for source 1 of 1: rpc error: code = Unknown desc = failed to list refs: Get "http://165.22.209.118:3000/siddharth/gitops-argocd.git/info/refs?service=git-upload-pack": context deadline exceeded (Client.Timeout exceeded while awaiting headers)  2026-06-05 23:00:26 +0000 UTC
+

@@ -1,0 +1,349 @@
+apiVersion: v1
+items:
+- apiVersion: argoproj.io/v1alpha1
+  kind: Application
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"argoproj.io/v1alpha1","kind":"Application","metadata":{"annotations":{},"name":"app-of-apps","namespace":"argocd"},"spec":{"destination":{"namespace":"argocd","server":"https://kubernetes.default.svc"},"project":"default","source":{"path":"./declarative/app-of-apps","repoURL":"http://165.22.209.118:3000/siddharth/gitops-argocd.git","targetRevision":"HEAD"},"syncPolicy":{"automated":{"prune":true,"selfHeal":true}}}}
+    creationTimestamp: "2026-06-05T23:00:26Z"
+    generation: 6
+    name: app-of-apps
+    namespace: argocd
+    resourceVersion: "47675"
+    uid: 27414def-4b7e-47f3-9e00-e967cb9415b7
+  spec:
+    destination:
+      namespace: argocd
+      server: https://kubernetes.default.svc
+    project: default
+    source:
+      path: ./declarative/app-of-apps
+      repoURL: http://165.22.209.118:3000/siddharth/gitops-argocd.git
+      targetRevision: HEAD
+    syncPolicy:
+      automated:
+        prune: true
+        selfHeal: true
+  status:
+    conditions:
+    - lastTransitionTime: "2026-06-05T23:00:26Z"
+      message: 'Failed to load target state: failed to generate manifest for source
+        1 of 1: rpc error: code = Unknown desc = failed to list refs: Get "http://165.22.209.118:3000/siddharth/gitops-argocd.git/info/refs?service=git-upload-pack":
+        context deadline exceeded (Client.Timeout exceeded while awaiting headers)'
+      type: ComparisonError
+    controllerNamespace: argocd
+    health:
+      lastTransitionTime: "2026-06-05T23:00:41Z"
+      status: Healthy
+    reconciledAt: "2026-06-05T23:13:04Z"
+    sync:
+      comparedTo:
+        destination:
+          namespace: argocd
+          server: https://kubernetes.default.svc
+        source:
+          path: ./declarative/app-of-apps
+          repoURL: http://165.22.209.118:3000/siddharth/gitops-argocd.git
+          targetRevision: HEAD
+      status: Unknown
+- apiVersion: argoproj.io/v1alpha1
+  kind: Application
+  metadata:
+    creationTimestamp: "2026-06-05T22:48:28Z"
+    generation: 22
+    name: health-check-app
+    namespace: argocd
+    resourceVersion: "47654"
+    uid: 37bb3c1d-8e9d-4b4a-9831-724b6e10c77e
+  spec:
+    destination:
+      namespace: health-check
+      server: https://cluster2-controlplane:6443
+    project: default
+    source:
+      path: ./health-check
+      repoURL: https://3000-port-eezopvsyada2iiyd.labs.kodekloud.com/bob/gitops-argocd.git
+      targetRevision: HEAD
+    syncPolicy:
+      syncOptions:
+      - CreateNamespace=true
+  status:
+    controllerNamespace: argocd
+    health:
+      lastTransitionTime: "2026-06-05T22:50:12Z"
+      status: Healthy
+    history:
+    - deployStartedAt: "2026-06-05T22:49:59Z"
+      deployedAt: "2026-06-05T22:50:02Z"
+      id: 0
+      initiatedBy:
+        username: admin
+      revision: 87945a03ed56ba442ed2796b56a51caa3ee99e53
+      source:
+        path: ./health-check
+        repoURL: https://3000-port-eezopvsyada2iiyd.labs.kodekloud.com/bob/gitops-argocd.git
+        targetRevision: HEAD
+    operationState:
+      finishedAt: "2026-06-05T22:50:02Z"
+      message: successfully synced (all tasks run)
+      operation:
+        initiatedBy:
+          username: admin
+        retry: {}
+        sync:
+          revision: 87945a03ed56ba442ed2796b56a51caa3ee99e53
+          syncOptions:
+          - CreateNamespace=true
+          syncStrategy:
+            hook: {}
+      phase: Succeeded
+      startedAt: "2026-06-05T22:49:59Z"
+      syncResult:
+        resources:
+        - group: ""
+          hookPhase: Running
+          kind: Namespace
+          message: namespace/health-check created
+          name: health-check
+          namespace: ""
+          status: Synced
+          syncPhase: PreSync
+          version: v1
+        - group: ""
+          hookPhase: Running
+          kind: ConfigMap
+          message: configmap/moving-shapes-colors created
+          name: moving-shapes-colors
+          namespace: health-check
+          status: Synced
+          syncPhase: Sync
+          version: v1
+        - group: ""
+          hookPhase: Running
+          kind: Service
+          message: service/random-shapes-svc created
+          name: random-shapes-svc
+          namespace: health-check
+          status: Synced
+          syncPhase: Sync
+          version: v1
+        - group: apps
+          hookPhase: Running
+          kind: Deployment
+          message: deployment.apps/random-shapes created
+          name: random-shapes
+          namespace: health-check
+          status: Synced
+          syncPhase: Sync
+          version: v1
+        revision: 87945a03ed56ba442ed2796b56a51caa3ee99e53
+        source:
+          path: ./health-check
+          repoURL: https://3000-port-eezopvsyada2iiyd.labs.kodekloud.com/bob/gitops-argocd.git
+          targetRevision: HEAD
+    reconciledAt: "2026-06-05T23:13:04Z"
+    resources:
+    - kind: ConfigMap
+      name: moving-shapes-colors
+      namespace: health-check
+      status: Synced
+      version: v1
+    - health:
+        status: Healthy
+      kind: Service
+      name: random-shapes-svc
+      namespace: health-check
+      status: Synced
+      version: v1
+    - group: apps
+      health:
+        status: Healthy
+      kind: Deployment
+      name: random-shapes
+      namespace: health-check
+      status: Synced
+      version: v1
+    sourceHydrator: {}
+    sourceType: Directory
+    summary:
+      images:
+      - siddharth67/php-random-shapes:v1
+    sync:
+      comparedTo:
+        destination:
+          namespace: health-check
+          server: https://cluster2-controlplane:6443
+        source:
+          path: ./health-check
+          repoURL: https://3000-port-eezopvsyada2iiyd.labs.kodekloud.com/bob/gitops-argocd.git
+          targetRevision: HEAD
+      revision: 87945a03ed56ba442ed2796b56a51caa3ee99e53
+      status: Synced
+- apiVersion: argoproj.io/v1alpha1
+  kind: Application
+  metadata:
+    creationTimestamp: "2026-06-05T22:35:53Z"
+    generation: 23
+    name: helm-random-shapes
+    namespace: argocd
+    resourceVersion: "47655"
+    uid: 888f989b-bbe7-4ec4-a9a5-acb960851f05
+  spec:
+    destination:
+      namespace: default
+      server: https://kubernetes.default.svc
+    project: default
+    source:
+      helm:
+        parameters:
+        - name: color.circle
+          value: pink
+        - name: color.oval
+          value: black
+        - name: color.square
+          value: red
+        - name: service.type
+          value: NodePort
+      path: ./helm-chart
+      repoURL: https://3000-port-eezopvsyada2iiyd.labs.kodekloud.com/bob/gitops-argocd.git
+      targetRevision: HEAD
+    syncPolicy:
+      syncOptions:
+      - CreateNamespace=true
+  status:
+    controllerNamespace: argocd
+    health:
+      lastTransitionTime: "2026-06-05T22:37:11Z"
+      status: Healthy
+    history:
+    - deployStartedAt: "2026-06-05T22:37:03Z"
+      deployedAt: "2026-06-05T22:37:03Z"
+      id: 0
+      initiatedBy:
+        username: admin
+      revision: 87945a03ed56ba442ed2796b56a51caa3ee99e53
+      source:
+        helm:
+          parameters:
+          - name: color.circle
+            value: pink
+          - name: color.oval
+            value: black
+          - name: color.square
+            value: red
+          - name: service.type
+            value: NodePort
+        path: ./helm-chart
+        repoURL: https://3000-port-eezopvsyada2iiyd.labs.kodekloud.com/bob/gitops-argocd.git
+        targetRevision: HEAD
+    operationState:
+      finishedAt: "2026-06-05T22:37:03Z"
+      message: successfully synced (all tasks run)
+      operation:
+        initiatedBy:
+          username: admin
+        retry: {}
+        sync:
+          revision: 87945a03ed56ba442ed2796b56a51caa3ee99e53
+          syncOptions:
+          - CreateNamespace=true
+          syncStrategy:
+            hook: {}
+      phase: Succeeded
+      startedAt: "2026-06-05T22:37:03Z"
+      syncResult:
+        resources:
+        - group: ""
+          hookPhase: Running
+          kind: ConfigMap
+          message: configmap/helm-random-shapes-configmap created
+          name: helm-random-shapes-configmap
+          namespace: default
+          status: Synced
+          syncPhase: Sync
+          version: v1
+        - group: ""
+          hookPhase: Running
+          kind: Service
+          message: service/helm-random-shapes-service created
+          name: helm-random-shapes-service
+          namespace: default
+          status: Synced
+          syncPhase: Sync
+          version: v1
+        - group: apps
+          hookPhase: Running
+          kind: Deployment
+          message: deployment.apps/helm-random-shapes-deploy created
+          name: helm-random-shapes-deploy
+          namespace: default
+          status: Synced
+          syncPhase: Sync
+          version: v1
+        revision: 87945a03ed56ba442ed2796b56a51caa3ee99e53
+        source:
+          helm:
+            parameters:
+            - name: color.circle
+              value: pink
+            - name: color.oval
+              value: black
+            - name: color.square
+              value: red
+            - name: service.type
+              value: NodePort
+          path: ./helm-chart
+          repoURL: https://3000-port-eezopvsyada2iiyd.labs.kodekloud.com/bob/gitops-argocd.git
+          targetRevision: HEAD
+    reconciledAt: "2026-06-05T23:13:04Z"
+    resources:
+    - kind: ConfigMap
+      name: helm-random-shapes-configmap
+      namespace: default
+      status: Synced
+      version: v1
+    - health:
+        status: Healthy
+      kind: Service
+      name: helm-random-shapes-service
+      namespace: default
+      status: Synced
+      version: v1
+    - group: apps
+      health:
+        status: Healthy
+      kind: Deployment
+      name: helm-random-shapes-deploy
+      namespace: default
+      status: Synced
+      version: v1
+    sourceHydrator: {}
+    sourceType: Helm
+    summary:
+      images:
+      - siddharth67/php-random-shapes:v1
+    sync:
+      comparedTo:
+        destination:
+          namespace: default
+          server: https://kubernetes.default.svc
+        source:
+          helm:
+            parameters:
+            - name: color.circle
+              value: pink
+            - name: color.oval
+              value: black
+            - name: color.square
+              value: red
+            - name: service.type
+              value: NodePort
+          path: ./helm-chart
+          repoURL: https://3000-port-eezopvsyada2iiyd.labs.kodekloud.com/bob/gitops-argocd.git
+          targetRevision: HEAD
+      revision: 87945a03ed56ba442ed2796b56a51caa3ee99e53
+      status: Synced
+kind: List
+metadata:
+  resourceVersion: ""
