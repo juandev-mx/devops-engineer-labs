@@ -43,6 +43,7 @@ helm-conditionals-with-blocks-and-ranges/
 ├── Chart.yaml
 ├── values.yaml
 └── README.md
+├── screenshot/
 └── templates/
     ├── deployment.yaml
     ├── service.yaml
