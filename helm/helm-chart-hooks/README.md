@@ -38,10 +38,9 @@ These Jobs execute automatically when a Helm release is installed or upgraded.
 ## Repository Structure
 
 ```text
-└── README.md
-└── screenshot/
 └── helm-chart-hooks/
     ├── README.md
+    └── screenshot/
     ├── webapp/
     │   ├── Chart.yaml
     │   ├── values.yaml
