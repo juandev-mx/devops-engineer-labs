@@ -166,11 +166,3 @@ Lab:
 - Docker Images
 
 ---
-
-## ‍ Author
-
-**Juan Carlos Reynoso Zuñiga**
-
-* Backend Developer
-* DevOps Enthusiast
-* Computer Systems Engineer
