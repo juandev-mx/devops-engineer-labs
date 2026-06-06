@@ -35,7 +35,7 @@ The lab demonstrates how ReplicaSets provide high availability and self-healing 
 ##  Project Structure
 
 ```text
-replica-sets/
+kubernetes-replica-sets/
 ├── README.md
 ├── replicaset-definition-1.yaml
 ├── replicaset-definition-2.yaml
