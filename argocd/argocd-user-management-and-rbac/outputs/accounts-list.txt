@@ -1,0 +1,3 @@
+NAME   ENABLED  CAPABILITIES
+admin  true     login
+alice  true     apiKey, login
