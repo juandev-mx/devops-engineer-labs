@@ -33,13 +33,12 @@ The exercise uses the HashiCorp Local provider to create a local file resource w
 ## Project Structure
 
 ```text
-remote-state/
+terraform-remote-state/
 ├── README.md
 ├── main.tf
 ├── terraform.tf
 ├── variables.tf
 ├── screenshot/
-│   └── .gitkeep
 └── .terraform.lock.hcl
 ```
 
