@@ -12,6 +12,22 @@
 
 Learn how to deploy existing Helm charts from a repository and manage releases inside a Kubernetes cluster.
 
+---
+
+## Project Structure
+
+```text
+helm-deploy-chart/
+│
+├── README.md
+├── screenshot/
+├── commands/
+│   ├── deploy-chart.sh
+
+```
+
+---
+
 ## Technologies
 
 - Helm 3
