@@ -42,13 +42,14 @@ This project simulates a real-world DevOps workflow commonly used in modern soft
 
 ```text
 jenkins-pipeline-env-scm/
-├── python-pipeline/
 ├── .gitkeep
 ├── Jenkinsfile
 ├── README.md
 ├── app.py
 ├── requirements.txt
-└── test_app.py
+├── test_app.py
+├── python-pipeline/
+      ├── config.xml
 ```
 
 ---
