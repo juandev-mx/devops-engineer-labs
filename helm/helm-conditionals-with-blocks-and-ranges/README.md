@@ -42,6 +42,7 @@ The lab uses a custom chart named **webapp-color** that deploys a web applicatio
 helm-conditionals-with-blocks-and-ranges/
 ├── Chart.yaml
 ├── values.yaml
+└── README.md
 └── templates/
     ├── deployment.yaml
     ├── service.yaml
