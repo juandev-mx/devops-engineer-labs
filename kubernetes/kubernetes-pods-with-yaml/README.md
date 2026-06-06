@@ -17,7 +17,7 @@ This lab focuses on creating and managing Kubernetes Pods using YAML definition 
 ##  Project Structure
 
 ```text
-pods-with-yaml/
+kubernetes-pods-with-yaml/
 ├── screenshot/
 ├── README.md
 └── pod-status.yaml
