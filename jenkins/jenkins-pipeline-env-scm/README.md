@@ -49,7 +49,7 @@ jenkins-pipeline-env-scm/
 ├── requirements.txt
 ├── test_app.py
 ├── python-pipeline/
-      ├── config.xml
+      └──config.xml
 ```
 
 ---
