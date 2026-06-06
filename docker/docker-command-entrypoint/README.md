@@ -189,13 +189,6 @@ Lab:
 
 ---
 
-# ‍ Author
-
-Juan Carlos Reynoso Zuñiga
-
----
-
-
 <img width="572" height="397" alt="CMD" src="https://github.com/user-attachments/assets/a524006e-96e2-4fa8-aa99-d799a957dce8" />
 
 <img width="572" height="406" alt="DockerFileWordpress" src="https://github.com/user-attachments/assets/883457fa-6cca-431c-86c6-39d8a80f0484" />
