@@ -23,7 +23,6 @@ kubernetes-pods-with-yaml/
 └── pod-status.yaml
 └── pods.yaml
 └── redis-definition.yaml
-
 ```
 
 ---
