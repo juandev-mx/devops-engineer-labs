@@ -224,13 +224,6 @@ git clone https://github.com/juandev-mx/devops-engineer-labs.git
 
 ---
 
-# ‍ Author
-
-**Juan Carlos Reynoso Zúñiga**
-*Software Engineer | Backend & DevOps Enthusiast*
-
----
-
 #  Course Reference
 
 - **Platform:** KodeKloud
