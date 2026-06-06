@@ -35,7 +35,7 @@ The objective of this lab was to understand:
 # Project Structure
 
 ```text
-resource-dependencies/
+terraform-resource-dependencies/
 │
 ├── explicit-dependency/
 │   └── main.tf
