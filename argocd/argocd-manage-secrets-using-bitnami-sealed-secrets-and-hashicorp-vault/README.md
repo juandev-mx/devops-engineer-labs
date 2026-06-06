@@ -80,19 +80,19 @@ Applications
 ## Project Structure
 
 ```text
-argocd-manage-secrets-using-bitnami-sealed-secrets-and-hashicorp-vault
+argocd-manage-secrets-using-bitnami-sealed-secrets-and-hashicorp-vault/
 │
 ├── README.md
 ├── application.yaml
 │
-├── manifests
+├── manifests/
 │   ├── mysql-password_k8s-secret.yaml
 │   ├── mysql-password_sealed-secret.yaml
 │   ├── secret.yaml
 │   ├── secret_updated.yaml
 │   └── vault.env
 │
-├── outputs
+├── outputs/
 │   ├── app-list.txt
 │   ├── encrypted-secret-app.txt
 │   ├── encrypted-secret-resources.txt
