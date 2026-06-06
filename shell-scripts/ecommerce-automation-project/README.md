@@ -25,6 +25,24 @@ The project includes:
 
 ---
 
+## Project Structure
+
+```text
+ecommerce-automation-project/
+│
+├── asests/
+├── css/
+├── forts/
+├── img/
+├── js/
+├── scss/
+├── vendors/
+├── index.php
+├── README.md
+```
+
+---
+
 # ️ Technologies Used
 
 
