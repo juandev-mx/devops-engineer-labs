@@ -28,7 +28,7 @@ This lab demonstrates how Kubernetes Deployments handle application updates, ver
 ## Project Structure
 
 ```text
-rolling-updates-rollbacks/
+kubernetes-rolling-updates-rollbacks/
 ├── README.md
 ├── rolling-updates-output.yaml
 ├── frontend-deployment.yaml
