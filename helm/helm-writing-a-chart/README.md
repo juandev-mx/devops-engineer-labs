@@ -38,6 +38,7 @@ These charts package Kubernetes resources and use Helm templating to provide reu
 
 ```text
 helm-writing-a-chart/
+├──  README.md
 ├── hello-world/
 │   ├── Chart.yaml
 │   ├── values.yaml
