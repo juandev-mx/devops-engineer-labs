@@ -26,8 +26,6 @@ The exercise focuses on:
 
 ---
 
----
-
 ## Project Structure
 
 ```text
