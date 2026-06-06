@@ -167,8 +167,3 @@ Lab:
 
 ---
 
-# ‍ Author
-
-Juan Carlos Reynoso Zuñiga
-
-
