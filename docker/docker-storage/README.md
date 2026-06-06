@@ -210,12 +210,6 @@ Lab:
 
 ---
 
-# ‍ Author
-
-Juan Carlos Reynoso Zúñiga
-
----
-
 <img width="571" height="408" alt="ContainerMYSQL" src="https://github.com/user-attachments/assets/1d207adf-d00f-4db3-b9e0-b9f159b2ebeb" />
 
 <img width="569" height="403" alt="GetData_sh" src="https://github.com/user-attachments/assets/472143a9-c290-4961-8bf1-5cb7ca6c06af" />
