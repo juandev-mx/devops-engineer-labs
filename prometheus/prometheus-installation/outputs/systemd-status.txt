@@ -1,0 +1,26 @@
+===== PROMETHEUS =====
+● prometheus.service - Prometheus Server
+     Loaded: loaded (/etc/systemd/system/prometheus.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2026-06-06 22:46:20 GMT; 8min ago
+   Main PID: 4678 (prometheus)
+      Tasks: 21 (limit: 77149)
+     Memory: 40.9M
+        CPU: 979ms
+     CGroup: /system.slice/prometheus.service
+             └─4678 /usr/local/bin/prometheus --config.file=/etc/prometheus/prometheus.yml --storage.tsdb.path=/var/lib/prometheus --web.listen-address=0.0.0.0:9090
+
+Jun 06 22:46:20 prometheus-server prometheus[4678]: time=2026-06-06T22:46:20.281Z level=INFO source=head.go:752 msg="Replaying WAL, this may take a while" component=tsdb
+Jun 06 22:46:20 prometheus-server prometheus[4678]: time=2026-06-06T22:46:20.287Z level=INFO source=head.go:825 msg="WAL segment loaded" component=tsdb segment=0 maxSegment=1 duration=5.240267ms
+Jun 06 22:46:20 prometheus-server prometheus[4678]: time=2026-06-06T22:46:20.288Z level=INFO source=head.go:825 msg="WAL segment loaded" component=tsdb segment=1 maxSegment=1 duration=705.736µs
+Jun 06 22:46:20 prometheus-server prometheus[4678]: time=2026-06-06T22:46:20.288Z level=INFO source=head.go:862 msg="WAL replay completed" component=tsdb checkpoint_replay_duration=34.185µs wal_replay_duration=6.060308ms wbl_replay_duration=179ns chunk_snapshot_load_duration=0s mmap_chunk_replay_duration=2.28µs total_replay_duration=6.149297ms
+Jun 06 22:46:20 prometheus-server prometheus[4678]: time=2026-06-06T22:46:20.290Z level=INFO source=main.go:1309 msg="filesystem information" fs_type=794c7630
+Jun 06 22:46:20 prometheus-server prometheus[4678]: time=2026-06-06T22:46:20.290Z level=INFO source=main.go:1312 msg="TSDB started"
+Jun 06 22:46:20 prometheus-server prometheus[4678]: time=2026-06-06T22:46:20.290Z level=INFO source=main.go:1497 msg="Loading configuration file" filename=/etc/prometheus/prometheus.yml
+Jun 06 22:46:20 prometheus-server prometheus[4678]: time=2026-06-06T22:46:20.292Z level=INFO source=main.go:1537 msg="Completed loading of configuration file" db_storage=2.003µs remote_storage=2.164µs web_handler=891ns query_engine=8.948µs scrape=785.177µs scrape_sd=103.377µs notify=286.49µs notify_sd=30.458µs rules=3.505µs tracing=9.447µs filename=/etc/prometheus/prometheus.yml totalDuration=1.727945ms
+Jun 06 22:46:20 prometheus-server prometheus[4678]: time=2026-06-06T22:46:20.292Z level=INFO source=main.go:1273 msg="Server is ready to receive web requests."
+Jun 06 22:46:20 prometheus-server prometheus[4678]: time=2026-06-06T22:46:20.292Z level=INFO source=manager.go:176 msg="Starting rule manager..." component="rule manager"
+
+===== NODE EXPORTER =====
+● node_exporter.service - Node Exporter
+     Loaded: loaded (/etc/systemd/system/node_exporter.service; disabled; vendor preset: enabled)
+     Active: inactive (dead)
