@@ -12,6 +12,7 @@ Terraform project demonstrating the use of the official AWS IAM module to create
 ## Project Structure
 
 ```text
+terraform-modules/
 ├── screenshot/
 ├── provider.tf
 ├── variables.tf
