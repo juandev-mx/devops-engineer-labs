@@ -18,6 +18,7 @@ Different environments are configured through workspace-specific values using th
 ## Project Structure
 
 ```text
+terraform-workspaces/
 ├── screenshot/
 ├── provider.tf
 ├── variables.tf
