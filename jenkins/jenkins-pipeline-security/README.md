@@ -38,8 +38,8 @@ jenkins-pipeline-security/
 │         ├── java/com/kodekloud/hello_demo/
 │                  ├── HelloController.java
 │                  ├── MainApplication.java
-│    ├── resources/
-│          ├──application.properties                                                                 
+├── resources/
+│       ├──application.properties                                                                 
 ├── lab2-java-hello-world/
 │       ├──config.xml
 ```
