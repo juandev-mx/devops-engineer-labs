@@ -1,0 +1,127 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  creationTimestamp: "2026-06-06T03:29:06Z"
+  generation: 13
+  name: encrypted-secret
+  namespace: argocd
+  resourceVersion: "6913"
+  uid: fdfe2621-e366-4f50-951e-a49a2d87e223
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: ./sealed-secret
+    repoURL: https://3000-port-zeton7fnwoz3r74y.labs.kodekloud.com/bob/gitops-argocd.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated: {}
+    syncOptions:
+    - CreateNamespace=true
+status:
+  controllerNamespace: argocd
+  health:
+    lastTransitionTime: "2026-06-06T03:29:19Z"
+    status: Healthy
+  history:
+  - deployStartedAt: "2026-06-06T03:29:07Z"
+    deployedAt: "2026-06-06T03:29:07Z"
+    id: 0
+    initiatedBy:
+      automated: true
+    revision: 73cbdd9eeceaefa2cb7567f47f1fe65340b48914
+    source:
+      path: ./sealed-secret
+      repoURL: https://3000-port-zeton7fnwoz3r74y.labs.kodekloud.com/bob/gitops-argocd.git
+      targetRevision: HEAD
+  operationState:
+    finishedAt: "2026-06-06T03:29:07Z"
+    message: successfully synced (all tasks run)
+    operation:
+      initiatedBy:
+        automated: true
+      retry:
+        limit: 5
+      sync:
+        revision: 73cbdd9eeceaefa2cb7567f47f1fe65340b48914
+        syncOptions:
+        - CreateNamespace=true
+    phase: Succeeded
+    startedAt: "2026-06-06T03:29:07Z"
+    syncResult:
+      resources:
+      - group: ""
+        hookPhase: Running
+        kind: Service
+        message: service/secret-app created
+        name: secret-app
+        namespace: default
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apps
+        hookPhase: Running
+        kind: Deployment
+        message: deployment.apps/secret-app created
+        name: secret-app
+        namespace: default
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: bitnami.com
+        hookPhase: Running
+        kind: SealedSecret
+        message: sealedsecret.bitnami.com/app-crds created
+        name: app-crds
+        namespace: default
+        status: Synced
+        syncPhase: Sync
+        version: v1alpha1
+      revision: 73cbdd9eeceaefa2cb7567f47f1fe65340b48914
+      source:
+        path: ./sealed-secret
+        repoURL: https://3000-port-zeton7fnwoz3r74y.labs.kodekloud.com/bob/gitops-argocd.git
+        targetRevision: HEAD
+  reconciledAt: "2026-06-06T03:38:08Z"
+  resources:
+  - health:
+      status: Healthy
+    kind: Service
+    name: secret-app
+    namespace: default
+    status: Synced
+    version: v1
+  - group: apps
+    health:
+      status: Healthy
+    kind: Deployment
+    name: secret-app
+    namespace: default
+    status: Synced
+    version: v1
+  - group: bitnami.com
+    health:
+      status: Healthy
+    kind: SealedSecret
+    name: app-crds
+    namespace: default
+    status: Synced
+    version: v1alpha1
+  sourceHydrator: {}
+  sourceType: Directory
+  summary:
+    images:
+    - siddharth67/secrets:bitnami
+  sync:
+    comparedTo:
+      destination:
+        namespace: default
+        server: https://kubernetes.default.svc
+      source:
+        path: ./sealed-secret
+        repoURL: https://3000-port-zeton7fnwoz3r74y.labs.kodekloud.com/bob/gitops-argocd.git
+        targetRevision: HEAD
+    revision: 73cbdd9eeceaefa2cb7567f47f1fe65340b48914
+    status: Synced

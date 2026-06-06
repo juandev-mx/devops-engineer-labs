@@ -1,0 +1,3 @@
+NAME                     CLUSTER                         NAMESPACE    PROJECT  STATUS  HEALTH   SYNCPOLICY  CONDITIONS  REPO                                                                         PATH             TARGET
+argocd/encrypted-secret  https://kubernetes.default.svc  default      default  Synced  Healthy  Auto        <none>      https://3000-port-zeton7fnwoz3r74y.labs.kodekloud.com/bob/gitops-argocd.git  ./sealed-secret  HEAD
+argocd/sealed-secrets    https://kubernetes.default.svc  kube-system  default  Synced  Healthy  Auto        <none>      https://bitnami-labs.github.io/sealed-secrets                                                 2.2.0
