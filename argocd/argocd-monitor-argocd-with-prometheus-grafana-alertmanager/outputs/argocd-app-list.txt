@@ -1,0 +1,2 @@
+NAME                       CLUSTER                         NAMESPACE   PROJECT  STATUS  HEALTH   SYNCPOLICY  CONDITIONS  REPO                                                                         PATH            TARGET
+argocd/alert-manager-demo  https://kubernetes.default.svc  alert-demo  default  Synced  Healthy  Manual      <none>      https://3000-port-wvu4t5s3pj63ogv6.labs.kodekloud.com/bob/gitops-argocd.git  ./solar-system  HEAD

@@ -1,0 +1,29 @@
+monitoring     pod/alertmanager-kode-kloud-prometheus-stac-alertmanager-0           2/2     Running   0          51m
+monitoring     pod/kode-kloud-prometheus-stac-operator-766855f7db-h2s6p             1/1     Running   0          51m
+monitoring     pod/kode-kloud-prometheus-stack-grafana-59bc7f78f6-4hmlm             3/3     Running   0          51m
+monitoring     pod/kode-kloud-prometheus-stack-kube-state-metrics-ccb675ff6-dbjf8   1/1     Running   0          51m
+monitoring     pod/kode-kloud-prometheus-stack-prometheus-node-exporter-hdrrj       1/1     Running   0          51m
+monitoring     pod/prometheus-kode-kloud-prometheus-stac-prometheus-0               2/2     Running   0          51m
+kube-system   service/kode-kloud-prometheus-stac-coredns                     ClusterIP   None             <none>        9153/TCP                       51m
+kube-system   service/kode-kloud-prometheus-stac-kube-controller-manager     ClusterIP   None             <none>        10257/TCP                      51m
+kube-system   service/kode-kloud-prometheus-stac-kube-etcd                   ClusterIP   None             <none>        2379/TCP                       51m
+kube-system   service/kode-kloud-prometheus-stac-kube-proxy                  ClusterIP   None             <none>        10249/TCP                      51m
+kube-system   service/kode-kloud-prometheus-stac-kube-scheduler              ClusterIP   None             <none>        10259/TCP                      51m
+kube-system   service/kode-kloud-prometheus-stac-kubelet                     ClusterIP   None             <none>        10250/TCP,10255/TCP,4194/TCP   51m
+monitoring    service/alertmanager-operated                                  ClusterIP   None             <none>        9093/TCP,9094/TCP,9094/UDP     51m
+monitoring    service/kode-kloud-prometheus-stac-alertmanager                NodePort    172.20.33.249    <none>        9093:30030/TCP                 51m
+monitoring    service/kode-kloud-prometheus-stac-operator                    ClusterIP   172.20.104.246   <none>        443/TCP                        51m
+monitoring    service/kode-kloud-prometheus-stac-prometheus                  NodePort    172.20.65.78     <none>        9090:30040/TCP                 51m
+monitoring    service/kode-kloud-prometheus-stack-grafana                    NodePort    172.20.35.101    <none>        80:30050/TCP                   51m
+monitoring    service/kode-kloud-prometheus-stack-kube-state-metrics         ClusterIP   172.20.13.22     <none>        8080/TCP                       51m
+monitoring    service/kode-kloud-prometheus-stack-prometheus-node-exporter   ClusterIP   172.20.64.10     <none>        9100/TCP                       51m
+monitoring    service/prometheus-operated                                    ClusterIP   None             <none>        9090/TCP                       51m
+monitoring     daemonset.apps/kode-kloud-prometheus-stack-prometheus-node-exporter   1         1         1       1            1           <none>                   51m
+monitoring    deployment.apps/kode-kloud-prometheus-stac-operator              1/1     1            1           51m
+monitoring    deployment.apps/kode-kloud-prometheus-stack-grafana              1/1     1            1           51m
+monitoring    deployment.apps/kode-kloud-prometheus-stack-kube-state-metrics   1/1     1            1           51m
+monitoring    replicaset.apps/kode-kloud-prometheus-stac-operator-766855f7db             1         1         1       51m
+monitoring    replicaset.apps/kode-kloud-prometheus-stack-grafana-59bc7f78f6             1         1         1       51m
+monitoring    replicaset.apps/kode-kloud-prometheus-stack-kube-state-metrics-ccb675ff6   1         1         1       51m
+monitoring   statefulset.apps/alertmanager-kode-kloud-prometheus-stac-alertmanager   1/1     51m
+monitoring   statefulset.apps/prometheus-kode-kloud-prometheus-stac-prometheus       1/1     51m

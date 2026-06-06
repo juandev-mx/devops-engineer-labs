@@ -1,0 +1,124 @@
+apiVersion: v1
+items:
+- apiVersion: argoproj.io/v1alpha1
+  kind: Application
+  metadata:
+    creationTimestamp: "2026-06-06T06:06:34Z"
+    generation: 18
+    name: alert-manager-demo
+    namespace: argocd
+    resourceVersion: "6996"
+    uid: 38d11263-a2ba-4124-b365-6e0dc6a1fda0
+  spec:
+    destination:
+      namespace: alert-demo
+      server: https://kubernetes.default.svc
+    project: default
+    source:
+      path: ./solar-system
+      repoURL: https://3000-port-wvu4t5s3pj63ogv6.labs.kodekloud.com/bob/gitops-argocd.git
+      targetRevision: HEAD
+    syncPolicy:
+      syncOptions:
+      - CreateNamespace=true
+  status:
+    controllerNamespace: argocd
+    health:
+      lastTransitionTime: "2026-06-06T06:10:05Z"
+      status: Healthy
+    history:
+    - deployStartedAt: "2026-06-06T06:09:45Z"
+      deployedAt: "2026-06-06T06:09:48Z"
+      id: 0
+      initiatedBy:
+        username: admin
+      revision: 03461ca43801bf16f111815123674e30adfe9e63
+      source:
+        path: ./solar-system
+        repoURL: https://3000-port-wvu4t5s3pj63ogv6.labs.kodekloud.com/bob/gitops-argocd.git
+        targetRevision: HEAD
+    operationState:
+      finishedAt: "2026-06-06T06:09:48Z"
+      message: successfully synced (all tasks run)
+      operation:
+        initiatedBy:
+          username: admin
+        retry: {}
+        sync:
+          revision: 03461ca43801bf16f111815123674e30adfe9e63
+          syncOptions:
+          - CreateNamespace=true
+          syncStrategy:
+            hook: {}
+      phase: Succeeded
+      startedAt: "2026-06-06T06:09:45Z"
+      syncResult:
+        resources:
+        - group: ""
+          hookPhase: Running
+          kind: Namespace
+          message: namespace/alert-demo created
+          name: alert-demo
+          namespace: ""
+          status: Synced
+          syncPhase: PreSync
+          version: v1
+        - group: ""
+          hookPhase: Running
+          kind: Service
+          message: service/solar-system-service created
+          name: solar-system-service
+          namespace: alert-demo
+          status: Synced
+          syncPhase: Sync
+          version: v1
+        - group: apps
+          hookPhase: Running
+          kind: Deployment
+          message: deployment.apps/solar-system created
+          name: solar-system
+          namespace: alert-demo
+          status: Synced
+          syncPhase: Sync
+          version: v1
+        revision: 03461ca43801bf16f111815123674e30adfe9e63
+        source:
+          path: ./solar-system
+          repoURL: https://3000-port-wvu4t5s3pj63ogv6.labs.kodekloud.com/bob/gitops-argocd.git
+          targetRevision: HEAD
+    reconciledAt: "2026-06-06T06:23:46Z"
+    resources:
+    - health:
+        status: Healthy
+      kind: Service
+      name: solar-system-service
+      namespace: alert-demo
+      status: Synced
+      version: v1
+    - group: apps
+      health:
+        status: Healthy
+      kind: Deployment
+      name: solar-system
+      namespace: alert-demo
+      status: Synced
+      version: v1
+    sourceHydrator: {}
+    sourceType: Directory
+    summary:
+      images:
+      - siddharth67/solar-system:v9
+    sync:
+      comparedTo:
+        destination:
+          namespace: alert-demo
+          server: https://kubernetes.default.svc
+        source:
+          path: ./solar-system
+          repoURL: https://3000-port-wvu4t5s3pj63ogv6.labs.kodekloud.com/bob/gitops-argocd.git
+          targetRevision: HEAD
+      revision: 03461ca43801bf16f111815123674e30adfe9e63
+      status: Synced
+kind: List
+metadata:
+  resourceVersion: ""
