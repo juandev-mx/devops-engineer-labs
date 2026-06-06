@@ -20,6 +20,32 @@ The objective of this laboratory was to:
 
 ---
 
+---
+
+## Project Structure
+
+```text
+jenkins-pipeline-security/
+│
+├── README.md
+├── Jenkinsfile
+├── mvnw
+├── mvnw.cmd
+├── pom.xml
+├── screenshot/
+├── src/
+│    ├── main/
+│         ├── java/com/kodekloud/hello_demo/
+│                  ├── HelloController.java
+│                  ├── MainApplication.java
+│    ├── resources/
+│          ├──application.properties                                                                 
+├── lab2-java-hello-world/
+│       ├──config.xml
+```
+
+---
+
 # ️ Technologies Used
 
 | Area | Technology |
