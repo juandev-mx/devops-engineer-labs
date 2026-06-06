@@ -42,9 +42,7 @@ terraform-import/
 ├── provider.tf
 ├── variables.tf
 ├── main.tf
-└── screenshot/
-    └── .gitkeep
-```
+└── screenshot/```
 
 ---
 
