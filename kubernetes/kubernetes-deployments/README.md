@@ -32,7 +32,7 @@ During the lab, Deployments were created using YAML manifests, verified using ku
 ##  Project Structure
 
 ```text
-deployments/
+kubernetes-deployments/
 ├── README.md
 ├── deployment-definition-1.yaml
 ├── deployment-definition-httpd.yaml
