@@ -263,10 +263,3 @@ Lab:
 - Jenkins Pipeline and Basic Security
 
 ---
-
-# ‍ Author
-
-Juan Carlos Reynoso Zuñiga
-
-Backend Developer | DevOps Enthusiast | CI/CD Automation
-
