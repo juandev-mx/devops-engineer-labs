@@ -142,29 +142,3 @@ This knowledge is essential for working with:
 * Infrastructure automation
 
 ---
-
-##  Notes
-
-This lab was completed as part of the KodeKloud Docker & DevOps learning path and documented inside the `devops-engineer-labs` repository.
-
-GitHub Repository:
-
-```bash
-https://github.com/juandev-mx/devops-engineer-labs
-```
-
----
-
-## ‍ Author
-
-**Juan Carlos Reynoso Zuñiga**
-
-* Backend Developer
-* DevOps Learner
-* API & Integration Engineer Enthusiast
-
-GitHub:
-
-```bash
-https://github.com/juandev-mx
-```
