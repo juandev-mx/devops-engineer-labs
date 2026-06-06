@@ -1,4 +1,4 @@
-# Lab: ArgoCD User Management and RBAC
+# ArgoCD User Management and RBAC
 
 ## Overview
 
