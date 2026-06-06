@@ -283,5 +283,3 @@ Git serves as the single source of truth for application deployments and infrast
 * Kubernetes Documentation: https://kubernetes.io/docs/
 
 ---
-
-GitHub: https://github.com/juandev-mx
