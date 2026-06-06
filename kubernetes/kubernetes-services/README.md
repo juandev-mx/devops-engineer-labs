@@ -29,7 +29,7 @@ This lab demonstrates how Kubernetes Services provide network access to applicat
 ## Project Structure
 
 ```text
-services/
+kubernetes-services/
 ├── README.md
 ├── service-definition-1.yaml
 ├── services-output.yaml
