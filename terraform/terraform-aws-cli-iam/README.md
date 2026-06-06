@@ -33,7 +33,7 @@ The lab covers common IAM administration tasks such as creating users, assigning
 ## Project Structure
 
 ```text
-aws-cli-iam/
+terraform-aws-cli-iam/
 ├── README.md
 ├── commands.txt
 ├── screenshots/
