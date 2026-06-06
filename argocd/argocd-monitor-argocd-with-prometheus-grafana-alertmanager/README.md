@@ -1,4 +1,4 @@
-# Lab - Monitor ArgoCD with Prometheus, Grafana, AlertManager
+# Monitor ArgoCD with Prometheus, Grafana, AlertManager
 
 ## Overview
 
