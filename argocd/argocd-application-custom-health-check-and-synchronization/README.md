@@ -26,6 +26,25 @@ The exercise focuses on:
 
 ---
 
+---
+
+## Project Structure
+
+```text
+argocd-application-custom-health-check-and-synchronization/
+│
+├── README.md
+├── application.yaml
+├── screenshot/
+├── outputs/
+│   ├── app-get.txt
+│   ├── app-history.txt
+│   ├── app-list.txt
+│   ├── app-resources.txt
+```
+
+---
+
 ## Lab Architecture
 
 ```text
