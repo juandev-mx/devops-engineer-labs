@@ -206,131 +206,221 @@ group_right()
 
 These modifiers help define how vectors should be matched during evaluation.
 
----
-
 # Queries Executed
 
-## Query 1
+## Query 1 – Comparison Operator
 
 ```promql
 node_filesystem_avail_bytes{job="web"} > 1000
 ```
 
-Purpose:
+**Purpose**
 
-Validate filesystem availability on web servers.
-
----
-
-## Query 2
-
-PromQL operator exercise executed through the Prometheus Expression Browser.
-
-Purpose:
-
-Practice metric filtering using comparison operators.
+Return filesystem metrics where available disk space is greater than 1000 bytes.
 
 ---
 
-## Query 3
+## Query 2 – Comparison Operator
+
+```promql
+node_network_receive_bytes_total{instance="loadbalancer:9100"} <= 10000
+```
+
+**Purpose**
+
+Return all network interfaces on the load balancer that have received less than or equal to 10,000 bytes of traffic.
+
+**Concepts Used**
+
+* Comparison operators
+* Metric filtering
+* Label selectors
+
+---
+
+## Query 3 – Logical Operator
 
 ```promql
 node_filesystem_files > 500000 and node_filesystem_files < 10000000
 ```
 
-Purpose:
+**Purpose**
 
-Filter filesystems using logical conditions.
+Filter filesystems whose file count falls within a specific range.
 
----
+**Concepts Used**
 
-## Query 4
-
-PromQL operator exercise executed through the Prometheus Expression Browser.
-
-Purpose:
-
-Practice additional operator-based filtering.
+* Logical operators
+* Boolean evaluation
+* Metric filtering
 
 ---
 
-## Query 5
+## Query 4 – Arithmetic Operator
 
-PromQL operator exercise executed through the Prometheus Expression Browser.
+```promql
+node_filesystem_avail_bytes{job="web", device!="tmpfs"} * 100
+/
+node_filesystem_size_bytes{job="web", device!="tmpfs"}
+```
 
-Purpose:
+**Purpose**
 
-Explore logical and arithmetic evaluation behavior.
+Calculate available filesystem space as a percentage of total capacity while excluding temporary filesystems.
+
+**Concepts Used**
+
+* Arithmetic operators
+* Label filtering
+* Percentage calculations
 
 ---
 
-## Query 6
+## Query 5 – Vector Matching with Ignoring
+
+```promql
+node_cpu_seconds_total{instance="loadbalancer:9100", mode="user"}
++
+ignoring(mode)
+node_cpu_seconds_total{instance="loadbalancer:9100", mode="system"}
+```
+
+**Purpose**
+
+Combine user CPU time and system CPU time while ignoring the `mode` label during vector matching.
+
+**Concepts Used**
+
+* Vector matching
+* `ignoring()`
+* Arithmetic operations between vectors
+
+---
+
+## Query 6 – Sum Aggregator
 
 ```promql
 sum(node_filesystem_size_bytes{instance="loadbalancer:9100"})
 ```
 
-Purpose:
+**Purpose**
 
-Calculate total filesystem capacity for the load balancer.
+Calculate total filesystem capacity available on the load balancer host.
+
+**Concepts Used**
+
+* Aggregation
+* `sum()`
 
 ---
 
-## Query 7
+## Query 7 – Count Aggregator
 
 ```promql
 count(node_cpu_seconds_total{instance="loadbalancer:9100", mode="idle"})
 ```
 
-Purpose:
+**Purpose**
 
-Count idle CPU metrics on the load balancer.
+Count CPU cores reporting idle metrics.
+
+**Concepts Used**
+
+* Aggregation
+* `count()`
 
 ---
 
-## Query 8
+## Query 8 – Grouped Aggregation
 
 ```promql
 count(node_cpu_seconds_total{mode="idle"}) by (instance)
 ```
 
-Purpose:
+**Purpose**
 
-Count idle CPU metrics grouped by host.
+Count CPU cores per monitored host.
+
+**Concepts Used**
+
+* Aggregation
+* Grouping with `by()`
 
 ---
 
-## Query 9
+## Query 9 – Aggregation Arithmetic
 
 ```promql
-sum by(instance) (node_network_receive_bytes_total)
+sum(node_network_receive_bytes_total)
+/
+sum(node_network_receive_packets_total)
 ```
 
-Purpose:
+**Purpose**
 
-Calculate total incoming network traffic grouped by host.
+Calculate the average number of bytes received per network packet across all monitored systems.
 
----
+**Concepts Used**
 
-## Query 10
-
-Aggregation and vector matching exercise executed through the Prometheus Expression Browser.
-
-Purpose:
-
-Analyze metric aggregation behavior.
+* Aggregation
+* Arithmetic operators
+* Infrastructure traffic analysis
 
 ---
 
-## Query 11
+## Query 10 – Aggregation Exercise
 
-Advanced PromQL exercise executed through the Prometheus Expression Browser.
+PromQL aggregation exercise executed through the Prometheus Expression Browser.
 
-Purpose:
+**Purpose**
 
-Practice combining operators and aggregation functions.
+Analyze metric aggregation behavior and understand how aggregated vectors are evaluated.
 
 ---
+
+## Query 11 – Vector Matching with Ignoring and Aggregation
+
+```promql
+node_cpu_seconds_total{mode="user"} * 100
+/
+ignoring(mode, job)
+sum by(instance, cpu) (node_cpu_seconds_total)
+```
+
+**Purpose**
+
+Calculate the percentage of CPU time spent in user mode per CPU core.
+
+**Concepts Used**
+
+* Aggregation
+* Vector matching
+* `ignoring()`
+* CPU utilization analysis
+
+---
+
+## Query 12 – Group Left Vector Matching
+
+```promql
+http_upload_failed_bytes_total * 100
+/
+ignoring(error)
+group_left
+http_uploaded_bytes_total
+```
+
+**Purpose**
+
+Calculate upload failure percentages while preserving labels from the left-hand metric.
+
+**Concepts Used**
+
+* Vector matching
+* `group_left`
+* Label cardinality handling
+* Error rate calculations
+
 
 # Active Targets Validation
 
