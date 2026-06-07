@@ -290,23 +290,25 @@ The following evidence files were collected during the lab execution:
 
 ### active-targets.json
 
-Contains the Prometheus target discovery information and target health status.
+Contains Prometheus target discovery information, scrape status, endpoint configuration, and health status for monitored targets.
 
 ### promql-selectors.txt
 
-Contains examples and results of PromQL metric selectors.
+Contains PromQL selector queries used to retrieve metrics and validate metric discovery.
 
 ### promql-matchers.txt
 
-Contains examples and results of label matchers and regex matchers.
+Contains examples of equality, inequality, and regular expression label matchers used during the lab.
 
 ### promql-modifiers.txt
 
-Contains examples and results of offset and time-based query modifiers.
+Contains examples of PromQL modifiers, including range vectors and offset queries for historical analysis.
 
 ### query-results.txt
 
-Contains query outputs generated during the lab validation process.
+Contains the outputs generated from the PromQL queries executed during the lab.
+
+
 ## Repository Structure
 
 ```text
