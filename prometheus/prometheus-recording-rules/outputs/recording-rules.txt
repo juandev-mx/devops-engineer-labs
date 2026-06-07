@@ -1,0 +1,143 @@
+========== PROMETHEUS VERSION ==========
+prometheus, version 3.5.0 (branch: HEAD, revision: 8be3a9560fbdd18a94dedec4b747c35178177202)
+  build user:       root@4451b64cb451
+  build date:       20250714-16:15:23
+  go version:       go1.24.5
+  platform:         linux/amd64
+  tags:             netgo,builtinassets
+
+========== PROMETHEUS CONFIG ==========
+# my global config
+global:
+  scrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+  evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
+  # scrape_timeout is set to the global default (10s).
+
+# Alertmanager configuration
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          # - alertmanager:9093
+
+# Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
+rule_files:
+    - "*rules.yaml"   
+    - "api-rules.yaml"    
+    - "node-rules.yaml"    
+  # - "first_rules.yml"
+  # - "second_rules.yml"
+
+# A scrape configuration containing exactly one endpoint to scrape:
+# Here it's Prometheus itself.
+scrape_configs:
+  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+  - job_name: "prometheus"
+
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.
+
+    static_configs:
+      - targets: ["localhost:9090"]
+
+  - job_name: "nodes"
+    scheme: https
+    tls_config:
+      ca_file: /etc/prometheus/node_exporter.crt
+      insecure_skip_verify: true
+    basic_auth:
+      username: prometheus
+      password: secret-password
+    static_configs:
+      - targets: ["node01:9100", "node02:9100"]
+
+  - job_name: "api"
+    static_configs:
+      - targets: ["node01:3000", "node02:3000"]
+
+========== ACTIVE TARGETS ==========
+{"status":"success","data":{"activeTargets":[{"discoveredLabels":{"__address__":"node01:3000","__metrics_path__":"/metrics","__scheme__":"http","__scrape_interval__":"15s","__scrape_timeout__":"10s","job":"api"},"labels":{"instance":"node01:3000","job":"api"},"scrapePool":"api","scrapeUrl":"http://node01:3000/metrics","globalUrl":"http://node01:3000/metrics","lastError":"","lastScrape":"2026-06-07T20:37:48.944953489Z","lastScrapeDuration":0.004029439,"health":"up","scrapeInterval":"15s","scrapeTimeout":"10s"},{"discoveredLabels":{"__address__":"node02:3000","__metrics_path__":"/metrics","__scheme__":"http","__scrape_interval__":"15s","__scrape_timeout__":"10s","job":"api"},"labels":{"instance":"node02:3000","job":"api"},"scrapePool":"api","scrapeUrl":"http://node02:3000/metrics","globalUrl":"http://node02:3000/metrics","lastError":"","lastScrape":"2026-06-07T20:37:59.185613094Z","lastScrapeDuration":0.00613971,"health":"up","scrapeInterval":"15s","scrapeTimeout":"10s"},{"discoveredLabels":{"__address__":"node01:9100","__metrics_path__":"/metrics","__scheme__":"https","__scrape_interval__":"15s","__scrape_timeout__":"10s","job":"nodes"},"labels":{"instance":"node01:9100","job":"nodes"},"scrapePool":"nodes","scrapeUrl":"https://node01:9100/metrics","globalUrl":"https://node01:9100/metrics","lastError":"","lastScrape":"2026-06-07T20:37:58.009951096Z","lastScrapeDuration":0.114334359,"health":"up","scrapeInterval":"15s","scrapeTimeout":"10s"},{"discoveredLabels":{"__address__":"node02:9100","__metrics_path__":"/metrics","__scheme__":"https","__scrape_interval__":"15s","__scrape_timeout__":"10s","job":"nodes"},"labels":{"instance":"node02:9100","job":"nodes"},"scrapePool":"nodes","scrapeUrl":"https://node02:9100/metrics","globalUrl":"https://node02:9100/metrics","lastError":"","lastScrape":"2026-06-07T20:37:51.895576967Z","lastScrapeDuration":0.154105506,"health":"up","scrapeInterval":"15s","scrapeTimeout":"10s"},{"discoveredLabels":{"__address__":"localhost:9090","__metrics_path__":"/metrics","__scheme__":"http","__scrape_interval__":"15s","__scrape_timeout__":"10s","job":"prometheus"},"labels":{"instance":"localhost:9090","job":"prometheus"},"scrapePool":"prometheus","scrapeUrl":"http://localhost:9090/metrics","globalUrl":"http://prometheus-server:9090/metrics","lastError":"","lastScrape":"2026-06-07T20:37:53.036748574Z","lastScrapeDuration":0.009498397,"health":"up","scrapeInterval":"15s","scrapeTimeout":"10s"}],"droppedTargets":[],"droppedTargetCounts":{"api":0,"nodes":0,"prometheus":0}}}
+========== RULE FILES ==========
+/etc/prometheus/node-rules.yaml
+/etc/prometheus/api-rules.yaml
+/etc/prometheus/prometheus.yml
+
+========== RECORDING RULE CONTENT ==========
+/etc/prometheus/node-rules.yaml:      - record: node_network_receive_bytes_rate
+/etc/prometheus/node-rules.yaml:      - record: node_network_receive_bytes_rate_avg
+/etc/prometheus/node-rules.yaml:      - record: node_filesystem_free_percent
+/etc/prometheus/api-rules.yaml:      - record: avg_latency_2m
+
+========== PROMETHEUS RULES API ==========
+{"status":"success","data":{"groups":[{"name":"api","file":"/etc/prometheus/api-rules.yaml","rules":[{"name":"avg_latency_2m","query":"rate(http_request_total_sum{job=\"api\"}[2m]) / rate(http_request_total_count{job=\"api\"}[2m])","health":"ok","evaluationTime":0.000706478,"lastEvaluation":"2026-06-07T20:37:53.64538095Z","type":"recording"}],"interval":15,"limit":0,"evaluationTime":0.000765509,"lastEvaluation":"2026-06-07T20:37:53.64532731Z"},{"name":"node","file":"/etc/prometheus/node-rules.yaml","rules":[{"name":"node_network_receive_bytes_rate","query":"rate(node_network_receive_bytes_total{job=\"nodes\"}[2m])","health":"ok","evaluationTime":0.000385821,"lastEvaluation":"2026-06-07T20:37:52.999651797Z","type":"recording"},{"name":"node_network_receive_bytes_rate_avg","query":"avg by (instance) (node_network_receive_bytes_rate)","health":"ok","evaluationTime":0.000166903,"lastEvaluation":"2026-06-07T20:37:53.00004955Z","type":"recording"},{"name":"node_filesystem_free_percent","query":"100 * node_filesystem_free_bytes{job=\"nodes\"} / node_filesystem_size_bytes{job=\"nodes\"}","health":"ok","evaluationTime":0.000957044,"lastEvaluation":"2026-06-07T20:37:53.000221386Z","type":"recording"}],"interval":15,"limit":0,"evaluationTime":0.001567557,"lastEvaluation":"2026-06-07T20:37:52.999614948Z"}]}}
+========== PROMETHEUS CONFIG API ==========
+{"status":"success","data":{"yaml":"global:\n  scrape_interval: 15s\n  scrape_timeout: 10s\n  scrape_protocols:\n  - OpenMetricsText1.0.0\n  - OpenMetricsText0.0.1\n  - PrometheusText1.0.0\n  - PrometheusText0.0.4\n  evaluation_interval: 15s\nruntime:\n  gogc: 75\nalerting:\n  alertmanagers:\n  - follow_redirects: true\n    enable_http2: true\n    scheme: http\n    timeout: 10s\n    api_version: v2\n    static_configs:\n    - targets: []\nrule_files:\n- /etc/prometheus/*rules.yaml\n- /etc/prometheus/api-rules.yaml\n- /etc/prometheus/node-rules.yaml\nscrape_configs:\n- job_name: prometheus\n  honor_timestamps: true\n  track_timestamps_staleness: false\n  scrape_interval: 15s\n  scrape_timeout: 10s\n  scrape_protocols:\n  - OpenMetricsText1.0.0\n  - OpenMetricsText0.0.1\n  - PrometheusText1.0.0\n  - PrometheusText0.0.4\n  always_scrape_classic_histograms: false\n  convert_classic_histograms_to_nhcb: false\n  metrics_path: /metrics\n  scheme: http\n  enable_compression: true\n  metric_name_validation_scheme: utf8\n  metric_name_escaping_scheme: allow-utf-8\n  follow_redirects: true\n  enable_http2: true\n  static_configs:\n  - targets:\n    - localhost:9090\n- job_name: nodes\n  honor_timestamps: true\n  track_timestamps_staleness: false\n  scrape_interval: 15s\n  scrape_timeout: 10s\n  scrape_protocols:\n  - OpenMetricsText1.0.0\n  - OpenMetricsText0.0.1\n  - PrometheusText1.0.0\n  - PrometheusText0.0.4\n  always_scrape_classic_histograms: false\n  convert_classic_histograms_to_nhcb: false\n  metrics_path: /metrics\n  scheme: https\n  enable_compression: true\n  metric_name_validation_scheme: utf8\n  metric_name_escaping_scheme: allow-utf-8\n  basic_auth:\n    username: prometheus\n    password: \u003csecret\u003e\n  tls_config:\n    ca_file: /etc/prometheus/node_exporter.crt\n    insecure_skip_verify: true\n  follow_redirects: true\n  enable_http2: true\n  static_configs:\n  - targets:\n    - node01:9100\n    - node02:9100\n- job_name: api\n  honor_timestamps: true\n  track_timestamps_staleness: false\n  scrape_interval: 15s\n  scrape_timeout: 10s\n  scrape_protocols:\n  - OpenMetricsText1.0.0\n  - OpenMetricsText0.0.1\n  - PrometheusText1.0.0\n  - PrometheusText0.0.4\n  always_scrape_classic_histograms: false\n  convert_classic_histograms_to_nhcb: false\n  metrics_path: /metrics\n  scheme: http\n  enable_compression: true\n  metric_name_validation_scheme: utf8\n  metric_name_escaping_scheme: allow-utf-8\n  follow_redirects: true\n  enable_http2: true\n  static_configs:\n  - targets:\n    - node01:3000\n    - node02:3000\notlp:\n  translation_strategy: UnderscoreEscapingWithSuffixes\n"}}
+========== SYSTEMD SERVICE ==========
+● prometheus.service - Prometheus
+     Loaded: loaded (/etc/systemd/system/prometheus.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sun 2026-06-07 20:30:04 GMT; 8min ago
+       Docs: https://prometheus.io/docs/introduction/overview/
+   Main PID: 4928 (prometheus)
+      Tasks: 21 (limit: 77149)
+     Memory: 48.1M
+        CPU: 1.533s
+     CGroup: /system.slice/prometheus.service
+             └─4928 /usr/local/bin/prometheus --config.file=/etc/prometheus/prometheus.yml --storage.tsdb.path=/var/lib/prometheus --web.console.templates=/etc/prometheus/consoles --web.console.libraries=/etc/prometheus/console_libraries --web.listen-address=0.0.0.0:9090
+
+Jun 07 20:30:05 prometheus-server prometheus[4928]: time=2026-06-07T20:30:05.602Z level=INFO source=head.go:825 msg="WAL segment loaded" component=tsdb segment=4 maxSegment=6 duration=5.01256ms
+Jun 07 20:30:05 prometheus-server prometheus[4928]: time=2026-06-07T20:30:05.697Z level=INFO source=head.go:825 msg="WAL segment loaded" component=tsdb segment=5 maxSegment=6 duration=95.394948ms
+Jun 07 20:30:05 prometheus-server prometheus[4928]: time=2026-06-07T20:30:05.699Z level=INFO source=head.go:825 msg="WAL segment loaded" component=tsdb segment=6 maxSegment=6 duration=1.372178ms
+Jun 07 20:30:05 prometheus-server prometheus[4928]: time=2026-06-07T20:30:05.699Z level=INFO source=head.go:862 msg="WAL replay completed" component=tsdb checkpoint_replay_duration=90.992µs wal_replay_duration=496.356739ms wbl_replay_duration=186ns chunk_snapshot_load_duration=0s mmap_chunk_replay_duration=1.870581ms total_replay_duration=498.426682ms
+Jun 07 20:30:05 prometheus-server prometheus[4928]: time=2026-06-07T20:30:05.724Z level=INFO source=main.go:1309 msg="filesystem information" fs_type=794c7630
+Jun 07 20:30:05 prometheus-server prometheus[4928]: time=2026-06-07T20:30:05.724Z level=INFO source=main.go:1312 msg="TSDB started"
+Jun 07 20:30:05 prometheus-server prometheus[4928]: time=2026-06-07T20:30:05.725Z level=INFO source=main.go:1497 msg="Loading configuration file" filename=/etc/prometheus/prometheus.yml
+Jun 07 20:30:05 prometheus-server prometheus[4928]: time=2026-06-07T20:30:05.729Z level=INFO source=main.go:1537 msg="Completed loading of configuration file" db_storage=1.834µs remote_storage=1.74µs web_handler=704ns query_engine=1.663µs scrape=1.128779ms scrape_sd=118.784µs notify=205.304µs notify_sd=43.141µs rules=2.56579ms tracing=8.785µs filename=/etc/prometheus/prometheus.yml totalDuration=4.76098ms
+Jun 07 20:30:05 prometheus-server prometheus[4928]: time=2026-06-07T20:30:05.729Z level=INFO source=main.go:1273 msg="Server is ready to receive web requests."
+Jun 07 20:30:05 prometheus-server prometheus[4928]: time=2026-06-07T20:30:05.729Z level=INFO source=manager.go:176 msg="Starting rule manager..." component="rule manager"
+
+========== PROMETHEUS DIRECTORY ==========
+/etc/prometheus/node-rules.yaml
+/etc/prometheus/api-rules.yaml
+/etc/prometheus/prometheus.yml
+/etc/prometheus/node_exporter.crt
+/etc/prometheus/node_exporter.key
+
+========== QUERY RESULTS ==========
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/PatchPrometheusRules_Groups.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/Rules_Prometheus.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/EmptyRulesArgoCD_Prometheus.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CommandEditRules_Prometheus.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/PatchPrometheusRules_Groups2.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/UpdatedRules_argocd.png
+/root/devops-engineer-labs/shell-scripts/ecommerce-automation-project/vendors/stellar/jquery.stellar.js
+/root/devops-engineer-labs/shell-scripts/ecommerce-automation-project/vendors/jQuery_ui/images/ui-icons_777777_256x240.png
+/root/devops-engineer-labs/shell-scripts/ecommerce-automation-project/vendors/jQuery_ui/images/ui-icons_cc0000_256x240.png
+/root/devops-engineer-labs/shell-scripts/ecommerce-automation-project/vendors/jQuery_ui/images/ui-icons_777620_256x240.png
+/root/devops-engineer-labs/shell-scripts/ecommerce-automation-project/vendors/jQuery_ui/images/ui-icons_ffffff_256x240.png
+/root/devops-engineer-labs/shell-scripts/ecommerce-automation-project/vendors/jQuery_ui/images/ui-icons_444444_256x240.png
+/root/devops-engineer-labs/shell-scripts/ecommerce-automation-project/vendors/jQuery_ui/images/ui-icons_555555_256x240.png
+/root/devops-engineer-labs/shell-scripts/ecommerce-automation-project/vendors/jQuery_ui/jquery-ui.min.css
+/root/devops-engineer-labs/shell-scripts/ecommerce-automation-project/vendors/jQuery_ui/jquery-ui.min.js
+/root/devops-engineer-labs/shell-scripts/ecommerce-automation-project/vendors/Counter-Up/jquery.counterup.min.js
+/root/devops-engineer-labs/shell-scripts/ecommerce-automation-project/js/jquery-1.12.4.min.js
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/.gitkeep
+/root/devops-engineer-labs/terraform/terraform-lifecycle-rules/main.tf
+/root/devops-engineer-labs/terraform/terraform-lifecycle-rules/screenshot/randompet_superpet_ModifyFilemaintf.png
+/root/devops-engineer-labs/terraform/terraform-lifecycle-rules/screenshot/NoSuchFile_randomtxt.png
+/root/devops-engineer-labs/terraform/terraform-lifecycle-rules/screenshot/DestructionResource_randomstring.png
+/root/devops-engineer-labs/terraform/terraform-lifecycle-rules/screenshot/ForcesReplacement_keepers.png
+/root/devops-engineer-labs/terraform/terraform-lifecycle-rules/screenshot/ResourceCreated_Firts.png
+/root/devops-engineer-labs/terraform/terraform-lifecycle-rules/screenshot/LifeCycle_maintf_FileModify.png
+/root/devops-engineer-labs/terraform/terraform-lifecycle-rules/screenshot/BothResources_Replaced2.png
+/root/devops-engineer-labs/terraform/terraform-lifecycle-rules/screenshot/.gitkeep
+/root/devops-engineer-labs/terraform/terraform-lifecycle-rules/screenshot/TypeResources.png
+/root/devops-engineer-labs/terraform/terraform-lifecycle-rules/screenshot/ModifyFile_maintf.png
+/root/devops-engineer-labs/terraform/terraform-lifecycle-rules/screenshot/Filetxt_randomCreated.png
+/root/devops-engineer-labs/terraform/terraform-lifecycle-rules/screenshot/BothResources_Replaced.png
+/root/devops-engineer-labs/terraform/terraform-lifecycle-rules/screenshot/TwoResources_Created.png
+/root/devops-engineer-labs/terraform/terraform-lifecycle-rules/screenshot/IdResourceFile.png
+/root/devops-engineer-labs/terraform/terraform-lifecycle-rules/screenshot/PreventDestroy_ResourceRandomPet.png
+/root/devops-engineer-labs/terraform/terraform-lifecycle-rules/variables.tf
+/root/devops-engineer-labs/terraform/terraform-lifecycle-rules/.gitkeep
+/root/devops-engineer-labs/terraform/terraform-lifecycle-rules/README.md
+/root/recording-rules-evidence/recording-rules.txt
