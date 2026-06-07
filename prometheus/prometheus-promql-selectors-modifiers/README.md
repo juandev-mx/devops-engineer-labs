@@ -322,7 +322,6 @@ prometheus/
     │   └── query-results.txt
     └── manifest/
         ├── prometheus.yaml
-
 ```
 
 ---
