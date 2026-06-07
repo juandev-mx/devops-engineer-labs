@@ -1,1 +1,0 @@
-sum(node_filesystem_size_bytes{instance="loadbalancer:9100"})

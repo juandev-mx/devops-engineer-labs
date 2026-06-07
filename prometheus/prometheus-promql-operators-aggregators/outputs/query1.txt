@@ -1,1 +1,0 @@
-node_filesystem_avail_bytes{job="web"} > 1000
