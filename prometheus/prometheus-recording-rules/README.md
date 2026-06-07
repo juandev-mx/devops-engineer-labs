@@ -330,12 +330,7 @@ prometheus/
     │   ├── rules-api.json
     │   └── config-api.json
     └── screenshots/
-        ├── RulesPage.png
-        ├── TargetsPage.png
-        ├── RecordingRulesValidation.png
-        └── PrometheusStatus.png
 ```
-
 ---
 
 # Skills Demonstrated
