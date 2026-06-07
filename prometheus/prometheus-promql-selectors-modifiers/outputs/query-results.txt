@@ -1,0 +1,1 @@
+{"status":"success","data":{"resultType":"vector","result":[{"metric":{"__name__":"up","instance":"node01:9100","job":"web"},"value":[1780814021.129,"1"]},{"metric":{"__name__":"up","instance":"node02:9100","job":"web"},"value":[1780814021.129,"1"]}]}}
