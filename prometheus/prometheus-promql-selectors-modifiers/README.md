@@ -284,28 +284,29 @@ Retrieve historical memory data.
 
 ---
 
-# Evidence Collected
+## Evidence Collected
 
-The following evidence files were collected during the lab:
+The following evidence files were collected during the lab execution:
 
-```text
-promql-lab-evidence/
-```
+### active-targets.json
 
-Contains:
+Contains the Prometheus target discovery information and target health status.
 
-```text
-query1.txt
-query2.txt
-query3.txt
-query4.txt
-query5.txt
-query6.txt
-query7.txt
-```
+### promql-selectors.txt
 
----
+Contains examples and results of PromQL metric selectors.
 
+### promql-matchers.txt
+
+Contains examples and results of label matchers and regex matchers.
+
+### promql-modifiers.txt
+
+Contains examples and results of offset and time-based query modifiers.
+
+### query-results.txt
+
+Contains query outputs generated during the lab validation process.
 ## Repository Structure
 
 ```text
@@ -314,13 +315,11 @@ prometheus/
     ├── README.md
     ├── screenshot/
     ├── outputs/
-    │   ├── query1.txt
-    │   ├── query2.txt
-    │   ├── query3.txt
-    │   ├── query4.txt
-    │   ├── query5.txt
-    │   ├── query6.txt
-    │   └── query7.txt
+    │   ├── active-targets.json
+    │   ├── promql-selectors.txt
+    │   ├── promql-matchers.txt
+    │   ├── promql-modifiers.txt
+    │   └── query-results.txt
     └── manifest/
         ├── prometheus.yaml
 
