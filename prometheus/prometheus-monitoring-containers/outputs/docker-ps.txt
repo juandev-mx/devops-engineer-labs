@@ -1,0 +1,6 @@
+CONTAINER ID   IMAGE                      COMMAND                  CREATED          STATUS                      PORTS                                       NAMES
+84561c14bacd   gcr.io/cadvisor/cadvisor   "/usr/bin/cadvisor -…"   26 minutes ago   Up 26 minutes (healthy)     0.0.0.0:8070->8080/tcp, :::8070->8080/tcp   cadvisor
+cd60798b5934   redis:alpine               "docker-entrypoint.s…"   52 minutes ago   Exited (0) 46 minutes ago                                               opt-redis4-1
+56589a712d48   redis:alpine               "docker-entrypoint.s…"   52 minutes ago   Up 31 minutes               6379/tcp                                    opt-redis2-1
+fb5c43fc3e96   redis:alpine               "docker-entrypoint.s…"   52 minutes ago   Up 31 minutes               6379/tcp                                    opt-redis1-1
+e7cad90189e9   redis:alpine               "docker-entrypoint.s…"   52 minutes ago   Up 31 minutes               6379/tcp                                    opt-redis3-1
