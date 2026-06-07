@@ -1,0 +1,20 @@
+● node_exporter.service - Node Exporter
+     Loaded: loaded (/etc/systemd/system/node_exporter.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sun 2026-06-07 01:19:33 GMT; 10min ago
+   Main PID: 7455 (node_exporter)
+      Tasks: 6 (limit: 77149)
+     Memory: 8.1M
+        CPU: 1.566s
+     CGroup: /system.slice/node_exporter.service
+             └─7455 /usr/local/bin/node_exporter --web.config.file=/etc/node_exporter/config.yml
+
+Jun 07 01:27:58 node01 node_exporter[7455]: time=2026-06-07T01:27:58.019Z level=ERROR source=collector.go:168 msg="collector failed" name=thermal_zone duration_seconds=0.00049525 err="strconv.ParseInt: parsing \"\": invalid syntax"
+Jun 07 01:28:13 node01 node_exporter[7455]: time=2026-06-07T01:28:13.036Z level=ERROR source=collector.go:168 msg="collector failed" name=thermal_zone duration_seconds=0.015465038 err="strconv.ParseInt: parsing \"\": invalid syntax"
+Jun 07 01:28:28 node01 node_exporter[7455]: time=2026-06-07T01:28:28.030Z level=ERROR source=collector.go:168 msg="collector failed" name=thermal_zone duration_seconds=0.011631665 err="strconv.ParseInt: parsing \"\": invalid syntax"
+Jun 07 01:28:43 node01 node_exporter[7455]: time=2026-06-07T01:28:43.016Z level=ERROR source=collector.go:168 msg="collector failed" name=thermal_zone duration_seconds=0.000596724 err="strconv.ParseInt: parsing \"\": invalid syntax"
+Jun 07 01:28:58 node01 node_exporter[7455]: time=2026-06-07T01:28:58.026Z level=ERROR source=collector.go:168 msg="collector failed" name=thermal_zone duration_seconds=0.013259148 err="strconv.ParseInt: parsing \"\": invalid syntax"
+Jun 07 01:29:13 node01 node_exporter[7455]: time=2026-06-07T01:29:13.028Z level=ERROR source=collector.go:168 msg="collector failed" name=thermal_zone duration_seconds=0.005481466 err="strconv.ParseInt: parsing \"\": invalid syntax"
+Jun 07 01:29:28 node01 node_exporter[7455]: time=2026-06-07T01:29:28.031Z level=ERROR source=collector.go:168 msg="collector failed" name=thermal_zone duration_seconds=0.010095932 err="strconv.ParseInt: parsing \"\": invalid syntax"
+Jun 07 01:29:43 node01 node_exporter[7455]: time=2026-06-07T01:29:43.021Z level=ERROR source=collector.go:168 msg="collector failed" name=thermal_zone duration_seconds=0.00063515 err="strconv.ParseInt: parsing \"\": invalid syntax"
+Jun 07 01:29:58 node01 node_exporter[7455]: time=2026-06-07T01:29:58.030Z level=ERROR source=collector.go:168 msg="collector failed" name=thermal_zone duration_seconds=0.01509201 err="strconv.ParseInt: parsing \"\": invalid syntax"
+Jun 07 01:30:13 node01 node_exporter[7455]: time=2026-06-07T01:30:13.026Z level=ERROR source=collector.go:168 msg="collector failed" name=thermal_zone duration_seconds=0.010315207 err="strconv.ParseInt: parsing \"\": invalid syntax"

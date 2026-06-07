@@ -1,0 +1,60 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            6f:2e:79:2d:2d:cb:63:13:33:2c:48:3e:b4:b4:26:a6:db:2b:92:9d
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C = US, ST = California, L = Oakland, O = MyOrg, CN = localhost
+        Validity
+            Not Before: Jun  7 01:19:33 2026 GMT
+            Not After : Jun  7 01:19:33 2027 GMT
+        Subject: C = US, ST = California, L = Oakland, O = MyOrg, CN = localhost
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (2048 bit)
+                Modulus:
+                    00:d6:50:89:f4:05:e2:56:9d:b8:03:2c:0c:9f:b6:
+                    8a:e5:32:49:3e:2e:c0:f6:ee:2a:78:36:a1:b4:25:
+                    0a:d5:97:22:37:37:5c:9e:14:58:5e:a7:40:fe:56:
+                    f4:e8:a1:28:93:a0:5e:2b:8a:63:b4:eb:cb:ec:10:
+                    fe:68:82:35:a3:98:76:de:9e:91:83:98:82:bd:9b:
+                    5b:84:46:2a:fa:8a:f4:8a:e0:1a:65:f9:c8:25:d9:
+                    30:e7:79:eb:e9:95:8e:0f:26:6c:ad:a1:8d:e6:41:
+                    ef:d9:c1:28:e7:db:0c:65:64:4d:f7:8d:a8:a2:e3:
+                    ab:fc:5c:63:9f:53:2c:c8:41:ba:58:9a:35:ab:df:
+                    ff:29:b8:7c:35:33:b7:a5:db:83:57:c2:a8:f5:f9:
+                    84:11:54:b6:d3:c0:6b:ef:9d:4f:9e:11:bf:2a:de:
+                    09:0a:04:e0:a2:45:06:75:75:92:0b:a1:83:f8:08:
+                    4d:e2:18:8e:13:71:58:03:37:6e:d4:62:03:18:a2:
+                    51:5b:07:45:24:ee:b7:da:23:48:fd:74:c2:df:13:
+                    95:12:b8:0e:05:9c:f3:11:01:58:be:7d:5f:e1:49:
+                    95:13:90:5f:71:f6:42:d9:c8:61:c3:0c:11:18:4c:
+                    0b:2c:c5:ea:2a:e2:fe:87:4a:3f:33:b4:3e:ae:f7:
+                    e0:a1
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Subject Key Identifier: 
+                E5:BF:AF:45:A1:25:6D:4B:05:AA:F4:31:52:ED:DA:88:37:74:78:9A
+            X509v3 Authority Key Identifier: 
+                keyid:E5:BF:AF:45:A1:25:6D:4B:05:AA:F4:31:52:ED:DA:88:37:74:78:9A
+
+            X509v3 Basic Constraints: critical
+                CA:TRUE
+            X509v3 Subject Alternative Name: 
+                DNS:localhost
+    Signature Algorithm: sha256WithRSAEncryption
+         40:52:fb:36:c1:a6:28:4b:d7:3d:47:f5:2e:10:71:55:bb:58:
+         a2:65:c4:48:47:10:93:64:39:8e:1a:d5:ba:62:ec:1d:e2:18:
+         33:8c:31:2b:bd:70:d0:9f:10:dd:eb:6b:8f:23:c6:79:ff:13:
+         91:19:c6:ce:ae:73:7e:73:44:8e:bf:8f:f1:0f:69:29:d7:5a:
+         ec:09:e1:d7:82:8d:97:a0:42:c6:c5:2e:bd:b1:52:09:ef:40:
+         0c:ee:ec:00:f3:f1:c8:71:bf:bc:ef:0b:a5:e8:c0:79:c6:93:
+         b9:91:aa:69:6d:e3:14:c9:6c:12:44:03:fe:6b:56:f3:24:d0:
+         5d:f6:0c:e3:14:d0:7f:c2:b1:06:25:c3:96:f8:71:a8:5b:19:
+         b2:23:dc:70:86:5a:c1:db:f9:be:cd:76:c8:cd:87:dc:84:b6:
+         66:3c:e0:f9:53:5e:a8:59:4a:89:6c:96:e6:1e:bf:88:63:99:
+         e0:59:3a:9a:aa:cb:80:70:92:a3:18:26:fb:f2:24:db:e4:99:
+         58:39:f0:4e:0e:ad:b5:0d:a5:48:9e:e9:ab:bb:33:c1:5f:3b:
+         47:9d:60:e4:18:e1:94:f7:be:39:d6:fa:a0:7a:d9:eb:4a:e0:
+         fe:36:4b:81:19:06:bb:ed:f3:e6:1b:68:d3:cc:fb:a6:65:85:
+         91:fd:77:f0
