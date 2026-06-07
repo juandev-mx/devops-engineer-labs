@@ -1,3 +1,0 @@
-node_network_receive_bytes_total{instance="node02:9100", device!="lo"}
-
-node_cpu_seconds_total{job="web", cpu="0", mode=~"user|system"}

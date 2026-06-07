@@ -1,3 +1,0 @@
-up{job="web"}
-
-node_memory_MemAvailable_bytes{job="loadbalancer"}
