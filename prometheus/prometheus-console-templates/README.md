@@ -1,4 +1,4 @@
-# Lab - Console Templates
+# Console Templates
 
 ## Overview
 
