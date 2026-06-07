@@ -1,0 +1,294 @@
+========== PROMETHEUS VERSION ==========
+prometheus, version 2.40.1 (branch: HEAD, revision: 965274259f993801d63f553639d248588287120b)
+  build user:       root@d020f7085e1e
+  build date:       20221109-14:30:50
+  go version:       go1.19.3
+  platform:         linux/amd64
+
+========== PROMETHEUS CONFIG ==========
+# my global config
+global:
+  scrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+  evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
+  # scrape_timeout is set to the global default (10s).
+
+# Alertmanager configuration
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          # - alertmanager:9093
+
+# Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
+rule_files:
+  # - "first_rules.yml"
+  # - "second_rules.yml"
+
+# A scrape configuration containing exactly one endpoint to scrape:
+# Here it's Prometheus itself.
+scrape_configs:
+  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+  - job_name: "prometheus"
+
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.
+
+    static_configs:
+      - targets: ["localhost:9090"]
+
+  - job_name: "nodes"
+    scheme: https
+    tls_config:
+      ca_file: /etc/prometheus/node_exporter.crt
+      insecure_skip_verify: true
+    basic_auth:
+      username: prometheus
+      password: secret-password
+    static_configs:
+      - targets: ["node01:9100", "node02:9100"]
+
+========== ACTIVE TARGETS ==========
+{"status":"success","data":{"activeTargets":[{"discoveredLabels":{"__address__":"node01:9100","__metrics_path__":"/metrics","__scheme__":"https","__scrape_interval__":"15s","__scrape_timeout__":"10s","job":"nodes"},"labels":{"instance":"node01:9100","job":"nodes"},"scrapePool":"nodes","scrapeUrl":"https://node01:9100/metrics","globalUrl":"https://node01:9100/metrics","lastError":"","lastScrape":"2026-06-07T22:52:53.488476988Z","lastScrapeDuration":0.153017558,"health":"up","scrapeInterval":"15s","scrapeTimeout":"10s"},{"discoveredLabels":{"__address__":"node02:9100","__metrics_path__":"/metrics","__scheme__":"https","__scrape_interval__":"15s","__scrape_timeout__":"10s","job":"nodes"},"labels":{"instance":"node02:9100","job":"nodes"},"scrapePool":"nodes","scrapeUrl":"https://node02:9100/metrics","globalUrl":"https://node02:9100/metrics","lastError":"","lastScrape":"2026-06-07T22:52:49.720038678Z","lastScrapeDuration":0.423635962,"health":"up","scrapeInterval":"15s","scrapeTimeout":"10s"},{"discoveredLabels":{"__address__":"localhost:9090","__metrics_path__":"/metrics","__scheme__":"http","__scrape_interval__":"15s","__scrape_timeout__":"10s","job":"prometheus"},"labels":{"instance":"localhost:9090","job":"prometheus"},"scrapePool":"prometheus","scrapeUrl":"http://localhost:9090/metrics","globalUrl":"http://prometheus-server:9090/metrics","lastError":"","lastScrape":"2026-06-07T22:52:51.439423904Z","lastScrapeDuration":0.0040741,"health":"up","scrapeInterval":"15s","scrapeTimeout":"10s"}],"droppedTargets":[]}}
+========== CONSOLE DIRECTORIES ==========
+/etc/prometheus
+/etc/prometheus/console_libraries
+/etc/prometheus/consoles
+
+========== CONSOLE FILES ==========
+/etc/prometheus/console_libraries/menu.lib
+/etc/prometheus/console_libraries/prom.lib
+/etc/prometheus/consoles/node-stats.html
+/etc/prometheus/consoles/node-overview.html
+/etc/prometheus/consoles/node-disk.html
+/etc/prometheus/consoles/index.html.example
+/etc/prometheus/consoles/prometheus.html
+/etc/prometheus/consoles/node-cpu.html
+/etc/prometheus/consoles/node.html
+/etc/prometheus/consoles/prometheus-overview.html
+
+========== WEB CONSOLE CONFIG ==========
+  --web.console.templates=/etc/prometheus/consoles \
+  --web.console.libraries=/etc/prometheus/console_libraries \
+
+========== PROMETHEUS SERVICE ==========
+● prometheus.service - Prometheus
+     Loaded: loaded (/etc/systemd/system/prometheus.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sun 2026-06-07 22:04:03 GMT; 49min ago
+       Docs: https://prometheus.io/docs/introduction/overview/
+   Main PID: 4512 (prometheus)
+      Tasks: 21 (limit: 77149)
+     Memory: 55.8M
+        CPU: 4.029s
+     CGroup: /system.slice/prometheus.service
+             └─4512 /usr/local/bin/prometheus --config.file=/etc/prometheus/prometheus.yml --storage.tsdb.path=/var/lib/prometheus --web.console.templates=/etc/prometheus/consoles --web.console.libraries=/etc/prometheus/console_libraries --web.listen-address=0.0.0.0:9090
+
+Jun 07 22:04:03 prometheus-server prometheus[4512]: ts=2026-06-07T22:04:03.412Z caller=head.go:606 level=info component=tsdb msg="On-disk memory mappable chunks replay completed" duration=2.508µs
+Jun 07 22:04:03 prometheus-server prometheus[4512]: ts=2026-06-07T22:04:03.412Z caller=head.go:612 level=info component=tsdb msg="Replaying WAL, this may take a while"
+Jun 07 22:04:03 prometheus-server prometheus[4512]: ts=2026-06-07T22:04:03.438Z caller=head.go:683 level=info component=tsdb msg="WAL segment loaded" segment=0 maxSegment=0
+Jun 07 22:04:03 prometheus-server prometheus[4512]: ts=2026-06-07T22:04:03.438Z caller=head.go:720 level=info component=tsdb msg="WAL replay completed" checkpoint_replay_duration=36.666µs wal_replay_duration=25.971132ms wbl_replay_duration=176ns total_replay_duration=26.0382ms
+Jun 07 22:04:03 prometheus-server prometheus[4512]: ts=2026-06-07T22:04:03.506Z caller=main.go:1014 level=info fs_type=794c7630
+Jun 07 22:04:03 prometheus-server prometheus[4512]: ts=2026-06-07T22:04:03.506Z caller=main.go:1017 level=info msg="TSDB started"
+Jun 07 22:04:03 prometheus-server prometheus[4512]: ts=2026-06-07T22:04:03.506Z caller=main.go:1197 level=info msg="Loading configuration file" filename=/etc/prometheus/prometheus.yml
+Jun 07 22:04:03 prometheus-server prometheus[4512]: ts=2026-06-07T22:04:03.507Z caller=main.go:1234 level=info msg="Completed loading of configuration file" filename=/etc/prometheus/prometheus.yml totalDuration=743.345µs db_storage=1.796µs remote_storage=1.469µs web_handler=778ns query_engine=942ns scrape=271.57µs scrape_sd=40.329µs notify=38.744µs notify_sd=9.96µs rules=2.312µs tracing=7.391µs
+Jun 07 22:04:03 prometheus-server prometheus[4512]: ts=2026-06-07T22:04:03.507Z caller=main.go:978 level=info msg="Server is ready to receive web requests."
+Jun 07 22:04:03 prometheus-server prometheus[4512]: ts=2026-06-07T22:04:03.507Z caller=manager.go:944 level=info component="rule manager" msg="Starting rule manager..."
+
+========== CONSOLE TEMPLATE CONTENT ==========
+-rw-r--r-- 1 root root 1.1K Jun  7 22:46 /etc/prometheus/consoles/node-stats.html
+-rw-r--r-- 1 prometheus prometheus 5.7K Nov  9  2022 /etc/prometheus/consoles/node-overview.html
+-rw-r--r-- 1 prometheus prometheus 3.5K Nov  9  2022 /etc/prometheus/consoles/node-disk.html
+-rw-r--r-- 1 prometheus prometheus 1.4K Nov  9  2022 /etc/prometheus/consoles/prometheus.html
+-rw-r--r-- 1 prometheus prometheus 2.7K Nov  9  2022 /etc/prometheus/consoles/node-cpu.html
+-rw-r--r-- 1 prometheus prometheus 1.5K Nov  9  2022 /etc/prometheus/consoles/node.html
+-rw-r--r-- 1 prometheus prometheus 4.1K Nov  9  2022 /etc/prometheus/consoles/prometheus-overview.html
+
+========== PROMETHEUS DIRECTORY ==========
+/etc/prometheus/console_libraries/menu.lib
+/etc/prometheus/console_libraries/prom.lib
+/etc/prometheus/NOTICE
+/etc/prometheus/node_exporter.crt
+/etc/prometheus/LICENSE
+/etc/prometheus/node_exporter.key
+/etc/prometheus/prometheus.yml
+/etc/prometheus/consoles/node-stats.html
+/etc/prometheus/consoles/node-overview.html
+/etc/prometheus/consoles/node-disk.html
+/etc/prometheus/consoles/index.html.example
+/etc/prometheus/consoles/prometheus.html
+/etc/prometheus/consoles/node-cpu.html
+/etc/prometheus/consoles/node.html
+/etc/prometheus/consoles/prometheus-overview.html
+
+========== LAB FILES ==========
+/root/devops-engineer-labs/helm/helm-writing-a-chart/webapp-nginx/templates/deployment.yaml
+/root/devops-engineer-labs/helm/helm-writing-a-chart/webapp-nginx/templates/service.yaml
+/root/devops-engineer-labs/helm/helm-writing-a-chart/hello-world/templates/deployment.yaml
+/root/devops-engineer-labs/helm/helm-writing-a-chart/hello-world/templates/service.yaml
+/root/devops-engineer-labs/helm/helm-chart-hooks/webapp-color/templates/configmap.yaml
+/root/devops-engineer-labs/helm/helm-chart-hooks/webapp-color/templates/serviceaccount.yaml
+/root/devops-engineer-labs/helm/helm-chart-hooks/webapp-color/templates/_helpers.tpl
+/root/devops-engineer-labs/helm/helm-chart-hooks/webapp-color/templates/deployment.yaml
+/root/devops-engineer-labs/helm/helm-chart-hooks/webapp-color/templates/service.yaml
+/root/devops-engineer-labs/helm/helm-chart-hooks/webapp/templates/install-job.yaml
+/root/devops-engineer-labs/helm/helm-chart-hooks/webapp/templates/serviceaccount.yaml
+/root/devops-engineer-labs/helm/helm-chart-hooks/webapp/templates/upgrade-job.yaml
+/root/devops-engineer-labs/helm/helm-chart-hooks/webapp/templates/_helpers.tpl
+/root/devops-engineer-labs/helm/helm-chart-hooks/webapp/templates/deployment.yaml
+/root/devops-engineer-labs/helm/helm-chart-hooks/webapp/templates/service.yaml
+/root/devops-engineer-labs/helm/helm-chart-hooks/webapp/templates/NOTES.txt
+/root/devops-engineer-labs/helm/helm-conditionals-with-blocks-and-ranges/templates/configmap.yaml
+/root/devops-engineer-labs/helm/helm-conditionals-with-blocks-and-ranges/templates/serviceaccount.yaml
+/root/devops-engineer-labs/helm/helm-conditionals-with-blocks-and-ranges/templates/deployment.yaml
+/root/devops-engineer-labs/helm/helm-conditionals-with-blocks-and-ranges/templates/service.yaml
+/root/devops-engineer-labs/helm/helm-using-functions-and-pipelines/templates/serviceaccount.yaml
+/root/devops-engineer-labs/helm/helm-using-functions-and-pipelines/templates/_helpers.tpl
+/root/devops-engineer-labs/helm/helm-using-functions-and-pipelines/templates/deployment.yaml
+/root/devops-engineer-labs/helm/helm-using-functions-and-pipelines/templates/service.yaml
+/root/devops-engineer-labs/helm/helm-using-functions-and-pipelines/templates/NOTES.txt
+/root/devops-engineer-labs/docker/docker-images/templates/hello.html
+/root/devops-engineer-labs/docker/env-variables/templates/hello.html
+/root/devops-engineer-labs/prometheus/prometheus-console-templates/.gitkeep
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/outputs/node01-node-exporter-status.txt
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/outputs/prometheus-config.txt
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/outputs/tls-certificate-info.txt
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/outputs/prometheus-targets.json
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/outputs/promtool-validation.txt
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/README.md
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/.gitkeep
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/manifests/prometheus.service
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/manifests/node_exporter.service
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/manifests/prometheus.yml
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/manifests/config.yml
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/ConfigureNodeExport01_UsingTLS.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/FileConfigYAML_ModifyNode02.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/ConfigurationServerPrometheus.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/FileConfigYAML_ModifyNode01.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/CommandsNodeExport01.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/Error402_nodesPrometheus.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/Reload_and_RestartNodeExport02.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/Error401_nodesPrometheus.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/ConfigureNodeExport01_UsingTLS2.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/CommandsNodeExport01_4.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/ConfigureNodeExport02_2.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/ConfigureNodeExport02_UsingTLS2.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/FileNodeExport02_ServiceModify.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/ConfigureServerPrometheus_UsingHTTPS.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/Reload_and_RestartNodeExport.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/CommandsNodeExport02_3.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/ConfigurationServerPrometheus2.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/CommandsNodeExport01_3.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/ConfigureNodeExport.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/ConfigureNodeExport02.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/FileNodeExportServiceOriginal.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/CommandsNodeExport02.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/UPNodes_PrometheusNoneERRORS.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/CommandsNodeExport01_2.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/FileNodeExportServiceModify.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/.gitkeep
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/ConfigureNodeExport02_UsingTLS.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/Metrics_for_node01.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/Metrics_for_node02.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/CommandsNodeExport02_2.png
+/root/devops-engineer-labs/prometheus/prometheus-monitoring-containers/outputs/prometheus-config.yml
+/root/devops-engineer-labs/prometheus/prometheus-monitoring-containers/outputs/docker-ps.txt
+/root/devops-engineer-labs/prometheus/prometheus-monitoring-containers/outputs/docker-images.txt
+/root/devops-engineer-labs/prometheus/prometheus-monitoring-containers/outputs/prometheus-targets.json
+/root/devops-engineer-labs/prometheus/prometheus-monitoring-containers/README.md
+/root/devops-engineer-labs/prometheus/prometheus-monitoring-containers/.gitkeep
+/root/devops-engineer-labs/prometheus/prometheus-monitoring-containers/manifests/prometheus.yml
+/root/devops-engineer-labs/prometheus/.gitkeep
+/root/devops-engineer-labs/prometheus/prometheus-installation/outputs/prometheus-version.txt
+/root/devops-engineer-labs/prometheus/prometheus-installation/outputs/systemd-status.txt
+/root/devops-engineer-labs/prometheus/prometheus-installation/outputs/prometheus-targets.json
+/root/devops-engineer-labs/prometheus/prometheus-installation/README.md
+/root/devops-engineer-labs/prometheus/prometheus-installation/.gitkeep
+/root/devops-engineer-labs/prometheus/prometheus-installation/manifests/prometheus.service
+/root/devops-engineer-labs/prometheus/prometheus-installation/manifests/node_exporter.service
+/root/devops-engineer-labs/prometheus/prometheus-installation/manifests/prometheus.yml
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/AddNewJob_FilePrometheusYAML.png
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/Commands_SS01_2.png
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/Commands_SS01_3.png
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/CreateFileService_Prometheus.png
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/Node01Verify_running.png
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/Commands_SS01.png
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/Commands_Prometheus.png
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/Node02Verify_running.png
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/Restart_Prometheus.png
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/Commands_Prometheus2.png
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/DownloadPrometheusVersion_PlusOtherCommands.png
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/Commands_SS02_3.png
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/.gitkeep
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/DownloadPrometheusVersion_PlusOtherCommands2.png
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/Commands_SS02_2.png
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/Commands_SS02.png
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/outputs/recording-rules.txt
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/README.md
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/.gitkeep
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/manifests/prometheus.yml
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/manifests/node-rules.yaml
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/manifests/api-rules.yaml
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/screenshot/RestartPrometheus_Systemctl3.png
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/screenshot/AddRulesFiles_Section.png
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/screenshot/TargetHealth_StatusOK.png
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/screenshot/ApiRulesModifyFile.png
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/screenshot/ModifyNodeRulesYAML3.png
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/screenshot/RestartPrometheus_Systemctl5.png
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/screenshot/RestartPrometheus_Systemctl2.png
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/screenshot/ModifyNodeRulesYAML2.png
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/screenshot/ModifyNodeRulesYAML.png
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/screenshot/ChangeSection_rulesyaml.png
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/screenshot/ImportNewFile_RuleFiles.png
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/screenshot/RestartPrometheus_Systemctl4.png
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/screenshot/.gitkeep
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/screenshot/RestartPrometheus_Systemctl.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/outputs/configmaps.txt
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/outputs/applications.yaml
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/outputs/helm-list.txt
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/outputs/argocd-app-list.txt
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/outputs/monitoring-resources.txt
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/README.md
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/.gitkeep
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/manifests/argocd-repo-server-metrics.yaml
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/manifests/argocd-applicationset-controller-metrics.yaml
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/manifests/argocd-metrics.yaml
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/manifests/argocd-server-metrics.yaml
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CreateApplication_AlertManagerDemo3.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/SyncAlertDemo_Command.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CreateFileDefinition_argocdmetrics2.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/EmptyRulesArgoCD_Prometheus.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/Rules_Prometheus.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CommandGetSecret_Monitoring.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/HealthyApplication_alertdemo.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/LoginGrafana.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CreateFileDefinition_argocdmetrics.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/UpdatedRules_argocd.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/UpdatedTarget_argocd.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CreateFileDefinition_argocdServerMetrics.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/Import_Grafana.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/Dashboard_Grafana.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CreateFileDefinition_argocdServerMetrics2.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/ImportDashboard_Grafana.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/Targets_prometheus.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CreateApplication_AlertManagerDemo4.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/Dashboard_prometheus.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CreateFileDefinition_argocdRepoServerMetrics2.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CreateFileDefinition_argocdApplicationsetControllerMetrics2.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/metrics_prometheus.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/SelectOption_Import.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/PatchPrometheusRules_Groups2.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/Ports_argocdmetrics.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CreateApplication_AlertManagerDemo.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CreateApplication_AlertManagerDemo5.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/ApplyAllTemplates.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/Dashboard_Grafana2.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CreateFileDefinition_argocdApplicationsetControllerMetrics.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CreateFileDefinition_argocdRepoServerMetrics.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/AlertPrometheus_OutOfSyncActivated.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/DashboardImport_Grafana.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/SyncAlertDemo_Command2.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/.gitkeep
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CreateApplication_AlertManagerDemo2.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/EmptyMetricsArgoCD_prometheus.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/PatchPrometheusRules_Groups.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CommandEditRules_Prometheus.png
+/root/console-templates-evidence/console-templates.txt
