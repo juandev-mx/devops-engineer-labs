@@ -1,0 +1,44 @@
+===== ALERTMANAGER =====
+● alertmanager.service - AlertManager
+     Loaded: loaded (/lib/systemd/system/alertmanager.service; disabled; vendor preset: enabled)
+     Active: active (running) since Mon 2026-06-08 06:11:26 GMT; 31min ago
+   Main PID: 5039 (alertmanager)
+      Tasks: 21 (limit: 77149)
+     Memory: 17.9M
+        CPU: 2.090s
+     CGroup: /system.slice/alertmanager.service
+             └─5039 /usr/bin/alertmanager --config.file /etc/alertmanager/alertmanager.yml --storage.path /var/lib/alertmanager/
+
+Jun 08 06:11:26 prometheus-server alertmanager[5039]: ts=2026-06-08T06:11:26.230Z caller=main.go:232 level=info build_context="(go=go1.17.8, user=root@265f14f5c6fc, date=20220325-09:31:33)"
+Jun 08 06:11:26 prometheus-server alertmanager[5039]: ts=2026-06-08T06:11:26.307Z caller=cluster.go:185 level=info component=cluster msg="setting advertise address explicitly" addr=192.168.241.235 port=9094
+Jun 08 06:11:26 prometheus-server alertmanager[5039]: ts=2026-06-08T06:11:26.309Z caller=cluster.go:680 level=info component=cluster msg="Waiting for gossip to settle..." interval=2s
+Jun 08 06:11:26 prometheus-server alertmanager[5039]: ts=2026-06-08T06:11:26.416Z caller=coordinator.go:113 level=info component=configuration msg="Loading configuration file" file=/etc/alertmanager/alertmanager.yml
+Jun 08 06:11:26 prometheus-server alertmanager[5039]: ts=2026-06-08T06:11:26.416Z caller=coordinator.go:126 level=info component=configuration msg="Completed loading of configuration file" file=/etc/alertmanager/alertmanager.yml
+Jun 08 06:11:26 prometheus-server alertmanager[5039]: ts=2026-06-08T06:11:26.419Z caller=main.go:431 level=info component=configuration msg="skipping creation of receiver not referenced by any route" receiver=web.hook
+Jun 08 06:11:26 prometheus-server alertmanager[5039]: ts=2026-06-08T06:11:26.421Z caller=main.go:535 level=info msg=Listening address=:9093
+Jun 08 06:11:26 prometheus-server alertmanager[5039]: ts=2026-06-08T06:11:26.421Z caller=tls_config.go:195 level=info msg="TLS is disabled." http2=false
+Jun 08 06:11:28 prometheus-server alertmanager[5039]: ts=2026-06-08T06:11:28.310Z caller=cluster.go:705 level=info component=cluster msg="gossip not settled" polls=0 before=0 now=1 elapsed=2.000850039s
+Jun 08 06:11:36 prometheus-server alertmanager[5039]: ts=2026-06-08T06:11:36.313Z caller=cluster.go:697 level=info component=cluster msg="gossip settled; proceeding" elapsed=10.003573658s
+
+===== PROMETHEUS =====
+● prometheus.service - Prometheus
+     Loaded: loaded (/etc/systemd/system/prometheus.service; enabled; vendor preset: enabled)
+     Active: active (running) since Mon 2026-06-08 06:13:44 GMT; 29min ago
+       Docs: https://prometheus.io/docs/introduction/overview/
+   Main PID: 5333 (prometheus)
+      Tasks: 21 (limit: 77149)
+     Memory: 44.4M
+        CPU: 3.267s
+     CGroup: /system.slice/prometheus.service
+             └─5333 /usr/local/bin/prometheus --config.file=/etc/prometheus/prometheus.yml --storage.tsdb.path=/var/lib/prometheus --web.console.templates=/etc/prometheus/consoles --web.console.libraries=/etc/prometheus/console_libraries --web.listen-address=0.0.0.0:9090
+
+Jun 08 06:13:44 prometheus-server prometheus[5333]: time=2026-06-08T06:13:44.706Z level=INFO source=head.go:825 msg="WAL segment loaded" component=tsdb segment=1 maxSegment=3 duration=41.754695ms
+Jun 08 06:13:44 prometheus-server prometheus[5333]: time=2026-06-08T06:13:44.806Z level=INFO source=head.go:825 msg="WAL segment loaded" component=tsdb segment=2 maxSegment=3 duration=99.715616ms
+Jun 08 06:13:44 prometheus-server prometheus[5333]: time=2026-06-08T06:13:44.807Z level=INFO source=head.go:825 msg="WAL segment loaded" component=tsdb segment=3 maxSegment=3 duration=616.857µs
+Jun 08 06:13:44 prometheus-server prometheus[5333]: time=2026-06-08T06:13:44.807Z level=INFO source=head.go:862 msg="WAL replay completed" component=tsdb checkpoint_replay_duration=59.731µs wal_replay_duration=387.115201ms wbl_replay_duration=263ns chunk_snapshot_load_duration=0s mmap_chunk_replay_duration=1.116204ms total_replay_duration=388.37053ms
+Jun 08 06:13:44 prometheus-server prometheus[5333]: time=2026-06-08T06:13:44.812Z level=INFO source=main.go:1309 msg="filesystem information" fs_type=794c7630
+Jun 08 06:13:44 prometheus-server prometheus[5333]: time=2026-06-08T06:13:44.812Z level=INFO source=main.go:1312 msg="TSDB started"
+Jun 08 06:13:44 prometheus-server prometheus[5333]: time=2026-06-08T06:13:44.812Z level=INFO source=main.go:1497 msg="Loading configuration file" filename=/etc/prometheus/prometheus.yml
+Jun 08 06:13:44 prometheus-server prometheus[5333]: time=2026-06-08T06:13:44.814Z level=INFO source=main.go:1537 msg="Completed loading of configuration file" db_storage=2.382µs remote_storage=1.798µs web_handler=667ns query_engine=2.234µs scrape=429.856µs scrape_sd=60.785µs notify=172.172µs notify_sd=26.381µs rules=632.826µs tracing=6.795µs filename=/etc/prometheus/prometheus.yml totalDuration=1.86683ms
+Jun 08 06:13:44 prometheus-server prometheus[5333]: time=2026-06-08T06:13:44.814Z level=INFO source=main.go:1273 msg="Server is ready to receive web requests."
+Jun 08 06:13:44 prometheus-server prometheus[5333]: time=2026-06-08T06:13:44.814Z level=INFO source=manager.go:176 msg="Starting rule manager..." component="rule manager"

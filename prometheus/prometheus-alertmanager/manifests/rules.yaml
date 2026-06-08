@@ -1,0 +1,16 @@
+groups:
+  - name: node
+    rules:
+      - alert: NodeDown
+        expr: up{job="nodes"} == 0
+        for: 10s
+        labels:
+          severity: critical
+          team: global-infra
+      - alert: HostOutOfMemory
+        expr: node_memory_MemAvailable_bytes{job="nodes"} / node_memory_MemTotal_bytes{job="nodes"} * 100 < 95
+        labels:
+          severity: warning
+          team: internal-infra
+        annotations:
+          message: "node {{.Labels.instance}} is seeing high memory usage, currently available memory: {{.Value}}%"
