@@ -1,6 +1,6 @@
 # Re-Labeling
 
-## Description
+## OverView
 
 In this lab, Prometheus relabeling techniques were explored to modify, rename, and remove labels from collected metrics. The exercise focused on using `metric_relabel_configs` and File Service Discovery (`file_sd_configs`) to control how target metadata and metric labels are processed before being stored in Prometheus.
 
