@@ -1,0 +1,13 @@
+default       prometheus-grafana                                   ClusterIP      10.43.193.147   <none>            80/TCP                          27m
+default       prometheus-kube-prometheus-alertmanager              ClusterIP      10.43.124.197   <none>            9093/TCP,8080/TCP               27m
+default       prometheus-kube-prometheus-operator                  ClusterIP      10.43.40.20     <none>            443/TCP                         27m
+default       prometheus-kube-prometheus-prometheus                NodePort       10.43.56.191    <none>            9090:30111/TCP,8080:30248/TCP   27m
+default       prometheus-kube-state-metrics                        ClusterIP      10.43.204.74    <none>            8080/TCP                        27m
+default       prometheus-operated                                  ClusterIP      None            <none>            9090/TCP                        27m
+default       prometheus-prometheus-node-exporter                  ClusterIP      10.43.97.146    <none>            9100/TCP                        27m
+kube-system   prometheus-kube-prometheus-coredns                   ClusterIP      None            <none>            9153/TCP                        27m
+kube-system   prometheus-kube-prometheus-kube-controller-manager   ClusterIP      None            <none>            10257/TCP                       27m
+kube-system   prometheus-kube-prometheus-kube-etcd                 ClusterIP      None            <none>            2381/TCP                        27m
+kube-system   prometheus-kube-prometheus-kube-proxy                ClusterIP      None            <none>            10249/TCP                       27m
+kube-system   prometheus-kube-prometheus-kube-scheduler            ClusterIP      None            <none>            10259/TCP                       27m
+kube-system   prometheus-kube-prometheus-kubelet                   ClusterIP      None            <none>            10250/TCP,4194/TCP,10255/TCP    27m

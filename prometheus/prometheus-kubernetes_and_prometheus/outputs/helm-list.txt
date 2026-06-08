@@ -1,0 +1,4 @@
+NAME       	NAMESPACE  	REVISION	UPDATED                                	STATUS  	CHART                       	APP VERSION
+prometheus 	default    	1       	2026-06-08 07:52:22.122696254 +0000 UTC	deployed	kube-prometheus-stack-86.2.0	v0.91.0    
+traefik    	kube-system	1       	2026-06-08 07:48:26.293589936 +0000 UTC	deployed	traefik-25.0.3+up25.0.0     	v2.10.5    
+traefik-crd	kube-system	1       	2026-06-08 07:48:25.094517703 +0000 UTC	deployed	traefik-crd-25.0.3+up25.0.0 	v2.10.5    

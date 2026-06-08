@@ -1,0 +1,16 @@
+NAMESPACE     NAME                                                     READY   STATUS      RESTARTS   AGE
+default       alertmanager-prometheus-kube-prometheus-alertmanager-0   2/2     Running     0          26m
+default       api-deployment-7448f77558-5b48h                          1/1     Running     0          22m
+default       api-deployment-7448f77558-hf99v                          1/1     Running     0          22m
+default       prometheus-grafana-5d77588576-qk5c2                      3/3     Running     0          26m
+default       prometheus-kube-prometheus-operator-7c958fffc4-k92vr     1/1     Running     0          26m
+default       prometheus-kube-state-metrics-659778b666-kg8jg           1/1     Running     0          26m
+default       prometheus-prometheus-kube-prometheus-prometheus-0       2/2     Running     0          26m
+default       prometheus-prometheus-node-exporter-2r79d                1/1     Running     0          26m
+kube-system   coredns-5dd589bf46-vqgh6                                 1/1     Running     0          31m
+kube-system   helm-install-traefik-crd-ht48r                           0/1     Completed   0          31m
+kube-system   helm-install-traefik-x4kbs                               0/1     Completed   1          31m
+kube-system   local-path-provisioner-846b9dcb6c-hghng                  1/1     Running     0          31m
+kube-system   metrics-server-5dc58b587c-q5m28                          1/1     Running     0          31m
+kube-system   svclb-traefik-039c52c3-r66qq                             2/2     Running     0          31m
+kube-system   traefik-7f4b44bf74-sqv7p                                 1/1     Running     0          31m

@@ -1,0 +1,9 @@
+NAMESPACE     NAME                                  READY   UP-TO-DATE   AVAILABLE   AGE
+default       api-deployment                        2/2     2            2           22m
+default       prometheus-grafana                    1/1     1            1           27m
+default       prometheus-kube-prometheus-operator   1/1     1            1           27m
+default       prometheus-kube-state-metrics         1/1     1            1           27m
+kube-system   coredns                               1/1     1            1           31m
+kube-system   local-path-provisioner                1/1     1            1           31m
+kube-system   metrics-server                        1/1     1            1           31m
+kube-system   traefik                               1/1     1            1           31m
