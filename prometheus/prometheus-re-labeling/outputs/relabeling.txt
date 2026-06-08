@@ -1,0 +1,88 @@
+========== PROMETHEUS CONFIG ==========
+# my global config
+global:
+  scrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+  evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
+  # scrape_timeout is set to the global default (10s).
+
+# Alertmanager configuration
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          # - alertmanager:9093
+
+# Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
+rule_files:
+  # - "first_rules.yml"
+  # - "second_rules.yml"
+
+# A scrape configuration containing exactly one endpoint to scrape:
+# Here it's Prometheus itself.
+scrape_configs:
+  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+  - job_name: "prometheus"
+
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.
+
+    static_configs:
+      - targets: ["localhost:9090"]
+
+  - job_name: "nodes"
+    metric_relabel_configs:
+      - source_labels: [device]
+        regex: (.*)
+        target_label: interface
+        replacement: $1
+        action: replace
+      - regex: device
+        action: labeldrop
+    scheme: https
+    tls_config:
+      ca_file: /etc/prometheus/node_exporter.crt
+      insecure_skip_verify: true
+    basic_auth:
+      username: prometheus
+      password: secret-password
+    static_configs:
+      - targets: ["node01:9100", "node02:9100"]
+  - job_name: "demo"
+    file_sd_configs:
+      - files:
+          - /etc/prometheus/file-sd.json
+
+========== TARGETS ==========
+{"status":"success","data":{"activeTargets":[{"discoveredLabels":{"__address__":"node8","__meta_cpu__":"amd","__meta_filepath":"/etc/prometheus/file-sd.json","__meta_mem__":"2000Mb","__meta_os__":"centos","__metrics_path__":"/metrics","__scheme__":"http","__scrape_interval__":"15s","__scrape_timeout__":"10s","env":"dev","job":"node","team":"api","type":"python"},"labels":{"env":"dev","instance":"node8","job":"node","team":"api","type":"python"},"scrapePool":"demo","scrapeUrl":"http://node8/metrics","globalUrl":"http://node8/metrics","lastError":"Get \"http://node8/metrics\": dial tcp: lookup node8 on 10.96.0.10:53: no such host","lastScrape":"2026-06-08T04:54:41.640803457Z","lastScrapeDuration":0.019447691,"health":"down","scrapeInterval":"15s","scrapeTimeout":"10s"},{"discoveredLabels":{"__address__":"node1","__meta_cpu__":"intel","__meta_filepath":"/etc/prometheus/file-sd.json","__meta_mem__":"1000Mb","__meta_os__":"ubuntu","__metrics_path__":"/metrics","__scheme__":"http","__scrape_interval__":"15s","__scrape_timeout__":"10s","env":"prod","job":"node","team":"database","type":"mysql"},"labels":{"env":"prod","instance":"node1","job":"node","team":"database","type":"mysql"},"scrapePool":"demo","scrapeUrl":"http://node1/metrics","globalUrl":"http://node1/metrics","lastError":"Get \"http://node1/metrics\": dial tcp: lookup node1 on 10.96.0.10:53: no such host","lastScrape":"2026-06-08T04:54:46.054862801Z","lastScrapeDuration":0.018974017,"health":"down","scrapeInterval":"15s","scrapeTimeout":"10s"},{"discoveredLabels":{"__address__":"node2","__meta_cpu__":"amd","__meta_filepath":"/etc/prometheus/file-sd.json","__meta_mem__":"1000Mb","__meta_os__":"ubuntu","__metrics_path__":"/metrics","__scheme__":"http","__scrape_interval__":"15s","__scrape_timeout__":"10s","env":"prod","job":"node","team":"database","type":"mysql"},"labels":{"env":"prod","instance":"node2","job":"node","team":"database","type":"mysql"},"scrapePool":"demo","scrapeUrl":"http://node2/metrics","globalUrl":"http://node2/metrics","lastError":"Get \"http://node2/metrics\": dial tcp: lookup node2 on 10.96.0.10:53: no such host","lastScrape":"2026-06-08T04:54:47.241897271Z","lastScrapeDuration":0.532596158,"health":"down","scrapeInterval":"15s","scrapeTimeout":"10s"},{"discoveredLabels":{"__address__":"node3","__meta_cpu__":"intel","__meta_filepath":"/etc/prometheus/file-sd.json","__meta_mem__":"4000Mb","__meta_os__":"fedora","__metrics_path__":"/metrics","__scheme__":"http","__scrape_interval__":"15s","__scrape_timeout__":"10s","env":"staging","job":"node","team":"database","type":"postgres"},"labels":{"env":"staging","instance":"node3","job":"node","team":"database","type":"postgres"},"scrapePool":"demo","scrapeUrl":"http://node3/metrics","globalUrl":"http://node3/metrics","lastError":"Get \"http://node3/metrics\": dial tcp: lookup node3 on 10.96.0.10:53: no such host","lastScrape":"2026-06-08T04:54:50.824879286Z","lastScrapeDuration":0.022528214,"health":"down","scrapeInterval":"15s","scrapeTimeout":"10s"},{"discoveredLabels":{"__address__":"node4","__meta_cpu__":"intel","__meta_filepath":"/etc/prometheus/file-sd.json","__meta_mem__":"4000Mb","__meta_os__":"fedora","__metrics_path__":"/metrics","__scheme__":"http","__scrape_interval__":"15s","__scrape_timeout__":"10s","env":"prod","job":"node","team":"database","type":"postgres"},"labels":{"env":"prod","instance":"node4","job":"node","team":"database","type":"postgres"},"scrapePool":"demo","scrapeUrl":"http://node4/metrics","globalUrl":"http://node4/metrics","lastError":"Get \"http://node4/metrics\": dial tcp: lookup node4 on 10.96.0.10:53: no such host","lastScrape":"2026-06-08T04:54:54.26386233Z","lastScrapeDuration":0.016963036,"health":"down","scrapeInterval":"15s","scrapeTimeout":"10s"},{"discoveredLabels":{"__address__":"node5","__meta_cpu__":"amd","__meta_filepath":"/etc/prometheus/file-sd.json","__meta_mem__":"8000Mb","__meta_os__":"centos","__metrics_path__":"/metrics","__scheme__":"http","__scrape_interval__":"15s","__scrape_timeout__":"10s","env":"prod","job":"node","team":"api","type":"nodejs"},"labels":{"env":"prod","instance":"node5","job":"node","team":"api","type":"nodejs"},"scrapePool":"demo","scrapeUrl":"http://node5/metrics","globalUrl":"http://node5/metrics","lastError":"Get \"http://node5/metrics\": dial tcp: lookup node5 on 10.96.0.10:53: no such host","lastScrape":"2026-06-08T04:54:47.480627179Z","lastScrapeDuration":0.018194492,"health":"down","scrapeInterval":"15s","scrapeTimeout":"10s"},{"discoveredLabels":{"__address__":"node6","__meta_cpu__":"ubuntu","__meta_filepath":"/etc/prometheus/file-sd.json","__meta_mem__":"8000Mb","__meta_os__":"centos","__metrics_path__":"/metrics","__scheme__":"http","__scrape_interval__":"15s","__scrape_timeout__":"10s","env":"prod","job":"node","team":"api","type":"python"},"labels":{"env":"prod","instance":"node6","job":"node","team":"api","type":"python"},"scrapePool":"demo","scrapeUrl":"http://node6/metrics","globalUrl":"http://node6/metrics","lastError":"Get \"http://node6/metrics\": dial tcp: lookup node6 on 10.96.0.10:53: no such host","lastScrape":"2026-06-08T04:54:40.237803091Z","lastScrapeDuration":0.066663936,"health":"down","scrapeInterval":"15s","scrapeTimeout":"10s"},{"discoveredLabels":{"__address__":"node7","__meta_cpu__":"amd","__meta_filepath":"/etc/prometheus/file-sd.json","__meta_mem__":"2000Mb","__meta_os__":"centos","__metrics_path__":"/metrics","__scheme__":"http","__scrape_interval__":"15s","__scrape_timeout__":"10s","env":"dev","job":"node","team":"api","type":"nodejs"},"labels":{"env":"dev","instance":"node7","job":"node","team":"api","type":"nodejs"},"scrapePool":"demo","scrapeUrl":"http://node7/metrics","globalUrl":"http://node7/metrics","lastError":"Get \"http://node7/metrics\": dial tcp: lookup node7 on 10.96.0.10:53: no such host","lastScrape":"2026-06-08T04:54:43.249112684Z","lastScrapeDuration":0.017594268,"health":"down","scrapeInterval":"15s","scrapeTimeout":"10s"},{"discoveredLabels":{"__address__":"node01:9100","__metrics_path__":"/metrics","__scheme__":"https","__scrape_interval__":"15s","__scrape_timeout__":"10s","job":"nodes"},"labels":{"instance":"node01:9100","job":"nodes"},"scrapePool":"nodes","scrapeUrl":"https://node01:9100/metrics","globalUrl":"https://node01:9100/metrics","lastError":"","lastScrape":"2026-06-08T04:54:43.005858383Z","lastScrapeDuration":0.163080654,"health":"up","scrapeInterval":"15s","scrapeTimeout":"10s"},{"discoveredLabels":{"__address__":"node02:9100","__metrics_path__":"/metrics","__scheme__":"https","__scrape_interval__":"15s","__scrape_timeout__":"10s","job":"nodes"},"labels":{"instance":"node02:9100","job":"nodes"},"scrapePool":"nodes","scrapeUrl":"https://node02:9100/metrics","globalUrl":"https://node02:9100/metrics","lastError":"","lastScrape":"2026-06-08T04:54:51.894865522Z","lastScrapeDuration":0.123128215,"health":"up","scrapeInterval":"15s","scrapeTimeout":"10s"},{"discoveredLabels":{"__address__":"localhost:9090","__metrics_path__":"/metrics","__scheme__":"http","__scrape_interval__":"15s","__scrape_timeout__":"10s","job":"prometheus"},"labels":{"instance":"localhost:9090","job":"prometheus"},"scrapePool":"prometheus","scrapeUrl":"http://localhost:9090/metrics","globalUrl":"http://prometheus-server:9090/metrics","lastError":"","lastScrape":"2026-06-08T04:54:53.036254827Z","lastScrapeDuration":0.006116448,"health":"up","scrapeInterval":"15s","scrapeTimeout":"10s"}],"droppedTargets":[],"droppedTargetCounts":{"demo":0,"nodes":0,"prometheus":0}}}
+========== SERVICE ==========
+[Unit]
+Description=Prometheus
+Documentation=https://prometheus.io/docs/introduction/overview/
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=prometheus
+Group=prometheus
+ExecReload=/bin/kill -HUP $MAINPID
+ExecStart=/usr/local/bin/prometheus \
+  --config.file=/etc/prometheus/prometheus.yml \
+  --storage.tsdb.path=/var/lib/prometheus \
+  --web.console.templates=/etc/prometheus/consoles \
+  --web.console.libraries=/etc/prometheus/console_libraries \
+  --web.listen-address=0.0.0.0:9090
+
+SyslogIdentifier=prometheus
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+========== PROMETHEUS FILES ==========
+/etc/prometheus/file-sd.json
+/etc/prometheus/prometheus.yml
+/etc/prometheus/node_exporter.crt
+/etc/prometheus/node_exporter.key
+
+========== RELABEL CONFIGS ==========
+/etc/prometheus/prometheus.yml:    metric_relabel_configs:

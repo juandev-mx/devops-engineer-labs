@@ -1,0 +1,195 @@
+[
+
+    {
+
+        "targets": ["node1"],
+
+        "labels": {
+
+            "job": "node",
+
+            "team": "database",
+
+            "env": "prod",
+
+            "type": "mysql",
+
+            "__meta_mem__": "1000Mb",
+
+            "__meta_os__": "ubuntu",
+
+            "__meta_cpu__": "intel"
+
+        }
+
+    },
+
+    {
+
+        "targets": ["node2"],
+
+        "labels": {
+
+            "job": "node",
+
+            "team": "database",
+
+            "env": "prod",
+
+            "type": "mysql",
+
+            "__meta_mem__": "1000Mb",
+
+            "__meta_os__": "ubuntu",
+
+            "__meta_cpu__": "amd"
+
+        }
+
+    },
+
+    {
+
+        "targets": ["node3"],
+
+        "labels": {
+
+            "job": "node",
+
+            "team": "database",
+
+            "env": "staging",
+
+            "type": "postgres",
+
+            "__meta_mem__": "4000Mb",
+
+            "__meta_os__": "fedora",
+
+            "__meta_cpu__": "intel"
+
+        }
+
+    },
+
+    {
+
+        "targets": ["node4"],
+
+        "labels": {
+
+            "job": "node",
+
+            "team": "database",
+
+            "env": "prod",
+
+            "type": "postgres",
+
+            "__meta_mem__": "4000Mb",
+
+            "__meta_os__": "fedora",
+
+            "__meta_cpu__": "intel"
+
+        }
+
+    },
+
+    {
+
+        "targets": ["node5"],
+
+        "labels": {
+
+            "job": "node",
+
+            "team": "api",
+
+            "env": "prod",
+
+            "type": "nodejs",
+
+            "__meta_mem__": "8000Mb",
+
+            "__meta_os__": "centos",
+
+            "__meta_cpu__": "amd"
+
+        }
+
+    },
+
+    {
+
+        "targets": ["node6"],
+
+        "labels": {
+
+            "job": "node",
+
+            "team": "api",
+
+            "env": "prod",
+
+            "type": "python",
+
+            "__meta_mem__": "8000Mb",
+
+            "__meta_os__": "centos",
+
+            "__meta_cpu__": "ubuntu"
+
+        }
+
+    },
+
+    {
+
+        "targets": ["node7"],
+
+        "labels": {
+
+            "job": "node",
+
+            "team": "api",
+
+            "env": "dev",
+
+            "type": "nodejs",
+
+            "__meta_mem__": "2000Mb",
+
+            "__meta_os__": "centos",
+
+            "__meta_cpu__": "amd"
+
+        }
+
+    },
+
+    {
+
+        "targets": ["node8"],
+
+        "labels": {
+
+            "job": "node",
+
+            "team": "api",
+
+            "env": "dev",
+
+            "type": "python",
+
+            "__meta_mem__": "2000Mb",
+
+            "__meta_os__": "centos",
+
+            "__meta_cpu__": "amd"
+
+        }
+
+    }
+
+]
