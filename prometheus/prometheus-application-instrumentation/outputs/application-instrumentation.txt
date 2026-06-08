@@ -1,0 +1,415 @@
+========== APPLICATION FILES ==========
+/root/application-instrumentation-evidence/application-instrumentation.txt
+/root/devops-engineer-labs/prometheus/prometheus-monitoring-containers/.gitkeep
+/root/devops-engineer-labs/prometheus/prometheus-monitoring-containers/README.md
+/root/devops-engineer-labs/prometheus/prometheus-monitoring-containers/outputs/docker-images.txt
+/root/devops-engineer-labs/prometheus/prometheus-monitoring-containers/outputs/prometheus-config.yml
+/root/devops-engineer-labs/prometheus/prometheus-monitoring-containers/outputs/docker-ps.txt
+/root/devops-engineer-labs/prometheus/prometheus-monitoring-containers/outputs/prometheus-targets.json
+/root/devops-engineer-labs/prometheus/prometheus-monitoring-containers/manifests/prometheus.yml
+/root/devops-engineer-labs/prometheus/.gitkeep
+/root/devops-engineer-labs/prometheus/prometheus-installation/.gitkeep
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/DownloadPrometheusVersion_PlusOtherCommands.png
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/Commands_SS02_3.png
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/Node01Verify_running.png
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/Commands_SS02.png
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/Commands_SS02_2.png
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/.gitkeep
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/Commands_SS01_3.png
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/DownloadPrometheusVersion_PlusOtherCommands2.png
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/Commands_SS01.png
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/AddNewJob_FilePrometheusYAML.png
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/CreateFileService_Prometheus.png
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/Commands_Prometheus2.png
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/Commands_Prometheus.png
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/Commands_SS01_2.png
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/Restart_Prometheus.png
+/root/devops-engineer-labs/prometheus/prometheus-installation/screenshot/Node02Verify_running.png
+/root/devops-engineer-labs/prometheus/prometheus-installation/README.md
+/root/devops-engineer-labs/prometheus/prometheus-installation/outputs/prometheus-version.txt
+/root/devops-engineer-labs/prometheus/prometheus-installation/outputs/systemd-status.txt
+/root/devops-engineer-labs/prometheus/prometheus-installation/outputs/prometheus-targets.json
+/root/devops-engineer-labs/prometheus/prometheus-installation/manifests/prometheus.service
+/root/devops-engineer-labs/prometheus/prometheus-installation/manifests/prometheus.yml
+/root/devops-engineer-labs/prometheus/prometheus-installation/manifests/node_exporter.service
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/.gitkeep
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/CommandsNodeExport02_3.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/FileNodeExportServiceModify.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/CommandsNodeExport01.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/Error401_nodesPrometheus.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/FileNodeExport02_ServiceModify.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/ConfigureNodeExport.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/ConfigureNodeExport01_UsingTLS.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/ConfigureServerPrometheus_UsingHTTPS.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/ConfigureNodeExport02.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/CommandsNodeExport02.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/CommandsNodeExport01_4.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/Error402_nodesPrometheus.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/FileConfigYAML_ModifyNode02.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/.gitkeep
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/ConfigurationServerPrometheus.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/CommandsNodeExport01_3.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/Metrics_for_node02.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/ConfigureNodeExport02_UsingTLS2.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/ConfigurationServerPrometheus2.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/CommandsNodeExport01_2.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/ConfigureNodeExport01_UsingTLS2.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/CommandsNodeExport02_2.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/FileNodeExportServiceOriginal.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/Reload_and_RestartNodeExport.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/ConfigureNodeExport02_UsingTLS.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/FileConfigYAML_ModifyNode01.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/ConfigureNodeExport02_2.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/UPNodes_PrometheusNoneERRORS.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/Metrics_for_node01.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/screenshot/Reload_and_RestartNodeExport02.png
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/README.md
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/outputs/prometheus-config.txt
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/outputs/node01-node-exporter-status.txt
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/outputs/promtool-validation.txt
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/outputs/tls-certificate-info.txt
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/outputs/prometheus-targets.json
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/manifests/prometheus.service
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/manifests/prometheus.yml
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/manifests/config.yml
+/root/devops-engineer-labs/prometheus/prometheus-authentication-encryption/manifests/node_exporter.service
+/root/devops-engineer-labs/prometheus/prometheus-console-templates/.gitkeep
+/root/devops-engineer-labs/prometheus/prometheus-console-templates/screenshot/CommandVi_NodeStartYAML.png
+/root/devops-engineer-labs/prometheus/prometheus-console-templates/screenshot/AddedCpuUtilizationStats_NodeStartYAML.png
+/root/devops-engineer-labs/prometheus/prometheus-console-templates/screenshot/TemplateIncludedGraph_NodeStartPrometheus.png
+/root/devops-engineer-labs/prometheus/prometheus-console-templates/screenshot/ModifyFileNodeStartYAML2_IncludedMemoryStats.png
+/root/devops-engineer-labs/prometheus/prometheus-console-templates/screenshot/AddedCpuStats_NodeStartYAML.png
+/root/devops-engineer-labs/prometheus/prometheus-console-templates/screenshot/TemplateIncludedCPUBasedStats_Prometheus.png
+/root/devops-engineer-labs/prometheus/prometheus-console-templates/screenshot/.gitkeep
+/root/devops-engineer-labs/prometheus/prometheus-console-templates/screenshot/TemplateIncludedCPUStats_NodeStartFile.png
+/root/devops-engineer-labs/prometheus/prometheus-console-templates/screenshot/AddedRequiredGraph_NodeStartYAML.png
+/root/devops-engineer-labs/prometheus/prometheus-console-templates/screenshot/ModifyFileNodeStartYAML.png
+/root/devops-engineer-labs/prometheus/prometheus-console-templates/screenshot/TemplateIncludedSizeMemoryStats_Prometheus.png
+/root/devops-engineer-labs/prometheus/prometheus-console-templates/screenshot/TemplateCREATED_NodeStartYAML.png
+/root/devops-engineer-labs/prometheus/prometheus-console-templates/screenshot/AddedNewSection_NodeStartYAML.png
+/root/devops-engineer-labs/prometheus/prometheus-console-templates/screenshot/AddedMemoryZiseStats_NodeStartYAML.png
+/root/devops-engineer-labs/prometheus/prometheus-console-templates/screenshot/TemplateIncludedGraphNetworking_NodeStartPrometheus.png
+/root/devops-engineer-labs/prometheus/prometheus-console-templates/screenshot/TemplateIncludedMemoryStats_Prometheus.png
+/root/devops-engineer-labs/prometheus/prometheus-console-templates/screenshot/CommandFindOutNumberCPUS_UsingServer.png
+/root/devops-engineer-labs/prometheus/prometheus-console-templates/README.md
+/root/devops-engineer-labs/prometheus/prometheus-console-templates/outputs/console-templates.txt
+/root/devops-engineer-labs/prometheus/prometheus-console-templates/manifests/prometheus.yml
+/root/devops-engineer-labs/prometheus/prometheus-console-templates/manifests/node-stats.html
+/root/devops-engineer-labs/prometheus/prometheus-application-instrumentation/.gitkeep
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/.gitkeep
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/screenshot/AddRulesFiles_Section.png
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/screenshot/ModifyNodeRulesYAML2.png
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/screenshot/RestartPrometheus_Systemctl4.png
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/screenshot/ApiRulesModifyFile.png
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/screenshot/TargetHealth_StatusOK.png
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/screenshot/RestartPrometheus_Systemctl3.png
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/screenshot/ModifyNodeRulesYAML.png
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/screenshot/.gitkeep
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/screenshot/ChangeSection_rulesyaml.png
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/screenshot/RestartPrometheus_Systemctl5.png
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/screenshot/RestartPrometheus_Systemctl2.png
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/screenshot/RestartPrometheus_Systemctl.png
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/screenshot/ImportNewFile_RuleFiles.png
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/screenshot/ModifyNodeRulesYAML3.png
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/README.md
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/outputs/recording-rules.txt
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/manifests/node-rules.yaml
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/manifests/prometheus.yml
+/root/devops-engineer-labs/prometheus/prometheus-recording-rules/manifests/api-rules.yaml
+/root/devops-engineer-labs/helm/helm-using-functions-and-pipelines/screenshot/WebApp_DeploymentSuccessfully.png
+/root/devops-engineer-labs/helm/helm-using-functions-and-pipelines/screenshot/HelmInstall_webapp.png
+/root/devops-engineer-labs/helm/helm-chart-hooks/webapp/Chart.yaml
+/root/devops-engineer-labs/helm/helm-chart-hooks/webapp/templates/install-job.yaml
+/root/devops-engineer-labs/helm/helm-chart-hooks/webapp/templates/NOTES.txt
+/root/devops-engineer-labs/helm/helm-chart-hooks/webapp/templates/upgrade-job.yaml
+/root/devops-engineer-labs/helm/helm-chart-hooks/webapp/templates/_helpers.tpl
+/root/devops-engineer-labs/helm/helm-chart-hooks/webapp/templates/service.yaml
+/root/devops-engineer-labs/helm/helm-chart-hooks/webapp/templates/deployment.yaml
+/root/devops-engineer-labs/helm/helm-chart-hooks/webapp/templates/serviceaccount.yaml
+/root/devops-engineer-labs/helm/helm-chart-hooks/webapp/values.yaml
+/root/devops-engineer-labs/helm/helm-chart-hooks/webapp-color/Chart.yaml
+/root/devops-engineer-labs/helm/helm-chart-hooks/webapp-color/templates/configmap.yaml
+/root/devops-engineer-labs/helm/helm-chart-hooks/webapp-color/templates/_helpers.tpl
+/root/devops-engineer-labs/helm/helm-chart-hooks/webapp-color/templates/service.yaml
+/root/devops-engineer-labs/helm/helm-chart-hooks/webapp-color/templates/deployment.yaml
+/root/devops-engineer-labs/helm/helm-chart-hooks/webapp-color/templates/serviceaccount.yaml
+/root/devops-engineer-labs/helm/helm-chart-hooks/webapp-color/values.yaml
+/root/devops-engineer-labs/helm/helm-chart-hooks/screenshot/HelmUpgrade_webapp.png
+/root/devops-engineer-labs/helm/helm-chart-hooks/screenshot/ChartYaml_webapp.png
+/root/devops-engineer-labs/helm/helm-chart-hooks/screenshot/webappInstall_helm.png
+/root/devops-engineer-labs/helm/helm-uploading-charts/webapp-color-0.1.0.tgz
+/root/devops-engineer-labs/helm/helm-uploading-charts/screenshot/WebApp_PackageCommand.png
+/root/devops-engineer-labs/helm/helm-uploading-charts/screenshot/VerifyPackage_WebApp.png
+/root/devops-engineer-labs/helm/helm-writing-a-chart/webapp-nginx/.helmignore
+/root/devops-engineer-labs/helm/helm-writing-a-chart/webapp-nginx/Chart.yaml
+/root/devops-engineer-labs/helm/helm-writing-a-chart/webapp-nginx/templates/service.yaml
+/root/devops-engineer-labs/helm/helm-writing-a-chart/webapp-nginx/templates/deployment.yaml
+/root/devops-engineer-labs/helm/helm-writing-a-chart/webapp-nginx/values.yaml
+/root/devops-engineer-labs/helm/helm-writing-a-chart/screenshot/Directory_webapp.png
+/root/devops-engineer-labs/helm/helm-writing-a-chart/screenshot/HelmInstallWebapp.png
+/root/devops-engineer-labs/helm/helm-writing-a-chart/screenshot/CreateStructure_webappNginx.png
+/root/devops-engineer-labs/docker/docker-registry/screenshot/registry_server.png
+/root/devops-engineer-labs/docker/env-variables/app.py
+/root/devops-engineer-labs/docker/docker-YAML/screenshot/NewApplePracticeYAML.png
+/root/devops-engineer-labs/docker/docker-YAML/screenshot/NewApplePracticeYAML2.png
+/root/devops-engineer-labs/docker/docker-YAML/screenshot/AddTwoMoreValues_Apple.png
+/root/devops-engineer-labs/docker/docker-YAML/screenshot/AddTwoMoreValues_Apple2.png
+/root/devops-engineer-labs/docker/docker-networking/network-inspect.json
+/root/devops-engineer-labs/docker/docker-networking/screenshot/DeployWebApplication.png
+/root/devops-engineer-labs/docker/docker-command-entrypoint/app.sh
+/root/devops-engineer-labs/docker/docker-command-entrypoint/app.py
+/root/devops-engineer-labs/docker/docker-storage/volume-inspect.json
+/root/devops-engineer-labs/docker/docker-storage/docker-inspect-mysql.json
+/root/devops-engineer-labs/docker/docker-images/Screenshot/Application_Run.png
+/root/devops-engineer-labs/docker/docker-images/app.py
+/root/devops-engineer-labs/jenkins/jenkins-pipeline-env-scm/test_app.py
+/root/devops-engineer-labs/jenkins/jenkins-pipeline-env-scm/app.py
+/root/devops-engineer-labs/jenkins/jenkins-pipeline-security/src/main/java/com/kodekloud/hello_demo/MainApplication.java
+/root/devops-engineer-labs/jenkins/jenkins-pipeline-security/src/main/resources/application.properties
+/root/devops-engineer-labs/terraform/terraform-resource-dependencies/screenshot/ExecuteCommandInit_Plan_Apply.png
+/root/devops-engineer-labs/terraform/terraform-datasources/screenshot/ApplyChanges_maintf.png
+/root/devops-engineer-labs/.git/hooks/pre-applypatch.sample
+/root/devops-engineer-labs/.git/hooks/applypatch-msg.sample
+/root/devops-engineer-labs/argocd/argocd-application-reconciliation/application.yaml
+/root/devops-engineer-labs/argocd/argocd-application-reconciliation/.gitkeep
+/root/devops-engineer-labs/argocd/argocd-application-reconciliation/screenshot/CreateApplication_ArgoCD2.png
+/root/devops-engineer-labs/argocd/argocd-application-reconciliation/screenshot/CreateApplication_ArgoCD3.png
+/root/devops-engineer-labs/argocd/argocd-application-reconciliation/screenshot/CreateWeebHook4.png
+/root/devops-engineer-labs/argocd/argocd-application-reconciliation/screenshot/OutOfSync_ApplicationArgoDC.png
+/root/devops-engineer-labs/argocd/argocd-application-reconciliation/screenshot/OutOfSyncReconciliation_ApplicationArgoDC3.png
+/root/devops-engineer-labs/argocd/argocd-application-reconciliation/screenshot/.gitkeep
+/root/devops-engineer-labs/argocd/argocd-application-reconciliation/screenshot/Synchronize_ApplicationArgoCD.png
+/root/devops-engineer-labs/argocd/argocd-application-reconciliation/screenshot/UI_ArgoCD.png
+/root/devops-engineer-labs/argocd/argocd-application-reconciliation/screenshot/OutOfSyncReconciliation_ApplicationArgoDC2.png
+/root/devops-engineer-labs/argocd/argocd-application-reconciliation/screenshot/Deploymentyaml_FileModify.png
+/root/devops-engineer-labs/argocd/argocd-application-reconciliation/screenshot/CreateWeebHook3.png
+/root/devops-engineer-labs/argocd/argocd-application-reconciliation/screenshot/Deploymentyaml_FileModify3.png
+/root/devops-engineer-labs/argocd/argocd-application-reconciliation/screenshot/Deploymentyaml_FileModify2.png
+/root/devops-engineer-labs/argocd/argocd-application-reconciliation/screenshot/SynchronizeReconciliation_ApplicationArgoCD2.png
+/root/devops-engineer-labs/argocd/argocd-application-reconciliation/screenshot/CreateWeebHook.png
+/root/devops-engineer-labs/argocd/argocd-application-reconciliation/screenshot/CreateWeebHook2.png
+/root/devops-engineer-labs/argocd/argocd-application-reconciliation/screenshot/SynchronizeReconciliation_ApplicationArgoCD.png
+/root/devops-engineer-labs/argocd/argocd-application-reconciliation/screenshot/CreateApplication_ArgoCD.png
+/root/devops-engineer-labs/argocd/argocd-application-reconciliation/screenshot/Deploymentyaml_FileOrginal.png
+/root/devops-engineer-labs/argocd/argocd-application-reconciliation/screenshot/ModifyReconciliation_InConfigMap2.png
+/root/devops-engineer-labs/argocd/argocd-application-reconciliation/screenshot/ModifyReconciliation_InConfigMap.png
+/root/devops-engineer-labs/argocd/argocd-application-reconciliation/screenshot/GiteaRepository.png
+/root/devops-engineer-labs/argocd/argocd-application-reconciliation/README.md
+/root/devops-engineer-labs/argocd/argocd-application-reconciliation/outputs/app-list.txt
+/root/devops-engineer-labs/argocd/argocd-application-reconciliation/outputs/app-resources.txt
+/root/devops-engineer-labs/argocd/argocd-application-reconciliation/outputs/app-history.txt
+/root/devops-engineer-labs/argocd/argocd-application-reconciliation/outputs/app-get.txt
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/.gitkeep
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/UpdatedTarget_argocd.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/Dashboard_Grafana.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CreateFileDefinition_argocdServerMetrics2.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CreateFileDefinition_argocdRepoServerMetrics2.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CreateApplication_AlertManagerDemo5.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/EmptyMetricsArgoCD_prometheus.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CommandEditRules_Prometheus.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/Dashboard_prometheus.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CommandGetSecret_Monitoring.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/Rules_Prometheus.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/.gitkeep
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CreateApplication_AlertManagerDemo2.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/ApplyAllTemplates.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CreateFileDefinition_argocdmetrics.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/metrics_prometheus.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CreateFileDefinition_argocdServerMetrics.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/SyncAlertDemo_Command.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CreateApplication_AlertManagerDemo4.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CreateFileDefinition_argocdApplicationsetControllerMetrics2.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/Import_Grafana.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/LoginGrafana.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/PatchPrometheusRules_Groups.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/EmptyRulesArgoCD_Prometheus.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/SelectOption_Import.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/Targets_prometheus.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/ImportDashboard_Grafana.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/AlertPrometheus_OutOfSyncActivated.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/Dashboard_Grafana2.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/DashboardImport_Grafana.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CreateFileDefinition_argocdmetrics2.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CreateApplication_AlertManagerDemo.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/PatchPrometheusRules_Groups2.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/UpdatedRules_argocd.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/SyncAlertDemo_Command2.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/Ports_argocdmetrics.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/HealthyApplication_alertdemo.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CreateFileDefinition_argocdRepoServerMetrics.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CreateApplication_AlertManagerDemo3.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/screenshot/CreateFileDefinition_argocdApplicationsetControllerMetrics.png
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/README.md
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/outputs/applications.yaml
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/outputs/monitoring-resources.txt
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/outputs/configmaps.txt
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/outputs/argocd-app-list.txt
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/outputs/helm-list.txt
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/manifests/argocd-metrics.yaml
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/manifests/argocd-server-metrics.yaml
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/manifests/argocd-applicationset-controller-metrics.yaml
+/root/devops-engineer-labs/argocd/argocd-monitor-argocd-with-prometheus-grafana-alertmanager/manifests/argocd-repo-server-metrics.yaml
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/application.yaml
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/.gitkeep
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/screenshot/CreateApplication_ArgoCD2.png
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/screenshot/AutoPruneSync.png
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/screenshot/PolicySync_None.png
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/screenshot/FileDeploymentOriginal.png
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/screenshot/Servicesyaml_Eliminated.png
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/screenshot/Command_selfhealth.png
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/screenshot/FileDeploymentModify.png
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/screenshot/CreateApplication_ArgoCD3.png
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/screenshot/Synced_Application.png
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/screenshot/OutOfSync_Application.png
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/screenshot/StatusHealthy3.png
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/screenshot/FileConfigMapModify.png
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/screenshot/CommandVi_patchyaml.png
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/screenshot/FileConfigMapModify2.png
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/screenshot/.gitkeep
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/screenshot/DeletedAllServices.png
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/screenshot/FilePatchyaml_commandPATCH.png
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/screenshot/FileConfigMapOriginal.png
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/screenshot/ColorTriangle_ApplicationArgoCD.png
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/screenshot/Details_Application.png
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/screenshot/CommitDeletedServicesyaml.png
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/screenshot/ModifyFile_patchyaml.png
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/screenshot/ButtonDeleted_For_Serviceyaml.png
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/screenshot/CreateApplication_ArgoCD.png
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/screenshot/StatusHealthy2.png
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/screenshot/StatusHealthy4.png
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/screenshot/StatusHealthy.png
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/screenshot/EnablePolicySync.png
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/screenshot/ApplicationRunning_Successfully.png
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/screenshot/StatusDEGRADED.png
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/README.md
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/outputs/app-list.txt
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/outputs/app-resources.txt
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/outputs/app-history.txt
+/root/devops-engineer-labs/argocd/argocd-application-custom-health-check-and-synchronization/outputs/app-get.txt
+/root/devops-engineer-labs/argocd/argocd-user-management-and-rbac/screenshot/CreateApplication_Alice2.png
+/root/devops-engineer-labs/argocd/argocd-user-management-and-rbac/screenshot/ApplicationCreate_NewRoleAlice_from_admin2.png
+/root/devops-engineer-labs/argocd/argocd-user-management-and-rbac/screenshot/CommandSyncApplication_NewRoleAlice_from_admin.png
+/root/devops-engineer-labs/argocd/argocd-user-management-and-rbac/screenshot/PermissionDenied_CreateApplicationAlice.png
+/root/devops-engineer-labs/argocd/argocd-user-management-and-rbac/screenshot/ApplicationCreate_NewRoleAlice_from_admin.png
+/root/devops-engineer-labs/argocd/argocd-user-management-and-rbac/screenshot/PermissionUserAlice_of_DeletedApplication.png
+/root/devops-engineer-labs/argocd/argocd-user-management-and-rbac/screenshot/CreateApplication_Alice.png
+/root/devops-engineer-labs/argocd/argocd-user-management-and-rbac/screenshot/CreateApplication_AliceNewRole.png
+/root/devops-engineer-labs/argocd/argocd-user-management-and-rbac/screenshot/CreateApplication_Alice3.png
+/root/devops-engineer-labs/argocd/argocd-user-management-and-rbac/screenshot/CreateApplication_AliceNewRole2.png
+/root/devops-engineer-labs/argocd/argocd-user-management-and-rbac/screenshot/CreateApplication_AliceNewRole3.png
+/root/devops-engineer-labs/argocd/argocd-manage-secrets-using-bitnami-sealed-secrets-and-hashicorp-vault/application.yaml
+/root/devops-engineer-labs/argocd/argocd-manage-secrets-using-bitnami-sealed-secrets-and-hashicorp-vault/screenshot/ApplicationEncrypted_Created4.png
+/root/devops-engineer-labs/argocd/argocd-manage-secrets-using-bitnami-sealed-secrets-and-hashicorp-vault/screenshot/CreateApplication4.png
+/root/devops-engineer-labs/argocd/argocd-manage-secrets-using-bitnami-sealed-secrets-and-hashicorp-vault/screenshot/CreateApplication.png
+/root/devops-engineer-labs/argocd/argocd-manage-secrets-using-bitnami-sealed-secrets-and-hashicorp-vault/screenshot/ApplicationEncrypted_Created.png
+/root/devops-engineer-labs/argocd/argocd-manage-secrets-using-bitnami-sealed-secrets-and-hashicorp-vault/screenshot/OutOfSyncApplication_Helm.png
+/root/devops-engineer-labs/argocd/argocd-manage-secrets-using-bitnami-sealed-secrets-and-hashicorp-vault/screenshot/SecretApplication_DesencryptedValues.png
+/root/devops-engineer-labs/argocd/argocd-manage-secrets-using-bitnami-sealed-secrets-and-hashicorp-vault/screenshot/CreateApplication2.png
+/root/devops-engineer-labs/argocd/argocd-manage-secrets-using-bitnami-sealed-secrets-and-hashicorp-vault/screenshot/ApplicationEncrypted_StatusHealthy.png
+/root/devops-engineer-labs/argocd/argocd-manage-secrets-using-bitnami-sealed-secrets-and-hashicorp-vault/screenshot/ApplicationEncrypted_Created2.png
+/root/devops-engineer-labs/argocd/argocd-manage-secrets-using-bitnami-sealed-secrets-and-hashicorp-vault/screenshot/CreateApplication3.png
+/root/devops-engineer-labs/argocd/argocd-manage-secrets-using-bitnami-sealed-secrets-and-hashicorp-vault/screenshot/ApplicationEncrypted_Created3.png
+/root/devops-engineer-labs/argocd/argocd-manage-secrets-using-bitnami-sealed-secrets-and-hashicorp-vault/screenshot/HealthyStatus_ApplicationHelm.png
+/root/devops-engineer-labs/argocd/argocd-manage-secrets-using-bitnami-sealed-secrets-and-hashicorp-vault/outputs/encrypted-secret-app.txt
+/root/devops-engineer-labs/argocd/argocd-manage-secrets-using-bitnami-sealed-secrets-and-hashicorp-vault/outputs/app-list.txt
+/root/devops-engineer-labs/argocd/argocd-multi-cluster-and-helm-deployment/screenshot/CreateAnotherApplication3.png
+/root/devops-engineer-labs/argocd/argocd-multi-cluster-and-helm-deployment/screenshot/AccessApplicationCluster2.png
+/root/devops-engineer-labs/argocd/argocd-multi-cluster-and-helm-deployment/screenshot/GetResourcesApplicartion_ArgoCD.png
+/root/devops-engineer-labs/argocd/argocd-multi-cluster-and-helm-deployment/screenshot/ApplicationsCreates_of_Manifiest.png
+/root/devops-engineer-labs/argocd/argocd-multi-cluster-and-helm-deployment/screenshot/CreateAnotherApplication.png
+/root/devops-engineer-labs/argocd/argocd-multi-cluster-and-helm-deployment/screenshot/CreateApplication4.png
+/root/devops-engineer-labs/argocd/argocd-multi-cluster-and-helm-deployment/screenshot/CreateApplication.png
+/root/devops-engineer-labs/argocd/argocd-multi-cluster-and-helm-deployment/screenshot/StatusHealtnyApplication_ArgoCD.png
+/root/devops-engineer-labs/argocd/argocd-multi-cluster-and-helm-deployment/screenshot/CreateApplication5.png
+/root/devops-engineer-labs/argocd/argocd-multi-cluster-and-helm-deployment/screenshot/CreateApplication2.png
+/root/devops-engineer-labs/argocd/argocd-multi-cluster-and-helm-deployment/screenshot/OutOfSyncAnotherApplication_ArgoCD.png
+/root/devops-engineer-labs/argocd/argocd-multi-cluster-and-helm-deployment/screenshot/Heliocentric_appYAML.png
+/root/devops-engineer-labs/argocd/argocd-multi-cluster-and-helm-deployment/screenshot/StatusHealtnyAnotherApplication_ArgoCD.png
+/root/devops-engineer-labs/argocd/argocd-multi-cluster-and-helm-deployment/screenshot/app_of_appsYAML.png
+/root/devops-engineer-labs/argocd/argocd-multi-cluster-and-helm-deployment/screenshot/CreateAnotherApplication4.png
+/root/devops-engineer-labs/argocd/argocd-multi-cluster-and-helm-deployment/screenshot/CreateApplication3.png
+/root/devops-engineer-labs/argocd/argocd-multi-cluster-and-helm-deployment/screenshot/CreateApplication6.png
+/root/devops-engineer-labs/argocd/argocd-multi-cluster-and-helm-deployment/screenshot/OutOfSyncApplication_ArgoCD.png
+/root/devops-engineer-labs/argocd/argocd-multi-cluster-and-helm-deployment/screenshot/CreateAnotherApplication2.png
+/root/devops-engineer-labs/argocd/argocd-multi-cluster-and-helm-deployment/screenshot/DeployManifiest_appofappsYAML.png
+/root/devops-engineer-labs/argocd/argocd-multi-cluster-and-helm-deployment/outputs/app-of-apps.txt
+/root/devops-engineer-labs/argocd/argocd-multi-cluster-and-helm-deployment/outputs/kubectl-applications.yaml
+/root/devops-engineer-labs/argocd/argocd-multi-cluster-and-helm-deployment/outputs/argocd-app-list.txt
+/root/devops-engineer-labs/shell-scripts/ecommerce-automation-project/js/min/emran.min.js
+/root/devops-engineer-labs/shell-scripts/ecommerce-automation-project/js/min/theme.min.js
+/root/devops-engineer-labs/shell-scripts/ecommerce-automation-project/js/bootstrap.min.js
+/root/devops-engineer-labs/shell-scripts/ecommerce-automation-project/js/theme.js
+/root/devops-engineer-labs/shell-scripts/ecommerce-automation-project/js/jquery-1.12.4.min.js
+/root/devops-engineer-labs/shell-scripts/ecommerce-automation-project/vendors/jQuery_ui/jquery-ui.min.js
+/root/devops-engineer-labs/shell-scripts/ecommerce-automation-project/vendors/stellar/jquery.stellar.js
+/root/devops-engineer-labs/shell-scripts/ecommerce-automation-project/vendors/owl_carousel/owl.carousel.min.js
+/root/devops-engineer-labs/shell-scripts/ecommerce-automation-project/vendors/Counter-Up/waypoints.min.js
+/root/devops-engineer-labs/shell-scripts/ecommerce-automation-project/vendors/Counter-Up/jquery.counterup.min.js
+/root/devops-engineer-labs/shell-scripts/ecommerce-automation-project/vendors/wow-js/wow.min.js
+/root/devops-engineer-labs/shell-scripts/ecommerce-automation-project/vendors/wow-js/animate.css
+/root/devops-engineer-labs/shell-scripts/ecommerce-automation-project/vendors/lightbox/js/lightbox.js
+/root/devops-engineer-labs/kubernetes/kubernetes-services/screenshot/VerifyWebApplicationNewService.png
+/root/devops-engineer-labs/kubernetes/kubernetes-services/screenshot/UIApplication_ERROR.png
+/root/devops-engineer-labs/kubernetes/kubernetes-services/screenshot/NewService_NodePort2_ApplyChanges.png
+/root/devops-engineer-labs/kubernetes/kubernetes-rolling-updates-rollbacks/screenshot/VerifyApplicationV3.png
+/root/devops-engineer-labs/kubernetes/kubernetes-rolling-updates-rollbacks/screenshot/ImageUsed_DeployApplications.png
+/root/devops-engineer-labs/kubernetes/kubernetes-rolling-updates-rollbacks/screenshot/ColorWebApplication.png
+/root/devops-engineer-labs/kubernetes/kubernetes-rolling-updates-rollbacks/screenshot/VerifyApplicationV3_cap2.png
+/root/devops-engineer-labs/kubernetes/kubernetes-pods-with-yaml/screenshot/ApplyChanges_Configuration.png
+/root/devops-engineer-labs/kubernetes/kubernetes-pods-with-yaml/screenshot/ContainerWebAppPod.png
+
+========== PACKAGE JSON ==========
+
+========== SERVER JS ==========
+
+========== APP JS ==========
+
+========== PROMETHEUS CONFIG ==========
+# my global config
+global:
+  scrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+  evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
+  # scrape_timeout is set to the global default (10s).
+
+# Alertmanager configuration
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          # - alertmanager:9093
+
+# Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
+rule_files:
+  # - "first_rules.yml"
+  # - "second_rules.yml"
+
+# A scrape configuration containing exactly one endpoint to scrape:
+# Here it's Prometheus itself.
+scrape_configs:
+  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+  - job_name: "prometheus"
+
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.
+
+    static_configs:
+      - targets: ["localhost:9090"]
+
+  - job_name: "nodes"
+    scheme: https
+    tls_config:
+      ca_file: /etc/prometheus/node_exporter.crt
+      insecure_skip_verify: true
+    basic_auth:
+      username: prometheus
+      password: secret-password
+    static_configs:
+      - targets: ["node01:9100", "node02:9100"]
+
+  - job_name: "api"
+    static_configs:
+      - targets: ["localhost:8000"]
+
+========== TARGETS ==========
+{"status":"success","data":{"activeTargets":[{"discoveredLabels":{"__address__":"localhost:8000","__metrics_path__":"/metrics","__scheme__":"http","__scrape_interval__":"15s","__scrape_timeout__":"10s","job":"api"},"labels":{"instance":"localhost:8000","job":"api"},"scrapePool":"api","scrapeUrl":"http://localhost:8000/metrics","globalUrl":"http://prometheus-server:8000/metrics","lastError":"","lastScrape":"2026-06-08T01:39:50.150955056Z","lastScrapeDuration":0.002653205,"health":"up","scrapeInterval":"15s","scrapeTimeout":"10s"},{"discoveredLabels":{"__address__":"node01:9100","__metrics_path__":"/metrics","__scheme__":"https","__scrape_interval__":"15s","__scrape_timeout__":"10s","job":"nodes"},"labels":{"instance":"node01:9100","job":"nodes"},"scrapePool":"nodes","scrapeUrl":"https://node01:9100/metrics","globalUrl":"https://node01:9100/metrics","lastError":"","lastScrape":"2026-06-08T01:39:43.006470935Z","lastScrapeDuration":0.137269031,"health":"up","scrapeInterval":"15s","scrapeTimeout":"10s"},{"discoveredLabels":{"__address__":"node02:9100","__metrics_path__":"/metrics","__scheme__":"https","__scrape_interval__":"15s","__scrape_timeout__":"10s","job":"nodes"},"labels":{"instance":"node02:9100","job":"nodes"},"scrapePool":"nodes","scrapeUrl":"https://node02:9100/metrics","globalUrl":"https://node02:9100/metrics","lastError":"","lastScrape":"2026-06-08T01:39:51.89545605Z","lastScrapeDuration":0.320693113,"health":"up","scrapeInterval":"15s","scrapeTimeout":"10s"},{"discoveredLabels":{"__address__":"localhost:9090","__metrics_path__":"/metrics","__scheme__":"http","__scrape_interval__":"15s","__scrape_timeout__":"10s","job":"prometheus"},"labels":{"instance":"localhost:9090","job":"prometheus"},"scrapePool":"prometheus","scrapeUrl":"http://localhost:9090/metrics","globalUrl":"http://prometheus-server:9090/metrics","lastError":"","lastScrape":"2026-06-08T01:39:53.037012226Z","lastScrapeDuration":0.005776672,"health":"up","scrapeInterval":"15s","scrapeTimeout":"10s"}],"droppedTargets":[],"droppedTargetCounts":{"api":0,"nodes":0,"prometheus":0}}}
+========== METRICS ENDPOINT ==========
