@@ -40,7 +40,6 @@ prometheus-application-instrumentation/
 ├── outputs/
 │   └── application-instrumentation.txt
 └── screenshot/
-    └── .gitkeep
 ```
 
 ---
