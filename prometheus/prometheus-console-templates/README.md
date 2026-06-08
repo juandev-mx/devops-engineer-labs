@@ -215,7 +215,6 @@ prometheus-console-templates/
 ├── outputs
 │   └── console-templates.txt
 └── screenshot
-    └── .gitkeep
 ```
 
 ---
