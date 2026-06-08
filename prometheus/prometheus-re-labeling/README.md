@@ -1,4 +1,4 @@
-# Lab - Re-Labeling
+# Re-Labeling
 
 ## Description
 
