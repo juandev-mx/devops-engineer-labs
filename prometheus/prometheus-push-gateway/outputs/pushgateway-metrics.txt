@@ -1,0 +1,165 @@
+# HELP go_gc_duration_seconds A summary of the wall-time pause (stop-the-world) duration in garbage collection cycles.
+# TYPE go_gc_duration_seconds summary
+go_gc_duration_seconds{quantile="0"} 5.6053e-05
+go_gc_duration_seconds{quantile="0.25"} 8.9013e-05
+go_gc_duration_seconds{quantile="0.5"} 0.00012303
+go_gc_duration_seconds{quantile="0.75"} 0.00014352
+go_gc_duration_seconds{quantile="1"} 0.001026894
+go_gc_duration_seconds_sum 0.003268256
+go_gc_duration_seconds_count 17
+# HELP go_gc_gogc_percent Heap size target percentage configured by the user, otherwise 100. This value is set by the GOGC environment variable, and the runtime/debug.SetGCPercent function. Sourced from /gc/gogc:percent.
+# TYPE go_gc_gogc_percent gauge
+go_gc_gogc_percent 100
+# HELP go_gc_gomemlimit_bytes Go runtime memory limit configured by the user, otherwise math.MaxInt64. This value is set by the GOMEMLIMIT environment variable, and the runtime/debug.SetMemoryLimit function. Sourced from /gc/gomemlimit:bytes.
+# TYPE go_gc_gomemlimit_bytes gauge
+go_gc_gomemlimit_bytes 9.223372036854776e+18
+# HELP go_goroutines Number of goroutines that currently exist.
+# TYPE go_goroutines gauge
+go_goroutines 11
+# HELP go_info Information about the Go environment.
+# TYPE go_info gauge
+go_info{version="go1.24.1"} 1
+# HELP go_memstats_alloc_bytes Number of bytes allocated in heap and currently in use. Equals to /memory/classes/heap/objects:bytes.
+# TYPE go_memstats_alloc_bytes gauge
+go_memstats_alloc_bytes 9.535392e+06
+# HELP go_memstats_alloc_bytes_total Total number of bytes allocated in heap until now, even if released already. Equals to /gc/heap/allocs:bytes.
+# TYPE go_memstats_alloc_bytes_total counter
+go_memstats_alloc_bytes_total 6.294504e+07
+# HELP go_memstats_buck_hash_sys_bytes Number of bytes used by the profiling bucket hash table. Equals to /memory/classes/profiling/buckets:bytes.
+# TYPE go_memstats_buck_hash_sys_bytes gauge
+go_memstats_buck_hash_sys_bytes 1.457962e+06
+# HELP go_memstats_frees_total Total number of heap objects frees. Equals to /gc/heap/frees:objects + /gc/heap/tiny/allocs:objects.
+# TYPE go_memstats_frees_total counter
+go_memstats_frees_total 215452
+# HELP go_memstats_gc_sys_bytes Number of bytes used for garbage collection system metadata. Equals to /memory/classes/metadata/other:bytes.
+# TYPE go_memstats_gc_sys_bytes gauge
+go_memstats_gc_sys_bytes 3.175936e+06
+# HELP go_memstats_heap_alloc_bytes Number of heap bytes allocated and currently in use, same as go_memstats_alloc_bytes. Equals to /memory/classes/heap/objects:bytes.
+# TYPE go_memstats_heap_alloc_bytes gauge
+go_memstats_heap_alloc_bytes 9.535392e+06
+# HELP go_memstats_heap_idle_bytes Number of heap bytes waiting to be used. Equals to /memory/classes/heap/released:bytes + /memory/classes/heap/free:bytes.
+# TYPE go_memstats_heap_idle_bytes gauge
+go_memstats_heap_idle_bytes 2.850816e+06
+# HELP go_memstats_heap_inuse_bytes Number of heap bytes that are in use. Equals to /memory/classes/heap/objects:bytes + /memory/classes/heap/unused:bytes
+# TYPE go_memstats_heap_inuse_bytes gauge
+go_memstats_heap_inuse_bytes 1.2746752e+07
+# HELP go_memstats_heap_objects Number of currently allocated objects. Equals to /gc/heap/objects:objects.
+# TYPE go_memstats_heap_objects gauge
+go_memstats_heap_objects 8029
+# HELP go_memstats_heap_released_bytes Number of heap bytes released to OS. Equals to /memory/classes/heap/released:bytes.
+# TYPE go_memstats_heap_released_bytes gauge
+go_memstats_heap_released_bytes 1.540096e+06
+# HELP go_memstats_heap_sys_bytes Number of heap bytes obtained from system. Equals to /memory/classes/heap/objects:bytes + /memory/classes/heap/unused:bytes + /memory/classes/heap/released:bytes + /memory/classes/heap/free:bytes.
+# TYPE go_memstats_heap_sys_bytes gauge
+go_memstats_heap_sys_bytes 1.5597568e+07
+# HELP go_memstats_last_gc_time_seconds Number of seconds since 1970 of last garbage collection.
+# TYPE go_memstats_last_gc_time_seconds gauge
+go_memstats_last_gc_time_seconds 1.7808981287055511e+09
+# HELP go_memstats_mallocs_total Total number of heap objects allocated, both live and gc-ed. Semantically a counter version for go_memstats_heap_objects gauge. Equals to /gc/heap/allocs:objects + /gc/heap/tiny/allocs:objects.
+# TYPE go_memstats_mallocs_total counter
+go_memstats_mallocs_total 223481
+# HELP go_memstats_mcache_inuse_bytes Number of bytes in use by mcache structures. Equals to /memory/classes/metadata/mcache/inuse:bytes.
+# TYPE go_memstats_mcache_inuse_bytes gauge
+go_memstats_mcache_inuse_bytes 19328
+# HELP go_memstats_mcache_sys_bytes Number of bytes used for mcache structures obtained from system. Equals to /memory/classes/metadata/mcache/inuse:bytes + /memory/classes/metadata/mcache/free:bytes.
+# TYPE go_memstats_mcache_sys_bytes gauge
+go_memstats_mcache_sys_bytes 31408
+# HELP go_memstats_mspan_inuse_bytes Number of bytes in use by mspan structures. Equals to /memory/classes/metadata/mspan/inuse:bytes.
+# TYPE go_memstats_mspan_inuse_bytes gauge
+go_memstats_mspan_inuse_bytes 189920
+# HELP go_memstats_mspan_sys_bytes Number of bytes used for mspan structures obtained from system. Equals to /memory/classes/metadata/mspan/inuse:bytes + /memory/classes/metadata/mspan/free:bytes.
+# TYPE go_memstats_mspan_sys_bytes gauge
+go_memstats_mspan_sys_bytes 195840
+# HELP go_memstats_next_gc_bytes Number of heap bytes when next garbage collection will take place. Equals to /gc/heap/goal:bytes.
+# TYPE go_memstats_next_gc_bytes gauge
+go_memstats_next_gc_bytes 1.3229186e+07
+# HELP go_memstats_other_sys_bytes Number of bytes used for other system allocations. Equals to /memory/classes/other:bytes.
+# TYPE go_memstats_other_sys_bytes gauge
+go_memstats_other_sys_bytes 2.041902e+06
+# HELP go_memstats_stack_inuse_bytes Number of bytes obtained from system for stack allocator in non-CGO environments. Equals to /memory/classes/heap/stacks:bytes.
+# TYPE go_memstats_stack_inuse_bytes gauge
+go_memstats_stack_inuse_bytes 1.179648e+06
+# HELP go_memstats_stack_sys_bytes Number of bytes obtained from system for stack allocator. Equals to /memory/classes/heap/stacks:bytes + /memory/classes/os-stacks:bytes.
+# TYPE go_memstats_stack_sys_bytes gauge
+go_memstats_stack_sys_bytes 1.179648e+06
+# HELP go_memstats_sys_bytes Number of bytes obtained from system. Equals to /memory/classes/total:byte.
+# TYPE go_memstats_sys_bytes gauge
+go_memstats_sys_bytes 2.3680264e+07
+# HELP go_sched_gomaxprocs_threads The current runtime.GOMAXPROCS setting, or the number of operating system threads that can execute user-level Go code simultaneously. Sourced from /sched/gomaxprocs:threads.
+# TYPE go_sched_gomaxprocs_threads gauge
+go_sched_gomaxprocs_threads 16
+# HELP go_threads Number of OS threads created.
+# TYPE go_threads gauge
+go_threads 14
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total 0.34
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds 1.048575e+06
+# HELP process_network_receive_bytes_total Number of bytes received by the process over the network.
+# TYPE process_network_receive_bytes_total counter
+process_network_receive_bytes_total 2.77223696e+08
+# HELP process_network_transmit_bytes_total Number of bytes sent by the process over the network.
+# TYPE process_network_transmit_bytes_total counter
+process_network_transmit_bytes_total 1.33092347e+08
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds 8
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes 2.9503488e+07
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds 1.78089648405e+09
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes 1.273270272e+09
+# HELP process_virtual_memory_max_bytes Maximum amount of virtual memory available in bytes.
+# TYPE process_virtual_memory_max_bytes gauge
+process_virtual_memory_max_bytes 1.8446744073709552e+19
+# TYPE processed_bytes_total gauge
+processed_bytes_total{instance="mov_node1",job="video_processing",quality="hd"} 96000
+# TYPE processed_videos_total gauge
+processed_videos_total{instance="mov_node1",job="video_processing",quality="hd"} 250
+# TYPE processing_time_seconds gauge
+processing_time_seconds{instance="mov_node1",job="video_processing",quality="hd"} 400
+# HELP push_failure_time_seconds Last Unix time when changing this group in the Pushgateway failed.
+# TYPE push_failure_time_seconds gauge
+push_failure_time_seconds{instance="mov_node1",job="video_processing"} 0
+# HELP push_time_seconds Last Unix time when changing this group in the Pushgateway succeeded.
+# TYPE push_time_seconds gauge
+push_time_seconds{instance="mov_node1",job="video_processing"} 1.7808965318394868e+09
+# HELP pushgateway_build_info A metric with a constant '1' value labeled by version, revision, branch, goversion from which pushgateway was built, and the goos and goarch for the build.
+# TYPE pushgateway_build_info gauge
+pushgateway_build_info{branch="HEAD",goarch="amd64",goos="linux",goversion="go1.24.1",revision="aff0d834b730375fc965135e3e2d17d15f82a76f",tags="unknown",version="1.11.1"} 1
+# HELP pushgateway_http_push_duration_seconds HTTP request duration for pushes to the Pushgateway.
+# TYPE pushgateway_http_push_duration_seconds summary
+pushgateway_http_push_duration_seconds{method="post",quantile="0.1"} NaN
+pushgateway_http_push_duration_seconds{method="post",quantile="0.5"} NaN
+pushgateway_http_push_duration_seconds{method="post",quantile="0.9"} NaN
+pushgateway_http_push_duration_seconds_sum{method="post"} 0.002901495
+pushgateway_http_push_duration_seconds_count{method="post"} 3
+pushgateway_http_push_duration_seconds{method="put",quantile="0.1"} NaN
+pushgateway_http_push_duration_seconds{method="put",quantile="0.5"} NaN
+pushgateway_http_push_duration_seconds{method="put",quantile="0.9"} NaN
+pushgateway_http_push_duration_seconds_sum{method="put"} 0.000964124
+pushgateway_http_push_duration_seconds_count{method="put"} 1
+# HELP pushgateway_http_push_size_bytes HTTP request size for pushes to the Pushgateway.
+# TYPE pushgateway_http_push_size_bytes summary
+pushgateway_http_push_size_bytes{method="post",quantile="0.1"} NaN
+pushgateway_http_push_size_bytes{method="post",quantile="0.5"} NaN
+pushgateway_http_push_size_bytes{method="post",quantile="0.9"} NaN
+pushgateway_http_push_size_bytes_sum{method="post"} 1040
+pushgateway_http_push_size_bytes_count{method="post"} 3
+pushgateway_http_push_size_bytes{method="put",quantile="0.1"} NaN
+pushgateway_http_push_size_bytes{method="put",quantile="0.5"} NaN
+pushgateway_http_push_size_bytes{method="put",quantile="0.9"} NaN
+pushgateway_http_push_size_bytes_sum{method="put"} 243
+pushgateway_http_push_size_bytes_count{method="put"} 1
+# HELP pushgateway_http_requests_total Total HTTP requests processed by the Pushgateway, excluding scrapes.
+# TYPE pushgateway_http_requests_total counter
+pushgateway_http_requests_total{code="200",handler="push",method="post"} 3
+pushgateway_http_requests_total{code="200",handler="push",method="put"} 1
+pushgateway_http_requests_total{code="200",handler="status",method="get"} 5
+pushgateway_http_requests_total{code="202",handler="delete",method="delete"} 1
